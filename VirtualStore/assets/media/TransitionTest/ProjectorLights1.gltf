@@ -1,0 +1,295 @@
+{
+    "accessors": {
+        "accessor_16": {
+            "bufferView": "bufferView_42",
+            "byteOffset": 18,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 12,
+            "max": [
+                5
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_18": {
+            "bufferView": "bufferView_43",
+            "byteOffset": 216,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                1,
+                1,
+                7.39654
+            ],
+            "min": [
+                -1.81976,
+                -1,
+                0
+            ],
+            "type": "VEC3"
+        },
+        "accessor_20": {
+            "bufferView": "bufferView_43",
+            "byteOffset": 360,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                0.934402,
+                0.990984,
+                0.35622
+            ],
+            "min": [
+                -0.993914,
+                -0.990984,
+                -0.110156
+            ],
+            "type": "VEC3"
+        },
+        "accessor_36": {
+            "bufferView": "bufferView_42",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 9,
+            "max": [
+                4
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_38": {
+            "bufferView": "bufferView_43",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 9,
+            "max": [
+                0.968697,
+                0.900722,
+                7.39654
+            ],
+            "min": [
+                -1.81976,
+                -0.900722,
+                0
+            ],
+            "type": "VEC3"
+        },
+        "accessor_40": {
+            "bufferView": "bufferView_43",
+            "byteOffset": 108,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 9,
+            "max": [
+                0.935714,
+                0.887196,
+                0.35276
+            ],
+            "min": [
+                -0.456903,
+                -0.887196,
+                -0.0642107
+            ],
+            "type": "VEC3"
+        }
+    },
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@86001551e098fbb15e730607588efc2fc68ea93d",
+        "premultipliedAlpha": true,
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.2"
+        },
+        "version": "1.0.1"
+    },
+    "bufferViews": {
+        "bufferView_42": {
+            "buffer": "ProjectorLights1",
+            "byteLength": 44,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        "bufferView_43": {
+            "buffer": "ProjectorLights1",
+            "byteLength": 504,
+            "byteOffset": 44,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "ProjectorLights1": {
+            "byteLength": 548,
+            "type": "arraybuffer",
+            "uri": "ProjectorLights1.bin"
+        }
+    },
+    "extensionsUsed": [
+        "KHR_materials_common"
+    ],
+    "materials": {
+        "Material_147-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.8,
+                            0.8,
+                            0.8,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 25,
+                        "specular": [
+                            0.25,
+                            0.25,
+                            0.25,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "Material_147"
+        }
+    },
+    "meshes": {
+        "Plane_016-mesh": {
+            "name": "Plane.016",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_40",
+                        "POSITION": "accessor_38"
+                    },
+                    "indices": "accessor_36",
+                    "material": "Material_147-effect",
+                    "mode": 4
+                }
+            ]
+        },
+        "Plane_017-mesh": {
+            "name": "Plane.017",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_20",
+                        "POSITION": "accessor_18"
+                    },
+                    "indices": "accessor_16",
+                    "material": "Material_147-effect",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "Plane_012": {
+            "children": [],
+            "matrix": [
+                1,
+                -5.60884e-15,
+                2.84217e-14,
+                0,
+                0,
+                1,
+                0,
+                0,
+                2.50107e-08,
+                0,
+                1,
+                0,
+                5.96046e-07,
+                0,
+                0,
+                1
+            ],
+            "meshes": [
+                "Plane_017-mesh"
+            ],
+            "name": "Plane_012"
+        },
+        "Plane_013": {
+            "children": [
+                "Plane_012"
+            ],
+            "matrix": [
+                5.9596e-08,
+                0,
+                -0.789374,
+                0,
+                0,
+                0.517228,
+                0,
+                0,
+                0.150357,
+                0,
+                1.13516e-08,
+                0,
+                3.38,
+                0.97,
+                1.5,
+                1
+            ],
+            "meshes": [
+                "Plane_016-mesh"
+            ],
+            "name": "Plane_013"
+        },
+        "node_2": {
+            "children": [
+                "Plane_013"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "Y_UP_Transform"
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_2"
+            ]
+        }
+    },
+    "skins": {}
+}

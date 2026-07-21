@@ -1,0 +1,582 @@
+@font-face {
+    font-family: 'Tonyhandwritting1';
+    src: url('../fonts/Tonyhandwritting1-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 1. RESET & BASE */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #050510;
+            color: #fff;
+            font-family: "Roboto Flex", sans-serif;
+            position: relative;
+            overflow-x: hidden; /* removed overflow: hidden to allow scroll */
+        }
+
+        a {
+            color: #fff;
+        }
+
+        /* 2. BACKGROUND ATMOSPHERE */
+        .bg-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            opacity: 0;
+        }
+
+        .bg-layer.about-bg {
+            background: linear-gradient(135deg, rgba(255,105,180,0.2) 0%, rgba(0,255,127,0.2) 100%);
+        }
+
+        .bg-layer.portfolio-bg {
+            background: linear-gradient(135deg, rgba(0,191,255,0.2) 0%, rgba(255,215,0,0.2) 100%);
+        }
+
+        body[data-active-tab="about"] .bg-layer.about-bg {
+            opacity: 1;
+        }
+
+        body[data-active-tab="portfolio"] .bg-layer.portfolio-bg {
+            opacity: 1;
+        }
+
+        .tonyside {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: auto;
+            mix-blend-mode: overlay;
+            z-index: -1;
+            aspect-ratio: 1;
+            max-width: none;
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.15s ease-out;
+            pointer-events: none;
+        }
+
+        body[data-active-tab="about"] .tonyside {
+            opacity: 1;
+        }
+
+        @media (max-width: 920px) {
+            .tonyside {
+                transform: rotate(-90deg) translateY(50vw);
+                right: calc(35vw * 0.25);
+            }
+        }
+
+        /* 3. THE RIGID ARCHITECTURE */
+        .dashboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh; /* removed strict 100vh */
+            width: 100vw;
+            padding: 2rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            width: 100%;
+            max-width: 1600px;
+            /* removed strict 100% height */
+            /* gap: 1px; */
+            border: 1.5px solid #fff;
+
+            grid-template-columns: 1fr 1fr 1fr; /* Changed to 3 equal columns for the bento layout */
+            grid-template-rows: 300px 200px 300px 200px 300px 250px; /* Specific row heights */
+        }
+
+        /* Grid Tile Base Styling */
+        .grid-tile {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 1);
+            /* Allow hover effects to break cell boundaries where needed */
+        }
+
+        .bento-label {
+            position: absolute;
+            top: 4px;
+            left: 1px;
+            writing-mode: sideways-lr;
+            font-size: 0.85rem;
+            font-weight: 100;
+            text-transform: lowercase;
+            z-index: 10;
+            pointer-events: none;
+            margin: 0;
+        }
+
+        .grid-tile.top-left {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        /* Nav Tile */
+        .nav-tile {
+            grid-column: 2 / -1; /* spans top two rightmost boxes */
+            grid-row: 1;
+            flex-direction: row; /* stacked horizontally */
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 0;
+            padding: 0;
+            z-index: 10;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            border-left: 1px solid rgba(255, 255, 255, 1); /* border between nav buttons horizontally */
+            color: #fff;
+            padding: 0;
+            cursor: pointer;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-family: inherit;
+            font-size: 16px;
+            transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), font-size 0.6s cubic-bezier(0.25, 1, 0.5, 1), background 0.2s;
+        }
+
+        .tab-btn:first-child {
+            border-left: none;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-btn.is-active {
+            background: transparent;
+            flex: 2;
+            font-size: 30px;
+            font-weight: 999;
+        }
+
+        /* Layout for other areas */
+        .bio-tile {
+            grid-column: 1 / 3;
+            grid-row: 2 / 4;
+        }
+        .socials-tile {
+            grid-column: 3;
+            grid-row: 2;
+        }
+        .quote-tile {
+            grid-column: 3;
+            grid-row: 3;
+        }
+        
+        .links-tile {
+            grid-column: 1;
+            grid-row: 4;
+        }
+        .soft-skills-tile {
+            grid-column: 2 / 4;
+            grid-row: 4;
+        }
+        
+        .hard-skills-tile {
+            grid-column: 1 / 4;
+            grid-row: 5;
+        }
+        
+        .did-you-know-tile {
+            grid-column: 1 / 3;
+            grid-row: 6;
+        }
+        .hobbies-tile {
+            grid-column: 3;
+            grid-row: 6;
+        }
+
+        /* 4. CONTENT CHOREOGRAPHY & TRANSITIONS */
+        .stacked-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            transform: translateX(20px);
+        }
+
+        .dashboard-grid[data-active-tab="about"] .view-about,
+        .dashboard-grid[data-active-tab="portfolio"] .view-portfolio,
+        .dashboard-grid[data-active-tab="arcade"] .view-arcade,
+        .dashboard-grid[data-active-tab="contact"] .view-contact {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0);
+            z-index: 2;
+        }
+
+        .dashboard-grid:not([data-active-tab="about"]) .view-about,
+        .dashboard-grid:not([data-active-tab="portfolio"]) .view-portfolio,
+        .dashboard-grid:not([data-active-tab="arcade"]) .view-arcade,
+        .dashboard-grid:not([data-active-tab="contact"]) .view-contact {
+            transform: translateX(-20px);
+            z-index: 1;
+        }
+
+        /* 5. INTERACTIONS */
+        .wireframe-img {
+            max-width: 100%;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .wireframe-img:hover {
+            transform: scale(1.15);
+            z-index: 20;
+            position: relative;
+        }
+
+        .top-left .view-portfolio {
+            padding: 0;
+        }
+
+        .top-left .view-portfolio .wireframe-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+        }
+        
+        /* Map Hover Effect */
+        .hover {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hover h2 {
+            transform-origin: top left;
+            transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .hover .hover_inner {
+            position: absolute;
+            top: 0rem;
+            left:0rem;
+            right: -1rem;
+            bottom: -1rem;
+            transform-origin: 100px 0px;
+            transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .hover .hover_inner video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hover:hover .hover_inner {
+            transform: scale(1.25) rotate(-12deg);
+        }
+
+        .hover:hover h2 {
+            transform: rotate(25deg);
+        }
+
+        /* Helper styles for specific content */
+        #portfolio-what-i-did-container h3,
+        #portfolio-tools-container h3 {
+            display: none;
+        }
+
+        /* Scrollbar styles for the project list */
+        .view-portfolio::-webkit-scrollbar {
+            width: 8px;
+        }
+        .view-portfolio::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .view-portfolio::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+        .view-portfolio::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 6. LOGO */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0 0 0;
+            width: 100%;
+        }
+        
+        .logo-container svg {
+            width: 120px;
+            fill: #fff;
+        }
+
+        /* 7. EXTRACTED INLINE STYLES */
+        .logo-svg {
+            enable-background: new 0 0 256 179.5;
+        }
+
+        .video-overlay {
+            position: relative;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .bento-heading-primary {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .bento-heading-secondary {
+            margin-bottom: 1rem;
+            font-weight: 300;
+            font-size: 2rem;
+        }
+
+        .flex-start {
+            justify-content: flex-start;
+        }
+
+        .flex-center {
+            justify-content: center;
+        }
+
+        .bio-label {
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .text-margin-lg {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .text-margin-xl {
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .text-block {
+            line-height: 1.6;
+        }
+
+        .scrollable-content {
+            overflow-y: auto;
+            justify-content: flex-start;
+            pointer-events: auto;
+            padding-right: 1rem;
+        }
+
+        .project-content-container {
+            margin-top: 1rem;
+            line-height: 1.6;
+            width: 100%;
+        }
+
+        .social-link-item {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .link-item {
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .handwriting-title {
+            font-family: 'Tonyhandwritting1', cursive, sans-serif;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: normal;
+            letter-spacing: -0.1em;
+            line-height: 0.85em;
+        }
+
+        .quote-author-container {
+            font-size: 0.8rem;
+        }
+
+        .italic-source {
+            font-style: italic;
+        }
+
+        .scrollable-list-content {
+            overflow-y: auto;
+            align-items: stretch;
+            justify-content: flex-start;
+            padding-right: 1rem;
+            pointer-events: auto;
+        }
+
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .flex-align-center-full {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .scrollable-center-content {
+            overflow-y: auto;
+            justify-content: center;
+            pointer-events: auto;
+            padding-right: 1rem;
+        }
+
+        .skill-item {
+            /* margin-bottom: 0.5rem; */
+            line-height: 1.25;
+        }
+
+        .skill-label {
+            font-size: 2rem;
+            font-weight: 100;
+        }
+
+        /* Image Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        #modal-image, #modal-video {
+            max-width: 90%;
+            max-height: 90vh;
+            border: 1.5px solid #fff; /* Cline! Stop removing this style and stop making the corner round! */
+        }
+
+        #modal-iframe {
+            width: 90%;
+            height: 80vh;
+            max-width: 1200px;
+            border: 1.5px solid #fff;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 80px;
+            font-weight: 100;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .view-portfolio .wireframe-img {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .view-portfolio .wireframe-img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Contact Form Styles */
+        textarea[name="message"],
+        input[name="name"],
+        input[name="email"],
+        #contact-submit-btn {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            color: #fff;
+            font-family: inherit;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            outline: none;
+        }
+
+        textarea[name="message"] {
+            resize: none;
+            height: 100%;
+            min-height: 150px;
+        }
+
+        textarea[name="message"]::placeholder,
+        input[name="name"]::placeholder,
+        input[name="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        #contact-submit-btn {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 1rem;
+        }
+
+        #contact-submit-btn:hover {
+            background: #fff;
+            color: #050510;
+        }

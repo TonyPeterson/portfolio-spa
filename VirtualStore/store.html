@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Microsoft VR Store Demo</title>
+    <meta name="description" content="Microsoft VR Store Demo">
+    <meta name="ROBOTS" CONTENT="NOINDEX, NOFOLLOW, NOARCHIVE">
+
+    <!-- MWF styles -->
+    <link rel="stylesheet" type="text/css" href="https://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.19.1/css/mwf-west-european-default.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/master.css">
+
+    <script type="text/javascript" src="assets/js/bundle.js"></script>
+</head>
+
+<body>
+    <!-- Light Box -->
+    <div class="c-dialog f-flow" id="store-overlay" aria-hidden="false">
+        <div role="presentation" tabindex="-1"></div>
+        <div role="dialog" aria-label="Flow" tabindex="-1">
+            <button class="c-glyph glyph-cancel" data-js-dialog-hide aria-label="Close dialog" tabindex="0"></button>
+            <div role="document">
+                <div data-grid="col-12" class="m-area-heading m-banner">
+                    <a href="http://microsoft.com" class="c-logo">
+                        <img class="c-image" src="assets/media/microsoft-logo-42x42.svg" alt="Microsoft Logo" itemscope itemtype="http://schema.org/ImageObject">
+                        <span>Microsoft</span>
+                    </a>
+                    <h1 class="c-heading animate fadeInUp one">Welcome to Microsoft VR</h1>
+                    <h3 class="c-subheading animate fadeIn three">Experience Microsoft products like never before</h3>
+                </div>
+                <section data-grid="container">
+                    <div class="m-panes" data-grid="col-12">
+                        <section>
+                            <div class="m-panes-product-placement-item">
+                                <picture class="c-image">
+                                    <img class="animate fadeIn one" srcset="assets/media/cardboard-white-2.gif" src="assets/media/cardboard-white-2.gif" alt="Mobile VR headset">
+                                </picture>
+                                <div>
+                                    <h3 class="c-heading-3 animate fadeIn one">Mobile Headset</h3>
+                                    <p class="c-paragraph animate fadeIn two">(Recommended)</p>
+                                    <div class="animate fadeIn three">
+                                        <button class="c-call-to-action c-glyph" id="immersive-button">
+                                            <span>ENTER VR STORE</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="m-panes-product-placement-item">
+                                <picture class="c-image">
+                                    <img class="animate fadeIn four" srcset="assets/media/tethered-white.gif" src="assets/media/tethered-white.gif" alt="Mobile VR headset">
+                                </picture>
+                                <div>
+                                    <h3 class="c-heading-3 animate fadeIn five">Tethered Headset</h3>
+                                    <p class="c-paragraph animate fadeIn six">(Experimental)</p>
+                                    <div class=" animate fadeIn seven">
+                                        <button class="c-call-to-action c-glyph" aria-label="Learn more about using a tethered headset">
+                                            <span>LEARN MORE</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="m-panes-product-placement-item">
+                                <picture class="c-image">
+                                    <img class="animate fadeIn eight" srcset="assets/media/devices-white-2.gif" src="assets/media/devices-white-2.gif" alt="Mobile VR headset">
+                                </picture>
+                                <div>
+                                    <h3 class="c-heading-3 animate fadeIn nine">No Headset</h3>
+                                    <p class="c-paragraph animate fadeIn ten">(2D experience)</p>
+                                    <div class="animate fadeIn eleven">
+                                        <button class="c-call-to-action c-glyph" aria-label="Enter 2D store with no headset" id="no-headset-button">
+                                            <span>ENTER 2D STORE</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Lightbox -->
+
+    <a-scene fog="type: linear; color: #a5d2fc; far: 30; near: 7">
+        <a-assets inspector>
+            <!-- Models -->
+            <a-asset-item id="store-walls" src="assets/media/TransitionTest/WallsAndCeiling1.gltf"></a-asset-item>
+            <a-asset-item id="store-floor" src="assets/media/TransitionTest/FloorAndTables3.gltf"></a-asset-item>
+
+            <a-asset-item id="spotlight-obj" src="assets/media/TransitionTest/ProjectorLights1.gltf"></a-asset-item>
+            <a-asset-item id="projector-obj" src="assets/media/TransitionTest/Projector2.gltf"></a-asset-item>
+
+            <a-asset-item id="sliding-wall" src="assets/media/TransitionTest/SlidingWall1.gltf"></a-asset-item>
+            <a-asset-item id="surface-pro-model" src="assets/media/surface-pro-holo/SurfaceProHolo.gltf"></a-asset-item>
+            <a-asset-item id="office-table" src="assets/media/TransitionTest/OfficeTable2.gltf"></a-asset-item>
+            <a-asset-item id="minecraft-scene" src="assets/media/TransitionTest/MinecraftScene2.gltf"></a-asset-item>
+
+            <a-asset-item id="empty-store" src="assets/media/TransitionTest/WhiteRoomBox1.gltf"></a-asset-item>
+            
+            <a-asset-item id="ministore" src="assets/media/TransitionTest/MiniStore1.gltf"></a-asset-item>
+            <a-asset-item id="maze" src="assets/media/TransitionTest/Maze1.gltf"></a-asset-item>
+            
+            <!-- TONYs DAEs --> 
+            <a-asset-item id="mazerz" src="assets/media/TransitionTest/Maze1.dae"></a-asset-item>
+
+            <!-- Images -->
+            <img id="showroom-background" src="assets/media/studio_one.jpg">
+            <img id="store-background" src="assets/media/minecraft-world.png">
+            <img id="officevideo" src="assets/media/OfficeHolo2.gif">
+            <img id="xboxvideo" src="assets/media/halo.gif">
+            <img id="spotlight-img" src="assets/media/TransitionTest/spotlight.png">
+            <img id="shun-placeholder" src="assets/media/office365/shun-placeholder.jpg">
+            <img id="office-collaborate" src="assets/media/office365/office-collaborate.png">
+            <img id="ios-icon" src="assets/media/office365/ios.png">
+            <img id="android-icon" src="assets/media/office365/android.png">
+            <img id="windows-icon" src="assets/media/office365/windows.png">
+            <img id="studio-artist" src="assets/media/studio-artist.jpg">
+            <img id="start-btn" src="assets/media/TransitionTest/Win98StartButton1.png">
+            <img id="curved-surface-menu" src="assets/media/SurfaceCurvedMenuMock2.png">
+
+            <!-- Office365 icons -->
+            <img id="word-icon" src="assets/media/office365/word.png">
+            <img id="excel-icon" src="assets/media/office365/excel.png">
+            <img id="powerpoint-icon" src="assets/tevo@amail.clubmedia/office365/powerpoint.png">
+            <img id="outlook-icon" src="assets/media/office365/outlook.png">
+            <img id="onenote-icon" src="assets/media/office365/onenote.png">
+            <img id="publisher-icon" src="assets/media/office365/publisher.png">
+            <img id="access-icon" src="assets/media/office365/access.png">
+            <img id="onedrive-icon" src="assets/media/office365/onedrive.png">
+            <img id="skpye-icon" src="assets/media/office365/skype.png">
+            <img id="msteams-icon" src="assets/media/office365/msteams.png">
+
+            <!-- Fonts -->
+            <a-mixin id="semiLightFont" text="font: assets/fonts/segoe-ui-semilight.fnt; fontImage: assets/fonts/segoe-ui-semilight.png"></a-mixin>
+            <a-mixin id="semiLightFontGeo" text-geometry="font: assets/fonts/Segoe-UI-Semilight-Regular.json;"></a-mixin>
+
+            <!-- Videos -->
+            <video id="office-shun-video" src="assets/media/OfficeFullVideo1.mp4"></video>
+
+            <!-- Mixins -->
+            <a-mixin id="wall" 
+                static-body 
+                material="side:double; opacity: 0;" 
+                geometry="primitive:box; width: 7.5; height: 1; depth: 0.5;"></a-mixin>
+
+            <a-mixin id="checkpoint" 
+                checkpoint 
+                geometry="primitive:box; depth: 1.6; height: 0.01; width: 1;" 
+                material="opacity: 0; color: #fff;" 
+                animation="property: material.opacity; from: 0; to: 0.5; dur: 200; startEvents:mouseenter;" 
+                animation__2="property: material.opacity; from: 0.5; to: 0; dur: 200; startEvents:mouseleave;"></a-mixin>
+
+            <a-mixin id="staticBody" 
+                static-body 
+                geometry="primitive: box; depth: 1.6; height: 0.8; width: 1.2" 
+                material="opacity:0;"></a-mixin>
+
+            <a-mixin id="wallStaticBody" geometry="depth: 0.15; height:3; width: 12"></a-mixin>
+
+            <a-mixin id="linkHoverAnimation" 
+                animation="property: scale; from: 1 1 1; to: 1.1 1.1 1; dur: 200; startEvents:mouseenter;" 
+                animation__2="property: scale; from: 1.1 1.1 1; to: 1 1 1; dur: 200; startEvents:mouseleave;"></a-mixin>
+            
+            <a-mixin id="linkHoverAnimationEnter" 
+                attribute="scale" 
+                dur="200" 
+                to="1.1 1.1 1.1" 
+                from="1 1 1" 
+                begin="mouseenter"></a-mixin>
+
+            <a-mixin id="linkHoverAnimationLeave" 
+                attribute="scale" 
+                dur="200" 
+                to="1 1 1" 
+                from="1.1 1.1 1.1" 
+                begin="mouseleave"></a-mixin>
+
+            <a-mixin id="menuButton" 
+                text="color:#fff; align: center; width: 1.75;" 
+                geometry="primitive:plane;height:0.25;width:0.85;" 
+                material="color:#0078D7;"></a-mixin>
+
+            <a-mixin id="panelMenuButton"
+                text="color:#000; align: center; width:0.7; wrapCount:12;"
+                geometry="primitive:plane; height:0.5; width:0.8;"
+                material="color:#C8C8C8; opacity: 0.85;"></a-mixin>
+            
+            <a-mixin id="officeColor"
+                material="color:#DA3B01;"></a-mixin>
+
+            <a-mixin id="floortile" 
+                checkpoint 
+                geometry="primitive:box; depth: 1; height: 0.01; width: 1;" 
+                material="opacity: 0;"></a-mixin>
+
+            <a-mixin id="msLogoTile" 
+                geometry="depth:0.025; height:0.3; width:0.3"></a-mixin>
+
+            <a-mixin id="returnButton"
+                text="value:Return to store; color:#000; wrapCount:14; align: center; side:double;" 
+                geometry="primitive: plane; height: 0.1; width: 0.5;" 
+                material="opacity: 0;" 
+                position="-3.37 1.5 0" 
+                rotation="0 90 0"></a-mixin>
+
+            <!-- Templates -->
+            <script type="text/html" id="modelAndMenu">
+                <a-entity id="${id}" collada-model="${model}" position="${positionmodel}" rotation="${rotationmodel}"></a-entity>
+
+                <a-entity rotation="${rotationmenu}" position="${positionmenu}" product-menu="target:#${id}">
+                    <a-entity mixin="semiLightFont linkHoverAnimation" product-orbit-link id="${id}-orbit" text="value:Orbit; color:#fff; wrapCount:7; align: center; side:double;" geometry="primitive: plane; height: 0.1; width: 0.25;" material="opacity:0;" position="0 0 0"></a-entity>
+                    <a-entity mixin="semiLightFont linkHoverAnimation" product-animate-link id="${id}-animate" text="value:Animate; color:#fff; wrapCount:7; align: center; side:double;" geometry="primitive: plane; height: 0.1; width: 0.25;" material="opacity:0;" position="0.275 0 0"></a-entity>
+                </a-entity>
+            </script>
+
+            <script id="videoWall" type="text/html">
+                <a-entity position="${position}">
+                    <a-entity scale="2.55 1.48 0.09" geometry="" material="color:#282828"></a-entity>
+                    <a-entity position="0 0 0.05" scale="0.15 0.15 0.01" geometry="primitive:plane;height:9;width:16" material="side:front;${video}"></a-entity>
+                </a-entity>
+            </script>
+
+            <script id="floorTileRow" type="text/html">
+                <a-entity layout="type: line;" rotation="0 90 0">
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                    <a-entity mixin="floortile"></a-entity>
+                </a-entity>
+            </script>
+
+            <script id="officeIcon" type="text/html">
+                <a-entity
+                    id="${id}-border"
+                    mixin="officeColor"
+                    geometry="primitive: plane; width: 0.3; height: 0.3;"
+                    position="0 0 -0.01"
+                    scale="0 0 0">
+                    <a-animation 
+                        attribute="scale" 
+                        from="0 0 0" 
+                        to="1 1 1" 
+                        dur="350"  
+                        easing="ease" 
+                        begin="enter"
+                        end="leave"></a-animation>
+                    <a-animation 
+                        attribute="scale" 
+                        to="0 0 0" 
+                        from="1 1 1" 
+                        dur="350"  
+                        easing="ease" 
+                        begin="leave"></a-animation>
+                </a-entity>
+                <a-image src="${src}"
+                    width="0.25"
+                    height="0.25"
+                    event-proxy__enter="listen: mouseenter; target: #${id}-border; emit: enter;"
+                    event-proxy__leave="listen: mouseleave; target: #${id}-border; emit: leave;"></a-image>
+                <a-entity mixin="semiLightFont" 
+                    text="value:${txt}; color:#000; align: center; width: 1.25;"
+                    position="0 -0.2 0"></a-entity>
+                <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+            </script>
+
+            <script id="mobileIcon" type="text/html">
+                <a-entity
+                    id="${txt}-icon"
+                    mixin="officeColor"
+                    geometry="primitive: plane; width: 0.75; height: 0.75;"
+                    scale="0 0 0">
+                    <a-animation 
+                        attribute="scale" 
+                        from="0 0 0" 
+                        to="1 1 1" 
+                        dur="350"  
+                        easing="ease" 
+                        begin="enter"></a-animation>
+                    <a-animation 
+                        attribute="scale" 
+                        to="0 0 0" 
+                        from="1 1 1" 
+                        dur="350"  
+                        easing="ease" 
+                        begin="leave"></a-animation>
+                </a-entity>
+                <a-image src="${src}"
+                    width="0.5"
+                    height="0.5"
+                    position="0 0.075 0.05"
+                    event-proxy__enter="listen: mouseenter; target: #${txt}-icon, #${txt}-icon-text; emit: enter;"
+                    event-proxy__leave="listen: mouseleave; target: #${txt}-icon, #${txt}-icon-text; emit: leave;"></a-image>
+                <a-entity id="${txt}-icon-text"
+                    mixin="semiLightFont" 
+                    text="value:${txt}; color:#000; align: center; width: 2.25;"
+                    position="0 -0.25 0">
+                    <a-animation 
+                        attribute="text.color" 
+                        from="#000" 
+                        to="#fff" 
+                        dur="350"  
+                        easing="ease" 
+                        begin="enter"></a-animation>
+                    <a-animation 
+                        attribute="text.color" 
+                        to="#000" 
+                        from="#fff" 
+                        dur="350"  
+                        easing="ease" 
+                        begin="leave"></a-animation>
+                </a-entity>
+                <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+            </script>
+
+            <script id="hotspot" type="text/html">
+                <a-entity id="hotspot-${product}" 
+                    position="${position}"
+                    rotation="${rotation}"
+                    geometry="primitive:torus; radius:0.03; radiusTubular:0.004;" 
+                    material="side: double; color: #0078D7; opacity: 0.75;">
+                    <a-animation 
+                        attribute="scale" 
+                        from="1 1 1" 
+                        to="1.1 1.1 1.1" 
+                        dur="500" 
+                        repeat="indefinite" 
+                        direction="alternate" 
+                        easing="ease" 
+                        begin="${product}enter" 
+                        end="${product}leave"></a-animation>
+                    <a-animation 
+                        attribute="scale" 
+                        to="1 1 1" 
+                        dur="200" 
+                        easing="ease" 
+                        begin="${product}leave"></a-animation>
+                </a-entity>
+            </script>
+
+            <!-- Surface Studio Models -->
+            <a-asset-item id="studio-tower-base" src="assets/media/surface-studio/TowerBase.gltf"></a-asset-item>
+            <a-asset-item id="studio-motherboard" src="assets/media/surface-studio/Motherboard.gltf"></a-asset-item>
+            <a-asset-item id="studio-tower-cap" src="assets/media/surface-studio/TowerCap.gltf"></a-asset-item>
+            <a-asset-item id="studio-l-arm" src="assets/media/surface-studio/L_Arm.gltf"></a-asset-item>
+            <a-asset-item id="studio-r-arm" src="assets/media/surface-studio/R_Arm.gltf"></a-asset-item>
+            <a-asset-item id="studio-lcd" src="assets/media/surface-studio/LCD.gltf"></a-asset-item>
+            <a-asset-item id="studio-monitor-back" src="assets/media/surface-studio/MonitorBack.gltf"></a-asset-item>
+
+            <a-asset-item id="studio-pen" src="assets/media/surface-studio/Pen.gltf"></a-asset-item>
+            <a-asset-item id="studio-keyboard" src="assets/media/surface-studio/Keyboard.gltf"></a-asset-item>
+            <a-asset-item id="studio-mouse" src="assets/media/surface-studio/Mouse.gltf"></a-asset-item>
+
+            <a-asset-item id="studio-dial-cap" src="assets/media/surface-studio/DialCap.gltf"></a-asset-item>
+            <a-asset-item id="studio-dial-base" src="assets/media/surface-studio/DialBase.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity light="type: directional; color: #FFF; intensity: 0.3" position="0 1 1"></a-entity>
+
+        <a-entity id="store-main" visible="true">
+            <!-- Sky -->
+            <a-sky src="#store-background"></a-sky>
+
+            <!-- White store model -->
+            <a-entity id="empty-store-drop" 
+                gltf-model="#empty-store"
+                position="0 0.005 0"
+                visible="false"
+                transition-element>
+                <a-animation attribute="visible" 
+                    begin="roomTransition" 
+                    to="true"
+                    delay="1000"></a-animation>
+                <a-animation attribute="visible" 
+                    begin="roomReturn" 
+                    to="false"
+                    delay="1000"></a-animation>
+            </a-entity>
+
+            <!-- Collision floor -->
+            <a-entity id="collision-floor" 
+                static-body 
+                position="0 -0.28 0" 
+                geometry="depth: 60; height: 0.5; width: 60" 
+                material="opacity:0.9; color: #333;"></a-entity>
+                
+            <a-entity id="hidden-floor-1" 
+                static-body 
+                position="0 -4 0" 
+                geometry="depth: 80; height: 0.5; width: 80" 
+                material="opacity:1; color: #fff;"></a-entity>
+
+            <!-- Collision tables -->
+            <a-entity id="collision-tables"
+                transition-element>
+                <a-animation 
+                    attribute="position" 
+                    from="0 0 0" 
+                    to="0 10 0" 
+                    dur="1" 
+                    easing="linear" 
+                    begin="roomTransition"></a-animation>
+                <a-animation 
+                    attribute="position" 
+                    from="0 10 0" 
+                    to="0 0 0" 
+                    dur="1" 
+                    easing="linear" 
+                    begin="roomReturn"></a-animation>
+
+                <a-entity id="deals-collide" 
+                    mixin="staticBody" 
+                    position="0.04 0.38 4.12" 
+                    geometry="depth:0.5; height: 0.9; width:0.55;"></a-entity>
+                <a-entity id="surface-collide" 
+                    mixin="staticBody" 
+                    position="-3.01 0.4 1.99"></a-entity>
+                <a-entity id="partner-collide" 
+                    mixin="staticBody" 
+                    position="3.02 0.4 1.99"></a-entity>
+                <a-entity id="office-collide" 
+                    mixin="staticBody"
+                    position="2.7 0.42 -1" 
+                    geometry="depth:1.19; 
+                    width:0.5;"></a-entity>
+                <a-entity id="xbox-collide" 
+                    mixin="staticBody" 
+                    position="-3 0.44 -1"></a-entity>
+            </a-entity>
+
+            <!-- Collision walls -->
+            <!-- <a-entity id="sliding-wall-collide"
+                    mixin="staticBody wallStaticBody"
+                    position="0.01 1.25 -4.42"
+                    geometry="width:2.6; depth:0.6;"></a-entity> -->
+            <a-entity id="collide-wall-logo-l"
+                mixin="staticBody wallStaticBody" 
+                position="-3.33 1.26 -4.8" 
+                geometry="width:4"></a-entity>
+                <a-entity id="collide-wall-logo-r"
+                mixin="staticBody wallStaticBody" 
+                position="3.33 1.26 -4.8" 
+                geometry="width:4"></a-entity>
+            <a-entity id="collide-wall-n1"
+                mixin="staticBody wallStaticBody" 
+                position="3.65 1.26 -6"
+                geometry="width:4.7"></a-entity>
+            <a-entity id="collide-wall-n2"
+                mixin="staticBody wallStaticBody" 
+                position="-3.65 1.26 -6"
+                geometry="width:4.7"></a-entity>
+            <a-entity id="collide-wall-oppositedoor"
+                mixin="staticBody wallStaticBody" 
+                position="-1.22 1.26 -5.82"
+                rotation="0 90 0"
+                geometry="width:3.37"></a-entity>
+            <a-entity id="collide-wall-nexttodoor"
+                mixin="staticBody wallStaticBody" 
+                position="1.346 1.26 -5.08"
+                rotation="0 90 0"
+                geometry="width:1.87"></a-entity>
+            <a-entity id="collide-wall-s"
+                mixin="staticBody wallStaticBody" 
+                position="0 1.26 6.1"></a-entity>
+            <a-entity id="collide-wall-e"
+                mixin="staticBody wallStaticBody" 
+                position="6 1.26 0" 
+                rotation="0 90 0"></a-entity>
+            <a-entity id="collide-wall-w"
+                mixin="staticBody wallStaticBody" 
+                position="-6 1.26 0" 
+                rotation="0 90 0"></a-entity>
+
+            <!-- Store walls and ceiling -->
+            <a-entity transition-element 
+                position="0 0 0">
+                <a-animation 
+                    attribute="position" 
+                    from="0 0 0" 
+                    to="0 10 0" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomTransition"></a-animation>
+                <a-animation 
+                    attribute="position" 
+                    to="0 0 0" 
+                    from="0 10 0" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomReturn"></a-animation>
+
+                <!-- Store walls and ceiling model -->
+                <a-entity id="store-wall-drop" gltf-model="#store-walls"></a-entity>
+
+                <!-- Glass Wall -->
+                <a-entity id="glasswall" 
+                    transition-element 
+                    position="0 1.4 6" 
+                    scale="12 3 0.01" 
+                    material="opacity:0.333; metalness:0.333; roughness:0.333; color:#ddd; sphericalEnvMap:https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" 
+                    geometry="mergeTo:null"></a-entity>
+
+                <!-- Sliding menu -->
+                <a-entity id="sliding-menu">
+                    <a-entity id="sliding-wall-drop" gltf-model="#sliding-wall"></a-entity>
+                    <a-entity id="sliding-wall-collide" 
+                        mixin="staticBody wallStaticBody" 
+                        position="0.01 1.25 -4.23" 
+                        geometry="width:2.6; depth:0.2;"></a-entity>
+                    <a-animation 
+                        attribute="position" 
+                        from="0 0 0" 
+                        to="0 0 -1.8" 
+                        dur="2000" 
+                        easing="ease-quart" 
+                        begin="startClicked"></a-animation>
+                    <a-animation 
+                        attribute="position" 
+                        to="0 0 0" 
+                        dur="2000" 
+                        easing="ease-quart" 
+                        begin="closeClicked"></a-animation>
+                    <a-animation 
+                        attribute="position" 
+                        to="0 0 -3.3" 
+                        dur="2000" 
+                        easing="ease-quart" 
+                        begin="push2"></a-animation>
+
+                    <!-- MS Wall -->
+                    <a-entity position="0 0 -4.1">
+                        <a-entity mixin="semiLightFont" 
+                            text="value:Hello Benson; color:#000; align: center; width: 3;" 
+                            position="0 2.44 0"></a-entity>
+
+                        <a-entity id="ms-logo" position="-0.1625 2 0">
+                            <a-entity id="ms-logo-red" 
+                                mixin="msLogoTile" 
+                                material="color:#F35325;"></a-entity>
+                            <a-entity id="ms-logo-green" 
+                                mixin="msLogoTile" 
+                                position="0.325 0 0" 
+                                material="color:#81BC06;"></a-entity>
+                            <a-entity id="ms-logo-blue" 
+                                mixin="msLogoTile" 
+                                position="0 -0.325 0" 
+                                material="color:#05A6F0;"></a-entity>
+                            <a-entity id="ms-logo-yellow" 
+                                mixin="msLogoTile" 
+                                position="0.325 -0.325 0" 
+                                material="color:#FFBA08;"></a-entity>
+                            <a-entity id="ms-logo-text" 
+                                mixin="semiLightFontGeo" 
+                                position="-0.15 -0.68 0" 
+                                scale="1 1 0.2" 
+                                text-geometry="value: Microsoft; size: 0.11;" 
+                                material="color: #000;"></a-entity>
+                        </a-entity>
+
+                        <a-entity mixin="semiLightFont" 
+                            text="value:Get started; color:#000; align: center; width: 2;" 
+                            geometry="primitive:plane;height:0.25;width:1;" 
+                            material="color:#e3e3e3;" 
+                            position="0 1 0"
+                            event-proxy__click="listen: click; target: #sliding-wall-drop; emit: startClicked;">
+                            <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                            <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                        </a-entity>
+                    </a-entity>
+                </a-entity>
+
+                <a-entity id="hidden-menu" position="0 2 -4.5">
+                    <a-entity mixin="semiLightFont menuButton" 
+                        text="value: Close;" 
+                        position="0.45 0 0" 
+                        event-proxy__click="listen: click; target: #sliding-wall-drop; emit: closeClicked;">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont menuButton" 
+                        text="value: Support;" 
+                        position="-0.45 -0.3 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont menuButton" 
+                        text="value: Share;" 
+                        position="0.45 -0.3 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont menuButton" 
+                        text="value: Profile;" 
+                        position="-0.45 -0.6 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont menuButton" 
+                        text="value: Cart;" 
+                        position="0.45 -0.6 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont menuButton" 
+                        text="value: Push;" 
+                        position="0.45 -0.9 0"
+                        event-proxy__click="listen: click; target: #sliding-wall-drop; emit: push2;">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                </a-entity>
+                
+                <!-- Office projector -->
+                <a-entity id="office-projector-drop" 
+                    gltf-model="#projector-obj"></a-entity>
+                <a-entity id="office-projector-light" 
+                    gltf-model="#spotlight-obj" 
+                    spotlight="color:#6ff; opacity: 0.2"></a-entity>
+                <a-entity id="office-video" 
+                    position="3.38 1.5 -0.97" 
+                    scale="0.3 0.3 1" 
+                    rotation="0 -90 0" 
+                    geometry="primitive:plane; width:3.44; height:5.25;" 
+                    material="side:double; shader:gif; src:#officevideo; opacity: 0.85;"></a-entity>
+            </a-entity>
+
+            <a-entity>
+                <a-animation
+                    attribute="position"
+                    from="0 0 0"
+                    to="0 -10 0"
+                    dur="1000"
+                    easing="linear"
+                    begin="roomTransition"></a-animation>
+                <a-animation
+                    attribute="position"
+                    to="0 0 0"
+                    from="0 -10 0"
+                    dur="1000"
+                    easing="linear"
+                    begin="roomReturn"></a-animation>
+
+                <!-- Store floor and tables model -->
+                <a-entity id="store-floor-drop" 
+                    gltf-model="#store-floor"
+                    transition-element
+                    position="0 0 0"></a-entity>
+
+                <!-- Outside scene -->
+                <a-entity gltf-model="#minecraft-scene"></a-entity>
+                <a-entity id="maze-gltf" gltf-model="#maze" position="0 -0.73 0"></a-entity>
+                <a-entity id="start-button" 
+                    position="-0.61 -2.5 -15.2" 
+                    rotation="0 180 0" 
+                    geometry="primitive:plane; width:0.9; height:0.65" 
+                    material="src:#start-btn; repeat:1 1; opacity: 0.7;"></a-entity>
+           
+                <!-- TONYs DAEs --> 
+
+            </a-entity>
+
+            <!-- Products -->
+            <!-- Surface Studio -->
+<!--        COMMENTED OUT TO REMOVE MOUSEENTER EVENT
+            <a-entity id="surface-model-drop" 
+                product-showroom="room: #surface-studio-room; hide: #hotspot-surface; moveProduct: true;" 
+                position="-2.79 1.08 1.99" 
+                rotation="0 90 0" 
+                event-proxy__surfaceenter="listen: mouseenter; target: #hotspot-surface, #base-arm-pivot; emit: surfaceenter;" 
+                event-proxy__surfaceleave="listen: mouseleave; target: #hotspot-surface; emit: surfaceleave;">
+-->
+                
+            <a-entity id="surface-model-drop" 
+                product-showroom="room: #surface-studio-room; hide: #hotspot-surface; moveProduct: true;" 
+                position="-2.79 1.08 1.99" 
+                rotation="0 90 0">
+
+                <a-entity position="0 -0.23 -0.15">
+
+                    <a-entity id="base-arm-pivot" rotation="35 0 0">
+                        <!-- Rotate arms and monitor -->
+                        <a-animation 
+                            attribute="rotation" 
+                            from="35 0 0" 
+                            to="80 0 0" 
+                            dur="1000" 
+                            direction="alternate" 
+                            repeat="1" 
+                            easing="linear" 
+                            begin="surfaceenter"></a-animation>
+
+                        <a-entity id="arm-monitor-pivot" position="0 0.23 0">
+                            <a-entity position="0 -0.235 0">
+                                <a-entity gltf-model="#studio-l-arm" position="-0.13 0 0"></a-entity>
+                                <a-entity gltf-model="#studio-r-arm" position="0.13 0 0"></a-entity>
+                            </a-entity>
+
+                            <a-entity id="surface-studio-monitor" rotation="-50 0 0">
+                                <!-- Rotate monitor -->
+                                <a-animation 
+                                    attribute="rotation" 
+                                    from="-50 0 0" 
+                                    to="-160 0 0" 
+                                    dur="1000" 
+                                    direction="alternate" 
+                                    repeat="1" 
+                                    easing="linear" 
+                                    begin="surfaceenter"></a-animation>
+
+                                <a-entity template="src: #hotspot"
+                                    data-product="surface"
+                                    data-position="-0.31 0.32 0.02"
+                                    data-rotation="0 0 0"></a-entity>
+
+                                <a-entity gltf-model="#studio-lcd"></a-entity>
+                                <a-entity gltf-model="#studio-monitor-back"></a-entity>
+                            </a-entity>
+                        </a-entity>
+                    </a-entity>
+
+                    <a-entity id="surface-studio-base" position="0 -0.02 0.09">
+                        <a-entity gltf-model="#studio-tower-base" visible="false"></a-entity>
+                        <a-entity gltf-model="#studio-motherboard" visible="false"></a-entity>
+                        <a-entity gltf-model="#studio-tower-cap"></a-entity>
+                    </a-entity>
+                </a-entity>
+
+                <a-entity id="surface-studio-accessories" position="0 -0.24 0.29">
+                    <a-entity gltf-model="#studio-pen" position="0.44 0 0"></a-entity>
+                    <a-entity gltf-model="#studio-keyboard"></a-entity>
+                    <a-entity gltf-model="#studio-mouse" position="0.33 0 0"></a-entity>
+                    <a-entity id="surdace-studio-dial" position="-0.33 0 0">
+                        <a-entity gltf-model="#studio-dial-cap"></a-entity>
+                        <a-entity gltf-model="#studio-dial-base"></a-entity>
+                    </a-entity>
+                </a-entity>
+
+                <a-animation attribute="position" from="-2.79 1.08 1.99" to="-2.68 -9.26 2.01" dur="1000" easing="linear" begin="roomTransition"></a-animation>
+                <a-animation attribute="position" to="-2.79 1.08 1.99" from="-2.68 -9.26 2.01" dur="1000" easing="linear" begin="roomReturn"></a-animation>
+            </a-entity>
+
+            <!-- Office -->
+            <a-entity id="office-wrapper"
+                product-showroom="room: #office-room; video: #office-shun-video; hide: #hotspot-office, #office-table-drop;"
+                event-proxy__officeenter="listen: mouseenter; target: #hotspot-office; emit: officeenter;" 
+                event-proxy__officeleave="listen: mouseleave; target: #hotspot-office; emit: officeleave;">
+                <a-animation 
+                    attribute="position" 
+                    from="0 0 0" 
+                    to="0 -10 0" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomTransition"></a-animation>
+                <a-animation 
+                    attribute="position" 
+                    to="0 0 0" 
+                    from="0 -10 0" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomReturn"></a-animation>
+
+                <a-entity template="src: #hotspot"
+                    data-product="office"
+                    data-position="2.41 0.84 -1.6"
+                    data-rotation="0 90 0"></a-entity>
+
+                <a-entity id="office-table-drop"
+                    gltf-model="#office-table"></a-entity>
+            </a-entity>
+
+            <a-entity id="office-room" 
+                visible="false"
+                position="0 0 0"
+                rotation="0 90 0">
+                <a-entity id="office-room-panel1"
+                    position="3.75 2 0"
+                    rotation="0 -90 0">
+                    <a-video id="office-shun-video-drop" 
+                        src="#office-shun-video"
+                        video-controls
+                        width="16" 
+                        height="9"
+                        scale="0.15 0.15 0.15"></a-video>
+                    <!-- <a-image src="#shun-placeholder"
+                        width="16" 
+                        height="9"
+                        scale="0.15 0.15 0.15"></a-image> -->
+                    <a-entity mixin="semiLightFont" 
+                        text="value:See options for:; color:#000; align: center; width: 2;" 
+                        position="0 -0.765 0"></a-entity>
+                    <a-entity mixin="semiLightFont menuButton officeColor" 
+                        text="value: Office for home;" 
+                        position="-0.9 -1 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont menuButton officeColor" 
+                        text="value: Office for business;" 
+                        position="0 -1 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont menuButton officeColor" 
+                        text="value: Office for education;" 
+                        position="0.9 -1 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Plans & pricing;"
+                        position="1.7 0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: What is Office 365;"
+                        position="1.7 0 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Compatibility;"
+                        position="1.7 -0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Create;"
+                        position="-1.7 0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Collaborate;"
+                        position="-1.7 0 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Compare;"
+                        position="-1.7 -0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                    </a-entity>
+                </a-entity>
+
+                <a-entity id="office-room-panel2"
+                    position="0 2 3.75"
+                    rotation="0 180 0">
+                    <a-entity mixin="semiLightFont" 
+                        text="value:Collaborate with anyone, anywhere; color:#000; align: center; width: 2;" 
+                        position="0 0.685 0"></a-entity>
+                    <a-image src="#office-collaborate"
+                        width="16" 
+                        height="9"
+                        scale="0.125 0.125 0.125"
+                        position="0 -0.1 0"></a-image>
+                    <a-entity id="office-icons"
+                        layout="type: line; margin: 0.36;"
+                        position="-1.26 -1 0">
+                        <a-entity template="src: #officeIcon" 
+                            data-id="word"
+                            data-src="#word-icon"
+                            data-txt="Word"></a-entity>
+                        <a-entity template="src: #officeIcon"
+                            data-id="excel"
+                            data-src="#excel-icon"
+                            data-txt="Excel"></a-entity>
+                        <a-entity template="src: #officeIcon" 
+                            data-id="powerpoint"
+                            data-src="#powerpoint-icon"
+                            data-txt="PowerPoint"></a-entity>
+                        <a-entity template="src: #officeIcon"
+                            data-id="outlook"
+                            data-src="#outlook-icon"
+                            data-txt="Outlook"></a-entity>
+                        <a-entity template="src: #officeIcon"
+                            data-id="onenote"
+                            data-src="#onenote-icon"
+                            data-txt="OneNote"></a-entity>
+                        <a-entity template="src: #officeIcon"
+                            data-id="access"
+                            data-src="#access-icon"
+                            data-txt="Access"></a-entity>
+                        <a-entity template="src: #officeIcon"
+                            data-id="publisher"
+                            data-src="#publisher-icon"
+                            data-txt="Publisher"></a-entity>
+                        <a-entity template="src: #officeIcon"
+                            data-id="teams"
+                            data-src="#msteams-icon"
+                            data-txt="Microsoft Teams"></a-entity>
+                    </a-entity>
+                </a-entity>
+
+                <a-entity id="office-room-panel3"
+                    position="0 2 -3.75">
+                    <a-entity mixin="semiLightFont" 
+                        text="value:Office mobile apps; color:#000; align: center; width: 2;" 
+                        position="0 0 0.05"></a-entity>>
+                    <a-entity 
+                        geometry="primitive:plane; height:1.5; width:2.75;" 
+                        material="color:#767676;" 
+                        position="0 -0.5 -0.05"></a-entity>
+                    <a-entity id="mobile-icons"
+                        layout="type: line; margin: 0.75;"
+                        position="-0.75 -0.57 0.05">
+                        <a-entity template="src: #mobileIcon" 
+                            data-src="#ios-icon"
+                            data-txt="iOS"></a-entity>
+                        <a-entity template="src: #mobileIcon" 
+                            data-src="#android-icon"
+                            data-txt="Android"></a-entity>
+                        <a-entity template="src: #mobileIcon" 
+                            data-src="#windows-icon"
+                            data-txt="Windows"></a-entity>
+                    </a-entity>
+                </a-entity>
+                
+                <!-- TONYs DAEs --> 
+                <a-entity id="ministore-drop" 
+                    position="-3.4 0.92 0" 
+                    scale="0.5 0.5 0.5" 
+                    gltf-model="#ministore">
+                    <a-animation attribute="rotation"
+                       dur="5000"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"></a-animation>
+                </a-entity>
+
+                <a-entity id="office-return-to-store" 
+                    mixin="semiLightFont returnButton" 
+                    return-to-store="room: #office-room; target: #office-wrapper; video: #office-shun-video; show: #hotspot-office, #office-table-drop;">
+                    <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                    <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                </a-entity>
+                
+                
+            </a-entity>
+
+            <a-entity id="product-room-walls"
+                position="0 -10 0"
+                transition-element>
+                <a-animation
+                    attribute="position" 
+                    from="0 -10 0" 
+                    to="0 0 0" 
+                    dur="1"
+                    begin="roomTransition"></a-animation>
+                <a-animation
+                    attribute="position" 
+                    to="0 -10 0" 
+                    from="0 0 0" 
+                    dur="1"
+                    begin="roomReturn"></a-animation>
+                <a-entity mixin="wall"
+                    position="0 0 3.75"></a-entity>
+                <a-entity mixin="wall"
+                    position="0 0 -3.75"></a-entity>
+                <a-entity mixin="wall"
+                    rotation="0 90 0"
+                    position="3.75 0 0"></a-entity>
+                <a-entity mixin="wall"
+                    rotation="0 90 0"
+                    position="-3.75 0 0"></a-entity>
+            </a-entity>
+
+            <a-entity id="surface-studio-room" visible="false" rotation="0 90 0">
+                <a-entity id="studio-room-panel1"
+                    position="0 1.5 -3.75">
+                    <a-entity id="surface-studio-sign" mixin="semiLightFont" 
+                        text="value:Surface Studio; color:#000; align: center; width: 3.5;" 
+                        position="0 0.85 0"></a-entity>
+<!--
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Tech specs;"
+                        position="-1.7 0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: In the box;"
+                        position="-1.7 0 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Videos;"
+                        position="-1.7 -0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Demos;"
+                        position="1.7 0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: What's new;"
+                        position="1.7 0 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+                    <a-entity mixin="semiLightFont panelMenuButton"
+                        text="value: Compare;"
+                        position="1.7 -0.55 0">
+                        <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                        <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                    </a-entity>
+-->
+                </a-entity>
+
+                <a-entity id="studio-room-panel2"
+                    position="-3.37 1.5 0"
+                    rotation="0 90 0">
+                    <a-image src="#studio-artist"
+                        width="1.919"
+                        height="1.052"
+                        scale="1.25 1.25 1.25"></a-image>
+
+                    <a-entity id="studio-setting-buttons"
+                        layout="type: line; margin: 0.55;"
+                        position="-0.825 -0.9 0">
+                        <a-entity mixin="semiLightFont panelMenuButton"
+                            text="value: Artist loft; width:0.5; color: #fff;"
+                            geometry="height:0.3; width:0.5;"
+                            material="color: #5e5e5e;">
+                            <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                            <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                        </a-entity>
+                        <a-entity mixin="semiLightFont panelMenuButton"
+                            text="value: The city; width:0.5;"
+                            geometry="height:0.3; width:0.5;">
+                            <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                            <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                        </a-entity>
+                        <a-entity mixin="semiLightFont panelMenuButton"
+                            text="value: The office; width:0.5;"
+                            geometry="height:0.3; width:0.5;">
+                            <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                            <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                        </a-entity>
+                        <a-entity mixin="semiLightFont panelMenuButton"
+                            text="value: The family; width:0.5;"
+                            geometry="height:0.3; width:0.5;">
+                            <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                            <a-animation mixin="linkHoverAnimationLeave"></a-animation>    
+                        </a-entity>
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity id="studio-return-to-store" 
+                    mixin="semiLightFont returnButton" 
+                    return-to-store="room: #surface-studio-room; target: #surface-model-drop; show: #hotspot-surface; moveProduct: true;"
+                    rotation="0 180 0"
+                    position="0 1.5 3.75">
+                    <a-animation mixin="linkHoverAnimationEnter"></a-animation>
+                    <a-animation mixin="linkHoverAnimationLeave"></a-animation>
+                </a-entity>
+                
+                <a-curvedimage id="curved-demo" src="#curved-surface-menu" height="2.4" radius="5.9" theta-length="80"
+                 rotation="0 140 0" position="0 1.4 -0.1" scale="0.25 0.25 0.25"></a-curvedimage>
+            </a-entity>
+
+            <a-entity id="surface-pro-holo"
+                transition-element 
+                gltf-model="#surface-pro-model" 
+                position="0.02 1 4.11" 
+                rotation="15 0 15" 
+                material="opacity: 0.5;" 
+                animation__rotate="property: rotation; to: 15 360 15; loop: true; easing: linear; dur: 15000;">
+                <!-- animation__position="property: position; from: 0.05 1.1 4.2; to: 0.05 1.05 4.2; loop: true; dir: alternate; dur: 4000;" -->
+                <a-animation 
+                    attribute="position" 
+                    from="0.02 1 4" 
+                    to="0.02 -9 4" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomTransition"></a-animation>
+                <a-animation 
+                    attribute="position" 
+                    to="0.02 1 4" 
+                    from="0.02 -9 4" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomReturn"></a-animation>
+            </a-entity>
+            
+            <!-- Jump point floor grid -->
+            <a-entity id="floor-grid" layout="type: line;" position="-5.5 0 5.5">
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+                <a-entity template="src: #floorTileRow"></a-entity>
+            </a-entity>
+
+            <!-- Video walls -->
+            <a-entity id="xbox-video" 
+                transition-element 
+                position="-3.1 1.23 -0.97" 
+                scale="0.065 0.067 1" 
+                rotation="0 90 0" 
+                geometry="primitive:plane; width:16; height:9;" 
+                material="side:front; shader:gif; src:#xboxvideo">
+                <a-animation 
+                    attribute="position" 
+                    from="-3.1 1.23 -0.97" 
+                    to="-3.1 -8.77 -0.97" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomTransition"></a-animation>
+                <a-animation 
+                    attribute="position" 
+                    to="-3.1 1.23 -0.97" 
+                    from="-3.1 -8.77 -0.97" 
+                    dur="1000" 
+                    easing="linear" 
+                    begin="roomReturn"></a-animation>
+            </a-entity>
+        </a-entity>
+
+        <!-- Cameras -->
+        <a-entity id="camera" 
+            kinematic-body="radius:0.75" 
+            position="0 1.5 0" 
+            geometry="primitive: sphere; radius:0.74;" 
+            material="color: #fff; opacity: 0; side: double;" 
+            camera="fov:60; active: true;" 
+            movement-controls
+            universal-controls="movementControls: keyboard, gamepad; movementAcceleration: 40;" 
+            checkpoint-controls="mode: animate; animateSpeed: 4">
+
+            <a-animation 
+                attribute="material.opacity" 
+                from="0" 
+                to="1" 
+                dur="1000" 
+                delay="200" 
+                easing="ease-in-out-cubic" 
+                repeat="1" 
+                direction="alternate" 
+                begin="roomTransition"></a-animation>
+
+            <a-entity id="cursor" 
+                cursor="fuse:false" 
+                position="0 0 -0.75" 
+                geometry="primitive: ring; radiusInner: 0.004; radiusOuter: 0.008;" 
+                material="color: #ccc; shader: flat;" 
+                raycaster></a-entity>
+
+            <!-- Hands -->
+            <!-- <a-entity hand-controls="left"></a-entity>
+                <a-entity hand-controls="right"></a-entity> -->
+        </a-entity>
+
+        <a-entity id="camera-orbit" camera="active: false" distance="1"></a-entity>
+
+        <!-- Lights -->
+        <a-light id="ambient-light" type="ambient" intensity="1"></a-light>
+
+    </a-scene>
+
+    <script type="text/javascript">
+        (function() {
+            var immersive = document.getElementById('immersive-button'),
+                noHeadset = document.getElementById('no-headset-button'),
+                overlay = document.getElementById('store-overlay'),
+                scene = document.querySelector('a-scene');
+
+            immersive.addEventListener('click', function() {
+                overlay.setAttribute('aria-hidden', true);
+                document.getElementsByClassName('a-enter-vr')[0].style.display = 'block';
+                if (scene.hasLoaded) {
+                    scene.enterVR();
+                } else {
+                    scene.addEventListener('loaded', function() {
+                        scene.enterVR();
+                    });
+                }
+            });
+
+            noHeadset.addEventListener('click', function() {
+                overlay.setAttribute('aria-hidden', true);
+                document.getElementsByClassName('a-enter-vr')[0].style.display = 'block';
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+{
+    "accessors": {
+        "accessor_21": {
+            "bufferView": "bufferView_29",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 26520,
+            "max": [
+                13259
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_23": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 26520,
+            "max": [
+                21.0567,
+                1.9219,
+                5.70037
+            ],
+            "min": [
+                -21.0567,
+                0.0140098,
+                -5.60065
+            ],
+            "type": "VEC3"
+        },
+        "accessor_25": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 318240,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 26520,
+            "max": [
+                1,
+                0.99421,
+                0.994202
+            ],
+            "min": [
+                -1,
+                -0.994214,
+                -0.999732
+            ],
+            "type": "VEC3"
+        },
+        "accessor_27": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 636480,
+            "byteStride": 8,
+            "componentType": 5126,
+            "count": 26520,
+            "max": [
+                1,
+                0.494081
+            ],
+            "min": [
+                0.5,
+                0.00424123
+            ],
+            "type": "VEC2"
+        }
+    },
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@c5ff32b2d555d43b96ab703fdf0b6695d29fc7d3",
+        "premultipliedAlpha": true,
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.2"
+        },
+        "version": "1.0.1"
+    },
+    "bufferViews": {
+        "bufferView_29": {
+            "buffer": "Keyboard",
+            "byteLength": 53040,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        "bufferView_30": {
+            "buffer": "Keyboard",
+            "byteLength": 848640,
+            "byteOffset": 53040,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "Keyboard": {
+            "byteLength": 901680,
+            "type": "arraybuffer",
+            "uri": "Keyboard.bin"
+        }
+    },
+    "extensionsUsed": [
+        "KHR_materials_common"
+    ],
+    "images": {
+        "SS_A_Albedo_jpg": {
+            "name": "SS_A_Albedo_jpg",
+            "uri": "SS_A_Albedo.jpg"
+        },
+        "noise_png": {
+            "name": "noise_png",
+            "uri": "noise.png"
+        }
+    },
+    "materials": {
+        "SS_A_Mat_001-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": "texture_SS_A_Albedo_jpg",
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 100,
+                        "specular": "texture_noise_png"
+                    }
+                }
+            },
+            "name": "SS_A_Mat_001"
+        }
+    },
+    "meshes": {
+        "Untitled_002-mesh": {
+            "name": "Untitled.002",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_25",
+                        "POSITION": "accessor_23",
+                        "TEXCOORD_0": "accessor_27"
+                    },
+                    "indices": "accessor_21",
+                    "material": "SS_A_Mat_001-effect",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "keyboard_geo": {
+            "children": [],
+            "matrix": [
+                0.01,
+                0,
+                0,
+                0,
+                0,
+                -1.62921e-09,
+                0.01,
+                0,
+                0,
+                -0.01,
+                -1.62921e-09,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "meshes": [
+                "Untitled_002-mesh"
+            ],
+            "name": "keyboard_geo"
+        },
+        "node_1": {
+            "children": [
+                "keyboard_geo"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "Y_UP_Transform"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_1"
+            ]
+        }
+    },
+    "skins": {},
+    "textures": {
+        "texture_SS_A_Albedo_jpg": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "SS_A_Albedo_jpg",
+            "target": 3553,
+            "type": 5121
+        },
+        "texture_noise_png": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "noise_png",
+            "target": 3553,
+            "type": 5121
+        }
+    }
+}

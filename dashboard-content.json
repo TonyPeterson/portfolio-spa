@@ -1,0 +1,441 @@
+{
+  "about": {
+    "top-left-title": "",
+    "top-left-text": "",
+    "bio-label": "who me?",
+    "bio-text-1": "I'm Tony Owen Peterson (TOP), a Seattle-based design leader specializing in prototyping and interaction design. I spent the last decade at Microsoft designing, mentoring, presenting, developing, deploying, collaborating, and cultivating fun across many different teams and orgs.",
+    "bio-text-2": "I lo-lo-love being part of a creative team, whether I'm leading or collaborating to bring complex and sometimes wacky ideas to life. I continue to work in siloed ambiguity as a freelancer but have years of experience leading medium sized creative teams. Do you have a whacky idea you'd like me to help you bring to life?",
+    "bio-title": "What's a Product Designer?",
+    "bio-text-3": "It's a role that looks at the big picture of how people interact with technology. Think of it as a problem-solver who also happens to have deep technical and visual skills. I bridge the gap between understanding what people actually need, designing a beautiful solution, and ensuring it can realistically be built in the real world. I care about both the aesthetics and the underlying logic, ensuring every experience is intuitive, seamless, and packed with delightful surprises.",
+    "social-1": "Instagram ›",
+    "social-2": "LinkedIn ›",
+    "quote-text-html": "There is no greater<br>agony than<br>bearing an untold<br>story inside you.",
+    "quote-author": "- Maya Angelou, ",
+    "quote-source": "I Know Why the Caged Bird Sings",
+    "link-1": "Portfolio ›",
+    "link-2": "Resume ›",
+    "soft-skills-label": "soft skills",
+    "soft-skills-text": "Concise communication | Adaptability | Empathy | Problem-solving | Collaboration",
+    "hard-skills-label": "hard skills",
+    "hard-skills-text-1-label": "Design:",
+    "hard-skills-text-1": " Figma, Adobe XD, Photoshop, Illustrator, InDesign, Premiere, After Effects, Blender",
+    "hard-skills-text-2-label": "Prototyping:",
+    "hard-skills-text-2": " HTML, CSS, JavaScript, React, Vue.js, Git, VSCode, npm, Jekyll, Sass, jQuery",
+    "hard-skills-text-3-label": "User Research:",
+    "hard-skills-text-3": " Usability Testing, A/B Testing, Ethnography, Personas, Surveys",
+    "hard-skills-text-4-label": "Collaboration:",
+    "hard-skills-text-4": " Agile/Scrum, Jira, Confluence, Slack, Project management",
+    "didyouknow-label": "did you know...",
+    "didyouknow-text-1": "Dark themes are more environmental than light themes?",
+    "didyouknow-text-2": "In a vast majority of modern displays, less energy is used when rendering black. In addition, less blue light is emitted from dark websites and prolonged eye strain is reduced.",
+    "hobbies-label": "hobbies",
+    "hobbies-text": "making indie games, playing piano, cooking, gaming, ebiking, vintage tech, d&d"
+  },
+  "portfolio": {
+    "top-left-title": "Portfolio",
+    "top-left-text": "Line-Art",
+    "wireframe-img": "",
+    "bio-title": "Portfolio Showcase",
+    "bio-text": "Huge hero image area for the selected project.",
+    "quote-title": "Project Details",
+    "quote-text": "Scrolling text and case study information.",
+    "projects": [
+      {
+        "title": "Shop in 3D",
+        "content": "<h3>Microsoft 3D Product Portal</h3><p>Amid the upheaval of the global pandemic, Microsoft made the strategic decision to shutter their physical stores, leaving a significant void in the realm of hands-on Microsoft device experiences. The tangible interaction with products is a pivotal aspect of the customer journey, instilling a sense of premium quality. However, with the transition to an online landscape, we sought to enhance the digital experience by transcending the confines of a flat and limited 2D image gallery. The goal was to empower customers to take control of their viewing experience, an ambitious endeavor that required the validation of research and customer feedback through prototyping.</p><h3>In Essence</h3><p>The 'Shop in 3D' experience originally served as a resource for sales associates to deliver immersive demonstrations of the Surface product line. However, Since its launch in April 2021, it has successfully enriched engagement with tens of thousands of enthusiastic customers.</p>",
+        "links": [
+          {
+            "url": "https://top-port.surge.sh/ShopIn3D",
+            "text": "Play with my prototype"
+          },
+          {
+            "url": "https://microsoft.com/en-us/store/shop-in-3d",
+            "text": "Visit the live site"
+          }
+        ],
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://modelviewer.dev/\" target=\"_blank\">Model-Viewer</a> - For rendering 3D models\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For coding the prototype\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://prepros.io/\" target=\"_blank\">Prepros</a> - For running local servers\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and some\r\n                        animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.babylonjs.com/\" target=\"_blank\">Babylon JS</a> - For rendering 3D models\r\n                        with physics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">Git</a> - For version history and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For wireframing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For pre-prototype motion mocks\r\n                    </li></ul>",
+        "what-i-did": "<h3>What I did</h3><p>As one of the two dedicated UX designers and the designated prototyper for this exciting project, my responsibilities spanned the full spectrum of design, from conceptualization and ideation to mock creation and presentation. My mission: to manifest the design team's vision into a captivating, high-fidelity, and interactive prototype—a blueprint that would guide the development efforts of the external company tasked with crafting the customer-facing tool.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "did-you-know": "<p>3D models on the web can increase user engagement by up to 50%.</p>"
+      },
+      {
+        "title": "Project Mio",
+        "content": "<h3>Overview</h3><p>In 2016, a small but passionate team of Microsoft employees embarked on an ambitious mission: to revolutionize coding education by making it engaging and accessible. Fueled by our love for classic platform-style gaming, we conceived Project Mio, a groundbreaking initiative aimed at teaching JavaScript without overwhelming or boring learners.</p><h3>Impact</h3><p>The apex of our journey culminated in a memorable middle school coding day challenge, where our team presented Project Mio to hundreds of students. We not only showcased the game but also offered students within our target demographic the opportunity to experience it firsthand and provide valuable feedback.</p>",
+        "links": [],
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://phaser.io/\" target=\"_blank\">Phaser</a> - The HTML5 game engine\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For writing Javascript\r\n                        and developing levels\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">GitHub</a> - For version control and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For level design and concept art\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For asset refinement\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For animated motion asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound compsition\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.bfxr.net/\">BFXR</a> - For sound design\r\n                    </li></ul>",
+        "what-i-did": "<h3>My Role</h3><p>Within our close-knit Product Lab team, consisting of just five members, I assumed the pivotal role of Game Designer and Developer. My responsibilities encompassed conceiving and crafting engaging levels and puzzles using the Phaser game engine as our canvas. I played a crucial role in transforming our conceptual ideas into tangible game elements, coding them directly in JavaScript within the Phaser framework.</p>",
+        "role": "<p>Game Developer & Designer</p>",
+        "did-you-know": "<p>The Konami code was created by Kazuhisa Hashimoto because he found Gradius too hard to play during testing.</p>"
+      },
+      {
+        "title": "Terra Mine Diver",
+        "content": "<h3>A nostalgic adventure game for the Playdate</h3><p>Your coworkers are going missing! Explore the haunted depths of an off-world mine in Terra Mine Diver, a game designed and developed exclusively for the Playdate handheld console. This unique experience blends classic exploration and puzzle-solving with innovative crank-powered mechanics, all wrapped in a charming 1-bit aesthetic.</p><h3>Unearthing the fun</h3><h4>Creative constraints</h4><ul class=\"white standard margin-left\"><li>low-resolution display</li>\r\n                    <li>Limited color palette</li>\r\n                    <li>Quirky crank controls</li>\r\n                    <li>Tiny filesize</li></ul><p>Inspired by the Playdate's distinctive hardware, I embraced the creative constraints. This allowed me to craft a truly unique gameplay experience where players utilize the crank to solve intricate puzzles and uncover the secrets hidden within the mine.</p><h3>Digging Deeper</h3><p>From the initial story concept and level design to the pixel-perfect visuals, engaging puzzles, and catchy chiptune soundtrack, I meticulously crafted every aspect of Terra Mine Diver using Lua - the same programming language used in Roblox. This project was a labor of love, showcasing my passion for game development and my ability to transform limitations into exciting opportunities.</p>",
+        "links": [
+          {
+            "url": "https://tonypeterson.itch.io/terraminediver",
+            "text": "See it on Itch.io"
+          }
+        ],
+        "role": "<p>Game Developer & Designer</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>The Playdate console has a black-and-white 1-bit screen that does not have a backlight.</p>"
+      },
+      {
+        "title": "CSO Showreel",
+        "content": "<h3>2023 Video Montage</h3><p>In a dynamic design organization comprising more than 30 skilled designers, the landscape is constantly evolving. I undertook the exciting challenge of crafting a comprehensive compilation video that highlights the remarkable achievements of my team throughout FY23.</p><h3>Collaborating Cross Pod</h3><p>While my usual workflow entails receiving a design brief, maintaining regular communication with Project Managers (PMs) and stakeholders, iterating based on feedback, and delivering assets upon alignment with both parties and overarching business objectives, this project demanded a unique approach.</p>",
+        "links": [],
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions\r\n                    </li></ul>",
+        "what-i-did": "<h3>What I did</h3><p>This endeavor involved curating a video that harmoniously integrated diverse projects, each spearheaded by a multitude of designers within our organization. My role was to transform their static designs into a captivating narrative suitable for video and motion playback. To achieve this, I leveraged advanced 3D reconstruction techniques. This process entailed dissecting their deliverables into individual components and meticulously reconstructing the final design within a dynamic timeline.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "did-you-know": "<p>Video content accounts for over 80% of all internet traffic today.</p>"
+      },
+      {
+        "title": "Microsoft Commute Poster",
+        "content": "<h3>Placeholder Title</h3><p>Placeholder content for Microsoft Commute Poster.</p>",
+        "links": [],
+        "role": "<p>Lead Designer</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "SAP Keynote",
+        "content": "<h3>Placeholder Title</h3><p>Placeholder content for SAP Keynote.</p>",
+        "links": [],
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Engage Series Bumper",
+        "content": "<h3>Placeholder Title</h3><p>Placeholder content for Engage Series Bumper.</p>",
+        "links": [],
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Virtual Store",
+        "content": "<h3>Bringing Virtual Reality to Microsoft Store</h3><p>In 2017, I was a part of the Microsoft.com UX design team, embarking on an innovative exploration: the concept of an online retail store translated into a virtual space. The challenge was to envision what this digital retail environment would entail. How would users accessing it through various means—mouse, touch, VR headset—engage with and experience this unified environment in vastly different ways?</p><h3>In Essence</h3><p>While the virtual store primarily functioned as a high-fidelity interactive concept, it was not intended for direct customer engagement. Instead, it was strategically employed as a demonstrative platform for testing and presentation purposes, providing valuable insights for discussions with other product teams.</p>",
+        "links": [
+          {
+            "url": "https://store-demo.surge.sh/store.html",
+            "text": "Give it a go"
+          }
+        ],
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://aframe.io/\" target=\"_blank\">A-Frame</a> - The 3D rendering engine\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For coding the prototype\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling, lighting,\r\n                        texturing, and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://unity.com/\" target=\"_blank\">Unity</a> - For rendering AR devices\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">Git</a> - For version history and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For wireframing and storyboarding\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For static asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For pre-prototype motion mocks\r\n                    </li></ul>",
+        "what-i-did": "<h3>What I did</h3><p>Taking on a multifaceted role, I conceptualized, modeled, constructed, and coded this groundbreaking virtual store experience. This project served as a pioneering tool to push the boundaries and unlock the potential of emerging web 3D technology at that time.</p>",
+        "role": "<p>Web Developer & Designer</p>",
+        "did-you-know": "<p>WebVR and WebXR enable immersive VR experiences directly in the browser without any app installations.</p>"
+      },
+      {
+        "title": "Synergy Grant Quiz",
+        "content": "<h3>The Challenge</h3><p>When Synergy Grant Solutions, a startup focused on helping businesses secure grant funding, needed a unique and engaging quiz for their website, they faced a challenge: existing quiz plugins were either too expensive, too limited in functionality, or didn't align with their branding. That's where I stepped in.</p><h3>The Solution</h3><p>As the web designer tasked with building their online presence, I saw an opportunity to go above and beyond. I crafted a custom quiz from scratch using JavaScript, tailoring it precisely to Synergy's needs and branding. This bespoke solution not only provided them with a versatile and engaging tool but also saved them the significant costs associated with third-party plugins and database hosting.</p><h3>The Outcome</h3><p>By integrating the quiz with Google Sheets, I provided a simple and cost-effective way for Synergy to collect and manage user data. The result? A polished, user-friendly quiz that delighted Synergy's clients and helped them launch their first product offering with confidence. This project showcases my commitment to customer obsession, my ability to think creatively, and my dedication to delivering high-quality solutions that exceed expectations.</p>",
+        "links": [
+          {
+            "url": "https://synergy-test.surge.sh/",
+            "text": "Take the quiz"
+          }
+        ],
+        "role": "<p>Web Developer & Designer</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>Interactive content like quizzes can generate 2x more conversions than passive content.</p>"
+      },
+      {
+        "title": "Optic8 Website",
+        "content": "<h3>A Digital Stage for Innovation</h3><p>For this project I partnered with Optic8, a leader in virtual production and immersive technology, to modernize their online presence. I Reconstructed the website's design and user experience within the Squarespace framework, ensuring it reflected the company's innovative spirit and visual prowess.</p>",
+        "links": [
+          {
+            "url": "https://www.optic8.com/",
+            "text": "Visit the site"
+          }
+        ],
+        "role": "<p>Web Developer & Designer</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Picchu",
+        "content": "<h3>Hey Microsoft! Let's align</h3><p>Picchu, the codename for the ambitious overhaul of our design system, later evolved into the formidable MWF (Microsoft Web Framework). Preceding the advent of Picchu, Microsoft's web landscape was a patchwork of distinct identities. Each web property, be it microsoft.com, windows.com, or office.com, stood as an independent entity, drawing from its unique web component repository, brand guidelines, and asset library. The absence of a central point of reference had underscored the urgent need for brand alignment across the organization.</p><h3>Where do we even start?</h3><p>The situation was so fragmented that certain microsoft.com pages were entirely disconnected from the broader network, leaving users stranded without a route back to the homepage. Consequently, our foremost mission, aptly dubbed UHF (United Header Footer), was to unify this disparate ecosystem. As the lead UX designer, my role was pivotal in spearheading the development of a new, consistent header, navigation, and footer that would extend across every page within the microsoft.com umbrella. Remarkably, this foundational component remains largely unchanged to this day, a testament to its enduring success.</p><h3>Just the beginning</h3><p>With the 'bread' of the sandwich in place (UHF), our subsequent endeavor was to ensure that every contributor adhered to the right 'ingredients' and refrain from making 'sandwiches' out of breakfast cereal. This phase demanded meticulous consideration of the latest web technology, adherence to accessibility standards, and compatibility with various browsers. Simultaneously, we endeavored to present these complex technical aspects in a simple and intuitive manner, catering to the needs of both designers and developers.</p><p>Designers sought guidance on image selection, dimensions, style guidance, fonts, colors, and brand voice alignment, while developers craved code and the knowledge to deploy it effectively. Picchu was conceived as a comprehensive portal, meticulously designed to cater to the unique requirements of both groups, streamlining their workflows without overwhelming them.</p><p>Crucially, none of this transformative work could go live without rigorous testing and data-backed insights. I actively contributed to this phase by creating numerous prototypes, facilitating testing with organizations like User Research International, and collecting valuable feedback across various deliverables. Additionally, we harnessed real-time feedback tools such as Azure and Power BI to glean customer insights, further shaping a system that prioritized user needs.</p><h3>In Essence</h3><p>Following months of tireless effort encompassing design, strategy, reviews, testing, prototyping, redesigns, and deployments, we successfully birthed a fully functional web framework that the entirety of Microsoft seamlessly aligned with.</p>",
+        "links": [],
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>Design systems can reduce product development time by up to 50% by reusing components.</p>"
+      },
+      {
+        "title": "Trilogy Studios Website",
+        "content": "<h3>From Blueprint to Launchpad</h3><p>I Spearheaded the online transformation of Trilogy Studios during their nationwide expansion. I also led the strategy, design, and execution of a comprehensive web presence, encompassing brand identity, website architecture (built on Webflow), and targeted marketing campaigns. This holistic approach ensured a cohesive user experience and positioned the company for rapid growth.</p>",
+        "links": [
+          {
+            "url": "https://www.trilogystudios.com/",
+            "text": "Visit the site"
+          }
+        ],
+        "role": "<p>Web Developer & Designer</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Motion Graphics Reel",
+        "content": "<h3>Motion Graphics are the SECRET SAUCE</h3><p>This reel is a peek into my brain—a kaleidoscope of colors, shapes, and ideas bouncing around, begging to be animated. I see motion design as a way to make the complex simple, the mundane magical, and the everyday extraordinary. My playful spirit and love of creative expression have always fueled my creativity. I'm drawn toward blending technology with art, and love being part of teams that push the boundaries of what's possible.</p>",
+        "links": [],
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions\r\n                    </li></ul>",
+        "role": "<p>Motion Designer & Video Editor</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Content Block Builder",
+        "content": "<h3>A Tool For Page Layouts</h3><p>When I first started my journey at Microsoft in 2012, I served as a MARCOM designer, primarily engaged in the creation of placement and hero banners for the homepage of microsoft.com. A year later, my transition to the UX team marked the initiation of a pivotal chapter as we embarked on the development of the next iteration of microsoft.com. During this transformative phase, we embarked on the formulation of an innovative suite of design standards and components, intended for widespread adoption across the entire organization, powering the development of web properties.</p><h3>In Essence</h3><p>The implementation of this groundbreaking tool ushered in a new era of efficiency for UX and MARCOM designers, accelerating the design process to unparalleled speeds while eradicating the potential for even the slightest brand misalignment errors.</p>",
+        "links": [
+          {
+            "url": "ContentBlockBuilder/ContentBlockBuilder.html",
+            "text": "Try the tool"
+          }
+        ],
+        "what-i-did": "<h3>What I did</h3><p>Recognizing the imperative need for a tool that could empower designers to seamlessly craft page components in precise alignment with our nascent design standards, I undertook the task of conceiving and constructing the content block tool. This sophisticated tool was meticulously engineered to seamlessly harmonize with the evolving web standards we were concurrently shaping, fundamentally transforming the often repetitive and time-consuming process of content placement layout.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>WYSIWYG editors revolutionized web design by allowing users to see what the end result would look like while creating it.</p>"
+      },
+      {
+        "title": "Microsoft Web Framework",
+        "content": "<h3>We're aligned! Now let's improve and optimize</h3><p>Returning to Microsoft's MSCOM team, I joined a ~10 person design team focused on evolving the Microsoft Web Framework (MWF), a company-wide design system powering Microsoft's web identity. As the Design Technologist, I played a crucial role in modernizing this foundational framework, which had undergone significant enhancements during my absence.</p><h3>In Essence</h3><p>MWF serves as the single source of truth for Microsoft's web design needs, enabling consistency and efficiency across the organization.</p>",
+        "links": [],
+        "what-i-did": "<h3>My contributions</h3><p>Prototyping: I built interactive prototypes of MWF components using HTML, CSS, and JavaScript. These prototypes were essential for stakeholder presentations, real-world user testing, and ultimately, engineering handoff for CMS integration.</p><p>Accessibility: I championed accessibility best practices, ensuring MWF components met evolving standards and provided inclusive experiences for all users.</p><p>CMS Integration: I collaborated closely with developers to seamlessly integrate MWF with various content management systems, including the latest migration to Adobe Experience Manager (AEM).</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Teams Holiday Background",
+        "content": "<h3>Willy Wonka Holiday</h3><p>Annually, the Campaigns team unveils their refreshed holiday marketing toolkit. In the year 2023, this comprehensive kit featured a novel addition—a 3D rendering, intended for utilization within Microsoft Teams as a backdrop image for conference calls. My design directive succinctly encapsulated the essence of the project: 'Craft a 3D environment that harmonizes with our style guide while infusing a whimsical 'Willy Wonka' touch.'</h3>\r\n                ",
+        "links": [],
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and some\r\n                        animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For SVG creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For post processing and color correction\r\n                    </li></ul>",
+        "what-i-did": "<h3>What I did</h3>\r\n                <p>Leveraging the toolkit's specifications as my guiding framework, I embarked on the creative journey. The outcome included multiple design alternatives and a meticulously structured working file, purposefully engineered to empower other Blender users in generating their own brand-compliant iterations.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Proactive Chat Invite",
+        "content": "<h3>New functionality - new design</h3><p>When visiting any Microsoft.com page, it's a matter of seconds before you're greeted with an invitation to initiate a chat conversation with a knowledgeable sales associate. Recognizing an opportunity to enhance the user experience, the business team sought to augment this chat component by incorporating the capability to schedule shopping appointments while also aligning the design with the latest web standards.</p><h3>In Essence</h3><p>Through strategic UX enhancements, we have witnessed a substantial uptick in customer engagement and satisfaction, accompanied by heightened awareness of our Personal Shopper offering.</p>",
+        "links": [
+          {
+            "url": "chatbot/ProChatDesignTool/index.html",
+            "text": "Try the design tool"
+          }
+        ],
+        "what-i-did": "<h3>What I did</h3><p>To facilitate the design transformation and decision-making process, I introduced a sophisticated design tool. This tool empowered stakeholders to explore a plethora of design possibilities, offering them the flexibility to experiment with 14 key controls to craft a customized design solution. Once a design direction was chosen and rigorously tested, I seamlessly transitioned into the implementation phase, furnishing the requisite CSS to bring the redesigned component to life. Throughout this journey, we iterated extensively based on insights gleaned from rounds of research and invaluable customer feedback, culminating in the successful deployment of the reimagined component in 2021.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Fluent Icon Refresh",
+        "content": "<h3>What about these old icons?</h3><p>When it comes to online iconography, SVG stands as the reigning champion among file formats. Regrettably, until recently, Microsoft's Digital Asset Management (DAM) and Content Management System (CMS) did not offer support for this versatile format. Recognized as the 'SVG Fanboy' within the organization, I have spearheaded the transition from not only an outdated icon design language to a contemporary one but also advocated for the widespread adoption of vector assets across all Microsoft online platforms.</p><p>In my pursuit of eradicating bitmap icons from the digital landscape, I took a proactive approach by developing an online tool. This multifaceted tool not only serves as a persuasive aid in my efforts to convince skeptics but also serves as a central hub for tracking the progress of our ongoing initiatives in creating and implementing these modern vector assets.</p>",
+        "links": [
+          {
+            "url": "https://store-icons.surge.sh/StoreIcons2.html",
+            "text": "Play with the tool"
+          }
+        ],
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "8-Bit Takeover",
+        "content": "<h3>Microsoft.com got a retro remake</h3><p>As an initiative purely for the enjoyment of it, a small, spirited team hailing from the Microsoft.com design team came together to orchestrate an unforgettable homepage takeover. On the 256th day of the year, we engineered a delightful surprise for users: by inputting the iconic Konami code on their keyboard while visiting the Microsoft home page, the entire website would undergo a whimsical transformation. The reskinned page featured enchanting 8-bit themed graphics, meticulously designed placements, captivating animations, and interactive links. Notably, it included a hero section spotlighting 8-bit renditions of each member of the MSCOM design team, creatively crafted by <a href=\"http://www.dannyschlitz.com/\" target=\"_blank\">Dan Schlitzkus</a>.</p><h3>In Essence</h3><p>While the project was primarily designed for sheer enjoyment, it sparked substantial social media buzz and, in turn, generated a notable increase of 3 - 10% in unique visitors to the homepage.</p>",
+        "links": [],
+        "what-i-did": "<h3>What I did</h3><p>In this creative endeavor, I actively participated in the design process by conceptualizing and crafting placements, and I also played a key role in building several of the interactive components that enriched the page's user experience.</p>",
+        "role": "<p>Game Developer & Designer</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Back to the Future Takeover",
+        "content": "<h3>Great Scott!</h3><p>Drawing inspiration from the iconic movie \"Back to the Future 2,\" where Marty embarks on a thrilling adventure to the year 2015 with Doc Brown, the Microsoft.com design team orchestrated a playful homage. On the very day of their fictional arrival, October 21st, we embedded a hidden secret code on the Microsoft home page. For a single day, users who visited the website and entered the license plate of the time-traveling DeLorean were in for a delightful surprise. The entire page underwent a remarkable transformation, with every component meticulously themed to juxtapose past and future technology.</p><h3>In Essence</h3><p>Beyond its intrinsic entertainment value, this takeover generated significant social media buzz, ultimately driving an impressive 3 - 10% increase in unique visitors to the homepage.</p>",
+        "links": [],
+        "what-i-did": "<h3>What I did</h3><p>In this imaginative endeavor, I played a pivotal role in crafting and designing all the strategic placements on the page. Additionally, I took charge of developing an innovative image slider, enabling seamless transitions between two distinct images. To further enhance the immersive experience, I introduced a dynamic 3D toggle, rendering every image on the page in anaglyphic (stereoscopic 3D), complete with retro glasses.</p>",
+        "role": "<p>Game Developer & Designer</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Tether",
+        "content": "<h3>Finding time to meet shouldn't be so hard</h3><p>Efficiently coordinating schedules can be a real challenge, especially when multiple individuals are involved. Factor in diverse scheduling habits, like Justin's meticulous planning months in advance, Heidi's penchant for tardiness, and Sam's indecisiveness, and the complexity only intensifies.</p><h3>What was the idea?</h3><p>In the Tether app, we aimed to simplify this process. Users had the capability to curate a recipient list with associated text numbers. After naming the event and specifying several date/time options, Tether seamlessly dispatched a text message to all recipients. The recipients could then cast their votes on their preferred date/time directly from their texting app—no additional Tether download or app installation was required. The creator of the event, in turn, could efficiently track responses, establish a voting window, issue reminders, and ultimately select the most favored time as determined by the recipients.</p><h3>In Essence</h3><p>This initiative, part of our Product Lab, successfully progressed into development and testing. Several team members enthusiastically utilized the app, but our project focus later shifted to the development of the Project Mio video game.</p><h3>App flow comp</h3>",
+        "links": [],
+        "what-i-did": "<h3>What I did</h3><p>I spearheaded the project by devising the app flow and crafting the user interface.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Xbox Gift Card",
+        "content": "<h3>Gifting Made Easy (and Animated)</h3><p>Need to give the gift of gaming?  Xbox Gift Cards.  But let's be honest, they could be a bit... static.  So, we brought in the animation cavalry.  Two designers, two months, countless pixels, and some very talented voice actors.  The result?  A dynamic gift card experience that graced the homepage of microsoft.com (and other digital domains).  Because gifting should be exciting, not just transactional.</p>",
+        "links": [],
+        "what-i-did": "<h3>My contributions</h3><p>One of two designers.  We split the graphics and animation, then I stitched it all together.  Seamlessly, of course.  Because that's what I do.  I bring the pieces together, make the whole greater than the sum of its parts.  And occasionally, I throw in a witty comment or two.  Just for fun.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Simplified Office",
+        "content": "<h3>Why does Office need to be so complex?</h3><p>As a dedicated member of the Product Lab team at Microsoft, we were entrusted with the exciting mandate of brainstorming, conceptualizing, pitching, and ultimately bringing to life a diverse array of passion projects. Among these endeavors, \"Simplified Office\" held a special place in my heart—a project aimed at elevating and simplifying the user interface of Microsoft Office, a software suite used by millions worldwide.</p><h3>In Essence</h3><p>During the ideation phase within Product Lab, \"Simplified Office\" emerged as one of the three standout projects chosen for presentation to Microsoft executives. Ultimately, while it did not progress beyond this stage, it remains a testament to the team's innovative spirit. The project, while side-lined, contributed to the creative ecosystem that eventually birthed the Project Mio video game idea.</p>",
+        "links": [],
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                    </li>\r\n                    <li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a></li>\r\n                    <li><a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a></li></ul>",
+        "what-i-did": "<h3>What I did</h3><p>In the pursuit of this vision, I took the reins of the project by spearheading its conceptualization and crafting a compelling video presentation designed to captivate the attention of company executives. My role encompassed ideating and articulating the core concepts, illustrating how \"Simplified Office\" could enhance user experiences, and showcasing its potential to streamline complex workflows.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Microsoft Complete Rebrand",
+        "content": "<h3>Branding, and stylesheets, and logos, OH MY!</h3><p>Microsoft Complete is a comprehensive offering encompassing warranties, tech support, and value-added services to enhance your purchase. However, the absence of a distinctive visual identity left it lacking the appearance of a tangible product, hindering customer recognition and engagement.</p><h3>In Essence</h3><p>The result of this initiative has been transformative. The Complete logo and branding elements are now prominently featured across the landscape of microsoft.com, significantly enhancing product recognition and driving increased traffic to the <a href=\"https://www.microsoft.com/en-us/store/b/microsoft-complete\" target=\"_blank\">Complete product page</a>.</p>",
+        "links": [],
+        "what-i-did": "<h3>What I did</h3><p>To address this challenge, I undertook the pivotal role of crafting a cohesive visual identity for Microsoft Complete. This encompassed the creation of a distinctive logo, the formulation of comprehensive branding guidelines, and the establishment of clear usage styles.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Chatbot Redesign",
+        "content": "<h3>Good Functionality - bad design</h3><p>At a critical juncture, I undertook the task of revitalizing the interactive chat widget on Microsoft.com, a fixture that had been in use for years but had lost its visual appeal. As depicted in the image above, the old design on the left was in stark contrast to my revamped design on the right. The original layout suffered from limited content real estate, resulting in a cramped interface. What the bot truly needed was a breath of fresh air and a much-needed facelift.</p><h3>In Essence</h3><p>The results of this redesign effort have been remarkable. It not only elevated customer satisfaction levels with the service but also introduced enhanced functionality, seamlessly integrating AI capabilities and real-time customer feedback mechanisms.</p>",
+        "links": [
+          {
+            "url": "https://www.microsoft.com/en-us/surface/devices/surface-duo?activetab=overview",
+            "text": "See it live"
+          }
+        ],
+        "what-i-did": "<h3>What I did</h3><p>My role in this endeavor encompassed the conceptualization and presentation of UI elements aligned with the brand's aesthetics. Once the design was approved, I played a pivotal role in translating it into reality by providing the requisite CSS for the third-party bot.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Value Prop Glyphs",
+        "content": "<h3>One glyph, two glyph, red glyph, blue glyph</h3><p>Microsoft Store embarked on the creation of a centralized web page to showcase the array of unique offerings available for direct purchase from Microsoft. These distinct value propositions demanded distinctive branded identities to effectively resonate with our audience.</p><h3>In Essence</h3><p>The end result of this endeavor has been a transformation in the visibility and recognition of these value propositions. Each now possesses a strong visual identity that empowers them to shine independently throughout microsoft.com, serving as compelling product placements and dynamic links.</p>",
+        "links": [
+          {
+            "url": "https://www.microsoft.com/en-us/store/b/why-microsoft-store",
+            "text": "Visit the live site"
+          }
+        ],
+        "what-i-did": "<h3>What I did</h3><p>Tasked with this challenge, I curated a refined collection of over 20 unique glyphs, some of which I designed from the ground up. These meticulously crafted icons were then seamlessly integrated into the Content Management System (CMS), with careful consideration for MARCOM placements. Additionally, I played a crucial role in the development of the accompanying stylesheets and guidelines to ensure consistent and coherent usage.</p>",
+        "role": "<p>Lead Designer</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Microsoft Holiday Campaign",
+        "content": "<h3>Make it snow!</h3><p>The holiday season represents a pivotal period for Microsoft, demanding meticulous preparation and strategic presentation of products and devices that resonate with customers. Months in advance, dedicated teams focus their efforts on creating a captivating holiday narrative and showcasing the offerings that customers eagerly anticipate.</p><h3>In Essence</h3><p>One of the pivotal achievements of this project was the successful transition from outsourcing holiday campaign efforts to an in-house approach. This strategic shift not only translated into substantial cost savings, amounting to hundreds of thousands of dollars in reduced agency expenses, but also significantly heightened awareness of our holiday product offerings.</p>",
+        "links": [],
+        "what-i-did": "<h3>What I did</h3><p>In this critical endeavor, I assumed a central role in designing and constructing a versatile 3D asset kit tailored explicitly for holiday MARCOM placements. This comprehensive kit encompassed a rich array of scenes, props, and animations, strategically engineered to seamlessly integrate with existing product renders. The outcome was a visually immersive experience, giving the impression that the featured products seamlessly belonged within the enchanting 3D holiday scenes.</p>",
+        "role": "<p>Lead Designer</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Microsoft Pride Campaign",
+        "content": "<h3>Embrace the Spectrum</h3><p>At Microsoft, our commitment to being a steadfast ally in the pursuit of equality is unwavering. To breathe new life into the annual Pride campaign, our goal was to refresh its visual elements. Collaborating closely with the design team, I embarked on a mission to contribute a dynamic video bumper that could be seamlessly integrated into presentations, live streams, and social media channels.</p><h3>In Essence</h3><p>The introduction of this visually engaging video bumper breathed new life into the Pride campaign's visual arsenal. It empowered the campaign to amplify its message across various platforms, reinforcing Microsoft's steadfast commitment to equality and diversity.</p>",
+        "links": [
+          {
+            "url": "https://www.microsoft.com/en-us/pride",
+            "text": "Learn more about Microsoft Pride"
+          }
+        ],
+        "what-i-did": "<h3>What I did</h3><p>Within this vibrant initiative, my primary focus revolved around the creation of the captivating bumper animation. Drawing inspiration from the campaign's existing assortment of vibrant pins, each adorned with distinct calls to action, I envisioned an animation that would eloquently illuminate the colorful spectrum. This animation symbolized unity, beautifully merging the diverse voices within the campaign into a harmonious and coherent message.</p>",
+        "role": "<p>Lead Designer</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "This is Our Story",
+        "content": "<h3>Church?  Documentary?  Challenge Accepted.</h3><p>45-minute documentary chronicling the unconventional beginnings of a church in a very conventional Midwestern town.</p>",
+        "links": [
+          {
+            "url": "https://www.youtube.com/watch?v=OpTSOeOKPqU",
+            "text": "Watch on YouTube"
+          }
+        ],
+        "what-i-did": "<h3>My contributions</h3><p>Director, editor, videographer, producer, writer, lighting designer, sound engineer, colorist, therapist...  Okay, maybe not therapist.  But I did wrangle a team of volunteers, taught them the finer points of filmmaking, and somehow managed to capture the heart and soul of this quirky church.  6 months, countless miles, and a whole lot of coffee.  But hey, who needs sleep when you're making movie magic?</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "GLC Design Makeover",
+        "content": "<h3>GLC Design Makeover</h3><p>Rebranding a church?  Not your typical design challenge.  New logo, style language, and a video to bring the congregation along for the ride.  Because who doesn't love a good makeover montage?</p>",
+        "links": [
+          {
+            "url": "https://www.youtube.com/watch?v=3WG30LL09FQ",
+            "text": "Watch on YouTube"
+          }
+        ],
+        "what-i-did": "<h3>My contributions</h3><p>Director, editor, camera operator, motion graphics artist, storyboarder, renderer, project manager, script writer...  I wear a lot of hats.  And sometimes, I even juggle them.  This project was a juggling act, but we pulled it off.</p>",
+        "role": "<p>Lead Designer</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Great Lakes Church",
+        "content": "<h3>GLC Interior Signage Overhaul</h3><p>Two locations, six phases, three months.  My mission?  Help visitors find their way around Great Lakes Church without resorting to interpretive dance.  (Though that would be entertaining.)  New signage for the existing Racine, WI building, plus a complete signage suite for the new Kenosha, WI location.  Main auditorium, restrooms, kids' areas, teen areas, cafe—we covered it all.</p>",
+        "links": [],
+        "what-i-did": "<h3>My contributions</h3><p>Designer, installer, concept artist, print liaison.  Basically, I was the signage whisperer.  I spoke the language of wayfinding, translated it into clear and concise visuals, and then wrestled those designs onto the walls.  (Okay, maybe not wrestled.  But there was definitely some strategic hammering involved.)  The result?  Happy visitors, no interpretive dance required.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "#staymarried",
+        "content": "<h3>From Blog to Movement: The #staymarried Story</h3><p>Marriage?  It's a wild ride.  But with a little help, it can be a wild ride worth taking.  #staymarried started as a humble blog in 2012, a passion project by my partner Michelle and myself.  Fast forward to 2018, and it had blossomed into a full-fledged movement—a blog, a community, a podcast, and a book with over 100,000 copies sold.  Millions of views, countless conversations, and a whole lot of love.  (And maybe a few tears along the way.)</p>",
+        "links": [],
+        "what-i-did": "<h3>My contributions</h3><p>Designer extraordinaire.  I crafted every piece of social marketing that fueled this movement.  Infographics, charts, visual stories—you name it, I designed it.  And because love is all about sharing, our materials even ended up in the hands of professional couples counselors.  So, yeah, you could say I played a small part in helping people #staymarried.  (But mostly, I just like making pretty things.)</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Eco Packaging Concept",
+        "content": "<h3>From Trash to Treasure: The Cardboard Lamp</h3><p>Packaging waste?  Not on my watch.  As a UX designer on the Microsoft Store team, we tackled the challenge of reducing the environmental impact of our Surface Notebook packaging.  One idea that sparked joy (and light): repurposing the shipping box into a DIY cardboard lamp.  Because who needs another trip to the landfill when you can have a stylish new light fixture?</p>",
+        "links": [],
+        "what-i-did": "<h3>My contributions</h3><p>I brought this origami-inspired concept to life with a video illustrating the transformation from box to lamp.  It's a step-by-step guide to eco-friendly illumination, with a touch of whimsy and a whole lot of \"reduce, reuse, recycle\" spirit.  Because sustainability can be fun, and design can make a difference.</p>",
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      },
+      {
+        "title": "Mailers & Invites",
+        "content": "",
+        "links": [],
+        "role": "<p>UX/UI Designer & Prototyper</p>",
+        "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
+        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
+      }
+    ]
+  },
+  "arcade": {
+    "top-left-title": "Arcade",
+    "top-left-text": "Select a game",
+    "bio-title": "Game Screen",
+    "bio-text": "Game canvas goes here...",
+    "quote-title": "High Scores",
+    "quote-text": "Score details..."
+  },
+  "contact": {
+    "top-left-title": "Contact",
+    "top-left-text": "Get in touch",
+    "bio-title": "Contact Form",
+    "bio-text": "Form fields here...",
+    "quote-title": "Socials",
+    "quote-text": "Links to LinkedIn, etc."
+  }
+}

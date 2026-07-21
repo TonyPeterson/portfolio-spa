@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+        font-size: 18px;
+        font-family: "JetBrains Mono", monospace;
+        @media (width < 720px) {
+            font-size: 16px;
+        }
+    }
+
+    body {
+        background: linear-gradient(165deg, #ffeef5, #ccebff);
+        margin: 0;
+        padding: 0;
+        width: 100dvw;
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    h1.title {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        font-size: 14px;
+        padding: 3dvh 0 0;
+        color: #999;
+        letter-spacing: 0.5em;
+    }
+
+    /* <uniquifier>: Use a unique and descriptive class name
+    <weight>: Use a value from 200 to 800 */
+
+    .biorhyme-font {
+        font-family: "BioRhyme", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+    .textareacontainer {
+        position: relative;
+    }
+
+    #mainNotesArea {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        font-size: 1rem;
+        font-family: "JetBrains Mono", monospace;
+        min-height: 500px;
+        position: fixed;
+        inset: 10dvh 5dvw 30dvh;
+        background-color: rgba(255, 255, 255, .666);
+        backdrop-filter: blur(50px);
+        border: 0;
+        border-radius: 1rem;
+        color: #555;
+        box-shadow: 0 10px 10px -3px rgba(0, 0, 0, .1);
+        transition: all 1s ease-in-out;
+
+        &:focus-visible {
+            /* outline: 2px dotted #aaa; */
+            outline: 0;
+            box-shadow: 0 30px 100px -15px rgba(0, 0, 0, .25);
+        }
+
+        &::-webkit-resizer {
+            /* di play: none; */
+            /* color: red; */
+        }
+    }
+
+    button[type=submit] {
+        padding: 1em 2.5em;
+        font-family: "JetBrains Mono", monospace;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #555;
+        border-radius: 2em;
+        border: 2px solid #999;
+        background: transparent;
+        position: fixed;
+        inset: auto 5dvw 5dvw auto;
+    }
+</style>
+
+<body>
+    <script type="text/javascript">var submitted=false</script>
+    <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;" onload="if(submitted){window.location="/zenjournal_submission/";}" frameborder="0"></iframe>
+    <h1 class="title">zen journal</h1>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSemwrxNnTaETy26r4nTornHfvIQZMcfPl4b6TR0ujsiDjadLQ/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true">
+        <div class="textareacontainer">
+            <textarea name="entry.1325344880" id="mainNotesArea"></textarea>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+.modal {
+  display: none;
+}
+
+.receipt {
+  display: none;
+}
+
+.annotation {
+  visibility: hidden;
+  opacity: 0;
+  padding: 32px;
+  position: absolute;
+  top: -200px;
+  right: 48px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border-radius: 0px !important;
+  background-color: #fff;
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: top 0.5s cubic-bezier(0, 0, 0, 1), opacity 0.3s linear !important;
+  -o-transition: top 0.5s cubic-bezier(0, 0, 0, 1), opacity 0.3s linear !important;
+  transition: top 0.5s cubic-bezier(0, 0, 0, 1), opacity 0.3s linear !important;
+  max-width: 364px;
+}
+.annotation.selected {
+  visibility: visible;
+  top: 150px;
+  opacity: 0.95;
+}
+.annotation.out {
+  top: 300px;
+  opacity: 0;
+}
+.annotation .close {
+  color: #2f2f2f;
+  font-size: 24px;
+  line-height: 24px;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+.annotation .poi-content {
+  margin-bottom: 1rem;
+}
+.annotation .grid-container.three {
+  gap: 6px;
+}
+.annotation .grid-container img {
+  margin: 0;
+  width: 100%;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.annotation .grid-container img:hover {
+  -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.25);
+}
+
+.poi {
+  overflow: visible;
+}
+.poi::after {
+  content: "";
+  display: table;
+  border: 1px solid #0067b8;
+  border-radius: 50%;
+  opacity: 0.6;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  -webkit-transition: all 0.4s cubic-bezier(0, 0, 0, 2);
+  -o-transition: all 0.4s cubic-bezier(0, 0, 0, 2);
+  transition: all 0.4s cubic-bezier(0, 0, 0, 2);
+}
+.poi:hover::after {
+  border: 12px solid #0067b8;
+  width: 18px;
+  height: 18px;
+  top: -9px;
+  left: -9px;
+}
+.poi.selected::after {
+  border: 12px solid #0067b8;
+  width: 36px;
+  height: 36px;
+  top: -18px;
+  left: -18px;
+}
+.poi.selected:hover::after {
+  border: 12px solid #0067b8;
+  width: 36px;
+  height: 36px;
+  top: -18px;
+  left: -18px;
+}
+.poi.hidden {
+  display: none !important;
+}
+
+.poi-content {
+  width: 300px !important;
+}

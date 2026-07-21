@@ -1,0 +1,490 @@
+{
+    "accessors": {
+        "accessor_21": {
+            "bufferView": "bufferView_83",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 8484,
+            "max": [
+                4241
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_23": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 8484,
+            "max": [
+                15.13,
+                15.3021,
+                -0.0999995
+            ],
+            "min": [
+                -14.87,
+                -14.6979,
+                -3
+            ],
+            "type": "VEC3"
+        },
+        "accessor_25": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 101808,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 8484,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "VEC3"
+        },
+        "accessor_27": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 203616,
+            "byteStride": 8,
+            "componentType": 5126,
+            "count": 8484,
+            "max": [
+                15.151,
+                3.83032
+            ],
+            "min": [
+                -7.4816,
+                -2.71627
+            ],
+            "type": "VEC2"
+        },
+        "accessor_48": {
+            "bufferView": "bufferView_83",
+            "byteOffset": 16968,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 1536,
+            "max": [
+                767
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_50": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 271488,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 1536,
+            "max": [
+                15.1038,
+                15.2596,
+                -0.1
+            ],
+            "min": [
+                -14.8962,
+                -14.7404,
+                -0.1
+            ],
+            "type": "VEC3"
+        },
+        "accessor_52": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 289920,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 1536,
+            "max": [
+                0,
+                0,
+                -1
+            ],
+            "min": [
+                0,
+                0,
+                -1
+            ],
+            "type": "VEC3"
+        },
+        "accessor_54": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 308352,
+            "byteStride": 8,
+            "componentType": 5126,
+            "count": 1536,
+            "max": [
+                1.92692,
+                0.995207
+            ],
+            "min": [
+                0.0519171,
+                -0.879793
+            ],
+            "type": "VEC2"
+        },
+        "accessor_75": {
+            "bufferView": "bufferView_83",
+            "byteOffset": 20040,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 1536,
+            "max": [
+                767
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_77": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 320640,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 1536,
+            "max": [
+                15,
+                15.3,
+                -3
+            ],
+            "min": [
+                -15,
+                -14.7,
+                -3
+            ],
+            "type": "VEC3"
+        },
+        "accessor_79": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 339072,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 1536,
+            "max": [
+                0,
+                0,
+                1
+            ],
+            "min": [
+                0,
+                0,
+                1
+            ],
+            "type": "VEC3"
+        },
+        "accessor_81": {
+            "bufferView": "bufferView_84",
+            "byteOffset": 357504,
+            "byteStride": 8,
+            "componentType": 5126,
+            "count": 1536,
+            "max": [
+                1.875,
+                0.975
+            ],
+            "min": [
+                4.76837e-07,
+                -0.9
+            ],
+            "type": "VEC2"
+        }
+    },
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@86001551e098fbb15e730607588efc2fc68ea93d",
+        "premultipliedAlpha": true,
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.2"
+        },
+        "version": "1.0.1"
+    },
+    "bufferViews": {
+        "bufferView_83": {
+            "buffer": "Maze1",
+            "byteLength": 23112,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        "bufferView_84": {
+            "buffer": "Maze1",
+            "byteLength": 369792,
+            "byteOffset": 23112,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "Maze1": {
+            "byteLength": 392904,
+            "type": "arraybuffer",
+            "uri": "Maze1.bin"
+        }
+    },
+    "extensionsUsed": [
+        "KHR_materials_common"
+    ],
+    "images": {
+        "MazeCeiling1_jpg": {
+            "name": "MazeCeiling1_jpg",
+            "uri": "MazeCeiling1.jpg"
+        },
+        "MazeFloor1_jpg": {
+            "name": "MazeFloor1_jpg",
+            "uri": "MazeFloor1.jpg"
+        },
+        "MazeWall1_jpg": {
+            "name": "MazeWall1_jpg",
+            "uri": "MazeWall1.jpg"
+        }
+    },
+    "materials": {
+        "Material_183-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": "texture_MazeWall1_jpg",
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 25,
+                        "specular": [
+                            0.25,
+                            0.25,
+                            0.25,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "Material_183"
+        },
+        "Material_184-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": "texture_MazeCeiling1_jpg",
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 25,
+                        "specular": [
+                            0.25,
+                            0.25,
+                            0.25,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "Material_184"
+        },
+        "Material_185-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": "texture_MazeFloor1_jpg",
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 25,
+                        "specular": [
+                            0.25,
+                            0.25,
+                            0.25,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "Material_185"
+        }
+    },
+    "meshes": {
+        "Mesh_003-mesh": {
+            "name": "Mesh.003",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_25",
+                        "POSITION": "accessor_23",
+                        "TEXCOORD_0": "accessor_27"
+                    },
+                    "indices": "accessor_21",
+                    "material": "Material_183-effect",
+                    "mode": 4
+                }
+            ]
+        },
+        "Plane_001-mesh": {
+            "name": "Plane.001",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_52",
+                        "POSITION": "accessor_50",
+                        "TEXCOORD_0": "accessor_54"
+                    },
+                    "indices": "accessor_48",
+                    "material": "Material_184-effect",
+                    "mode": 4
+                }
+            ]
+        },
+        "Plane_024-mesh": {
+            "name": "Plane.024",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_79",
+                        "POSITION": "accessor_77",
+                        "TEXCOORD_0": "accessor_81"
+                    },
+                    "indices": "accessor_75",
+                    "material": "Material_185-effect",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "Curve_001": {
+            "children": [],
+            "meshes": [
+                "Mesh_003-mesh"
+            ],
+            "name": "Curve_001"
+        },
+        "Plane": {
+            "children": [],
+            "meshes": [
+                "Plane_001-mesh"
+            ],
+            "name": "Plane"
+        },
+        "Plane_022": {
+            "children": [],
+            "meshes": [
+                "Plane_024-mesh"
+            ],
+            "name": "Plane_022"
+        },
+        "node_3": {
+            "children": [
+                "Curve_001",
+                "Plane",
+                "Plane_022"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "Y_UP_Transform"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_3"
+            ]
+        }
+    },
+    "skins": {},
+    "textures": {
+        "texture_MazeCeiling1_jpg": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "MazeCeiling1_jpg",
+            "target": 3553,
+            "type": 5121
+        },
+        "texture_MazeFloor1_jpg": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "MazeFloor1_jpg",
+            "target": 3553,
+            "type": 5121
+        },
+        "texture_MazeWall1_jpg": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "MazeWall1_jpg",
+            "target": 3553,
+            "type": 5121
+        }
+    }
+}

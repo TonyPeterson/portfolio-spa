@@ -1,0 +1,247 @@
+{
+    "accessors": {
+        "accessor_21": {
+            "bufferView": "bufferView_29",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 2454,
+            "max": [
+                1226
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_23": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 2454,
+            "max": [
+                1.32602,
+                24.3064,
+                1.29699
+            ],
+            "min": [
+                -1.32602,
+                -1.29032,
+                -1.30621
+            ],
+            "type": "VEC3"
+        },
+        "accessor_25": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 29448,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 2454,
+            "max": [
+                1,
+                0.999267,
+                0.99999
+            ],
+            "min": [
+                -0.999989,
+                -0.992942,
+                -0.999917
+            ],
+            "type": "VEC3"
+        },
+        "accessor_27": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 58896,
+            "byteStride": 8,
+            "componentType": 5126,
+            "count": 2454,
+            "max": [
+                0.996234,
+                0.173871
+            ],
+            "min": [
+                0.851079,
+                0.0180324
+            ],
+            "type": "VEC2"
+        }
+    },
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@c5ff32b2d555d43b96ab703fdf0b6695d29fc7d3",
+        "premultipliedAlpha": true,
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.2"
+        },
+        "version": "1.0.1"
+    },
+    "bufferViews": {
+        "bufferView_29": {
+            "buffer": "L_Arm",
+            "byteLength": 4908,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        "bufferView_30": {
+            "buffer": "L_Arm",
+            "byteLength": 78528,
+            "byteOffset": 4908,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "L_Arm": {
+            "byteLength": 83436,
+            "type": "arraybuffer",
+            "uri": "L_Arm.bin"
+        }
+    },
+    "extensionsUsed": [
+        "KHR_materials_common"
+    ],
+    "images": {
+        "SS_B_Albedo": {
+            "name": "SS_B_Albedo",
+            "uri": "SS_B_Albedo.jpg"
+        },
+        "noise_png": {
+            "name": "noise_png",
+            "uri": "noise.png"
+        }
+    },
+    "materials": {
+        "SS_B_Mat_004-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": "texture_SS_B_Albedo",
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 33,
+                        "specular": "texture_noise_png"
+                    }
+                }
+            },
+            "name": "SS_B_Mat_004"
+        }
+    },
+    "meshes": {
+        "Untitled_005-mesh": {
+            "name": "Untitled.005",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_25",
+                        "POSITION": "accessor_23",
+                        "TEXCOORD_0": "accessor_27"
+                    },
+                    "indices": "accessor_21",
+                    "material": "SS_B_Mat_004-effect",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "l_arm_geo": {
+            "children": [],
+            "matrix": [
+                0.01,
+                0,
+                0,
+                0,
+                0,
+                -1.62921e-09,
+                0.01,
+                0,
+                0,
+                -0.01,
+                -1.62921e-09,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "meshes": [
+                "Untitled_005-mesh"
+            ],
+            "name": "l_arm_geo"
+        },
+        "node_1": {
+            "children": [
+                "l_arm_geo"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "Y_UP_Transform"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_1"
+            ]
+        }
+    },
+    "skins": {},
+    "textures": {
+        "texture_SS_B_Albedo": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "SS_B_Albedo",
+            "target": 3553,
+            "type": 5121
+        },
+        "texture_noise_png": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "noise_png",
+            "target": 3553,
+            "type": 5121
+        }
+    }
+}

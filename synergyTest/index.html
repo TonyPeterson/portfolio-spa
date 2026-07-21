@@ -1,0 +1,699 @@
+<!--
+-- Check the Google doc ...................... copy up to date
+-- Synergy Grant Solution logo ............... this will live on the Webflow, so there will be a header nav and logo there
+-- yes, no, not sure emojis consideration .... thumbs up/down
+-- design results pages ...................... have a few options, might need more
+-- scoring logic ............................. have logic for 0, 1, and 2 points... need to add 4th option .... done
+-- progress bar .............................. simple bar for now but paper airplane in flight might be cool
+
+SEPT 16th 2024
+Things keeping this from going to testers
+...BIG THINGS...
+-- 3 Mobile layout ................. Done 
+-- 1 Google Forms hookup ........... Done 
+-- 2 Results page format/design .... Have pointing to CSS now
+-- "Next" change to "Submit" ....... have to move inside form [done]
+
+...LITTLE THINGS...
+-- Progress bar (logic and position) ...... logic is good - now style
+-- 3 Button spacing perfected (2by2) ...... done
+-- Next button un-focus on click .......... done
+-- next button is submitting too quick .... fixed
+ 
+
+OCT 1st 2024
+-- Result page design ......................................................... done
+-- Calculate points to final score on result page ............................. done
+-- going 'previous' from submit page keeps submit functionality for 'next' .... 
+-- Align copy of results page to doc .......................................... done
+-- Create new point system .................................................... done
+-- Create Melcie 'Thank You' image ............................................ done
+
+
+OCT 22nd 2024
+-- Move result pages to hidden elements on test page ......................................... done
+-- Remove iframe ............................................................................. done
+-- Fix logic to reveal correct page/element .................................................. done
+-- Fix logic to update pie chart ............................................................. done
+-- Hook the email catcher up to Google Forms ................................................. done
+-- Style/move personalized name .............................................................. done
+-- Hook up result page selections to Google .................................................. done
+-- Copy to all results pages (may require querySelection changes) ............................ done
+-- CSS change margin: 0 auto; to margin-inline: auto; ........................................ done
+-- CSS check wrapper/container padding - maybe change to width: min(x, 100% - [padding]); .... nah
+-- Create a post-email click experience ...................................................... done
+-- Animate details tag height ................................................................ not released 
+
+NOV 1 NOTES 
+-- Placeholder text in fields............................................. gtg
+-- details tag is 'not a distraction' but would like to see my ideas ..... moved
+-- Question titles to get balanced ....................................... done
+-- Larger h4 title size (1.5em) .......................................... done
+-- Change details arrow to color ......................................... done
+-- title text is not centered when details open .......................... done
+-- Site results checkboxes are broken .................................... fine? 
+-- Profile image 'thank you' needs mobile equivelant ..................... done
+-- Grant Ready 'Guide' to 'Checklist' .................................... done
+-- Change CTAs to 'Opt in' ............................................... done
+-- Remove 'Sign up to...' from L&L ....................................... done
+-- Airplane animation to not loop, and also reveal the thank you note .... low-pri (time consuming)
+-- Share your email 'to opt in' copy addition? ........................... done
+
+NOV 5 
+-- Want highlight cards to have pointer:cursor but not working ....... done (inheritance)
+-- #lead elements in results shouldn't be different but are .......... aligned 
+-- make thank you profile reveal the 'We'll get back to you soon' .... done
+
+NOV 8
+-- 'Almost there' and 'youre ready' result page still says "Your name" .... done
+-- Same pages as above have active 'send' button .......................... done
+-- Orange stroke on 'send' button when focus .............................. done
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestQuiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="synergystyle.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="w-container">
+            <img src="https://cdn.prod.website-files.com/6671f4cafbc98cfbee5f8c93/66746cc3572baf9ff16cde17_NavBarLogo2.svg" alt="">
+        </div>
+    </div>
+
+    <div id="splashScreen">
+        <div class="grantreadytitle">
+            <h1>Grant Ready?</h1>
+        </div>
+        <p>This quiz is designed with you in mind! Let's get started to assess your nonprofit's grant readiness.</p>
+        <button id="beginQuiz">Begin quiz</button>
+    </div>
+    <form id="synergyGrantReadinessQuiz" action="https://docs.google.com/forms/d/e/1FAIpQLSfzWWm_Ba4uBP0Azp6sOeQlUap1AQoFccXfKOWS_TRw5cLfKg/formResponse" method="post" target="googleSubmission">
+        <div class="questioncontainer hidden-question card callingcard">
+            <div id="q0" class="answerblock">
+                <div>
+                    <label class="questiontext" for="entry.1463236143">First, what's your name and pronouns?</label>
+                    <input type="text" name="entry.1463236143" id="entry.1463236143" placeholder="First Last">
+                    <select name="entry.1548180991" id="entry.1548180991">
+                        <option value="sheher">She/her</option>
+                        <option value="hehim">He/him</option>
+                        <option value="theythem">They/them</option>
+                        <option value="somethingelse">Something else</option>
+                        <option value="noanswer">Prefer not to answer</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="questiontext" for="entry.528007474">Next, what's your nonprofit's name, and where are you located?</label>
+                    <input type="text" name="entry.528007474" id="entry.528007474" placeholder="Name of nonprofit">
+                    <select name="entry.1855480414" id="entry.1855480414">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="questiontext" for="entry.1616065709">What's your role at your nonprofit?</label>
+                    <input class="rolefield" type="text" name="entry.1616065709" id="entry.1616065709" placeholder="Executive Director, Board member, etc.">
+                </div>
+            </div>
+        </div>
+
+        <div class="questioncontainer hidden-question card firstQuestion">
+            <label class="questiontext autoProgOff" for="entry.1551805330">
+                <h4>Does your nonprofit have a mission or vision statement?</h4>
+            </label>
+
+            <div id="q1" class="answerblock radio">
+                <label>
+                    <input class="tenpoints hidden" type="radio" name="entry.1551805330" id="entry.1551805330" value="Yes">
+                    <div class="answercard">
+                        <div class="cardtext">Yes</div>
+                        <div class="emoji">
+                            &#128077;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="zeropoints hidden" type="radio" name="entry.1551805330" id="entry.1551805330" value="No">
+                    <div class="answercard">
+                        <div class="cardtext">No</div>
+                        <div class="emoji">
+                            &#128078;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="fivepoints hidden" type="radio" name="entry.1551805330" id="entry.1551805330" value="Not sure">
+                    <div class="answercard">
+                        <div class="cardtext">Not sure</div>
+                        <div class="emoji right">
+                            &#129295;
+                        </div>
+                    </div>
+                </label>
+                <textarea id="missionStatementInput" class="hidden" name="entry.2130907417" id="entry.2130907417" placeholder="Enter your mission statement here"></textarea>
+            </div>
+            <details>
+                <summary>Why do we ask?</summary>
+                <p>Having a clear mission or vision statement helps funders immediately identify if your organization is doing work that aligns with their own mission and vision.</p>
+            </details>
+        </div>
+
+        <div class="questioncontainer hidden-question card">
+            <label class="questiontext" for="entry.913223353">
+                <h4>Are your programs scalable and sustainable?</h4>
+            </label>
+
+
+            <div id="q2" class="answerblock radio">
+                <label>
+                    <input class="tenpoints hidden" type="radio" name="entry.913223353" id="entry.913223353" value="Yes">
+                    <div class="answercard">
+                        <div class="cardtext">Yes</div>
+                        <div class="emoji">
+                            &#128077;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="zeropoints hidden" type="radio" name="entry.913223353" id="entry.913223353" value="No">
+                    <div class="answercard">
+                        <div class="cardtext">No</div>
+                        <div class="emoji">
+                            &#128078;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="fivepoints hidden" type="radio" name="entry.913223353" id="entry.913223353" value="Not sure">
+                    <div class="answercard">
+                        <div class="cardtext">Not sure</div>
+                        <div class="emoji right">
+                            &#129295;
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <details>
+                <summary>Why do we ask?</summary>
+                <p>Scalable and sustainable programs mean your organization can grow and help more people without losing quality or stability. This is key for long-term success and financial health. When we say scalable, we mean your programs can expand to serve more people without compromising quality. When we say sustainable, we mean your programs can continue operating effectively over time with reliable funding and resources.</p>
+            </details>
+        </div>
+
+        <div class="questioncontainer hidden-question card">
+            <label class="questiontext" for="entry.1781837474">
+                <h4>Do you have research and data showing your nonprofit's impact?</h4>
+            </label>
+
+
+            <div id="q3" class="answerblock radio">
+                <label>
+                    <input class="tenpoints hidden" type="radio" name="entry.1781837474" id="entry.1781837474" value="Yes">
+                    <div class="answercard">
+                        <div class="cardtext">Yes</div>
+                        <div class="emoji">
+                            &#128077;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="zeropoints hidden" type="radio" name="entry.1781837474" id="entry.1781837474" value="No">
+                    <div class="answercard">
+                        <div class="cardtext">No</div>
+                        <div class="emoji">
+                            &#128078;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="fivepoints hidden" type="radio" name="entry.1781837474" id="entry.1781837474" value="Not sure">
+                    <div class="answercard">
+                        <div class="cardtext">Not sure</div>
+                        <div class="emoji right">
+                            &#129295;
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <details>
+                <summary>Why do we ask?</summary>
+                <p>Research and data show your nonprofit's ability to grow and sustain itself. Funders look for this to ensure you have a solid foundation for long-term success.</p>
+            </details>
+        </div>
+
+        <div class="questioncontainer hidden-question card">
+            <label class="questiontext" for="entry.1679118081">
+                <h4>Do you have policies and procedures for finances, staff, volunteers, and board members?</h4>
+            </label>
+
+            <div id="q4" class="answerblock four radio">
+                <label>
+                    <input class="tenpoints hidden" type="radio" name="entry.1679118081" id="entry.1679118081" value="Yes">
+                    <div class="answercard">
+                        <div class="cardtext">Yes</div>
+                        <div class="emoji">
+                            &#128077;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="sevenpoints hidden" type="radio" name="entry.1679118081" id="entry.1679118081" value="Not sure">
+                    <div class="answercard">
+                        <div class="cardtext">Some</div>
+                        <div class="emoji right">
+                            &#129295;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="threepoints hidden" type="radio" name="entry.1679118081" id="entry.1679118081" value="Need help">
+                    <div class="answercard">
+                        <div class="cardtext">Need help</div>
+                        <div class="emoji centered">
+                            &#129309;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="zeropoints hidden" type="radio" name="entry.1679118081" id="entry.1679118081" value="No">
+                    <div class="answercard">
+                        <div class="cardtext">No</div>
+                        <div class="emoji">
+                            &#128078;
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <details>
+                <summary>Why do we ask?</summary>
+                <p>Clear policies and procedures for finances, staff, volunteers, and board members ensure that your organization runs smoothly and consistently. This helps to build and maintain trust with funders.</p>
+            </details>
+        </div>
+
+        <div class="questioncontainer hidden-question card">
+            <label class="questiontext" for="entry.513642708">
+                <h4>Do you have community partnerships that support your mission?</h4>
+            </label>
+
+            <div id="q5" class="answerblock radio">
+                <label>
+                    <input class="tenpoints hidden" type="radio" name="entry.513642708" id="entry.513642708" value="Yes">
+                    <div class="answercard">
+                        <div class="cardtext">Yes</div>
+                        <div class="emoji">
+                            &#128077;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="zeropoints hidden" type="radio" name="entry.513642708" id="entry.513642708" value="No">
+                    <div class="answercard">
+                        <div class="cardtext">No</div>
+                        <div class="emoji">
+                            &#128078;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="fivepoints hidden" type="radio" name="entry.513642708" id="entry.513642708" value="Not sure">
+                    <div class="answercard">
+                        <div class="cardtext">Not sure</div>
+                        <div class="emoji right">
+                            &#129295;
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <details>
+                <summary>Why do we ask?</summary>
+                <p>Community partnerships deepen your nonprofit’s impact. Funders often ask about how you collaborate with community partners.</p>
+            </details>
+        </div>
+
+        <div class="questioncontainer hidden-question card">
+            <label class="questiontext" for="entry.229362419">
+                <h4>Do you have an approved annual budget?</h4>
+            </label>
+
+            <div id="q6" class="answerblock radio">
+                <label>
+                    <input class="tenpoints hidden" type="radio" name="entry.229362419" id="entry.229362419" value="Yes">
+                    <div class="answercard">
+                        <div class="cardtext">Yes</div>
+                        <div class="emoji">
+                            &#128077;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="zeropoints hidden" type="radio" name="entry.229362419" id="entry.229362419" value="No">
+                    <div class="answercard">
+                        <div class="cardtext">No</div>
+                        <div class="emoji">
+                            &#128078;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="fivepoints hidden" type="radio" name="entry.229362419" id="entry.229362419" value="Not sure">
+                    <div class="answercard">
+                        <div class="cardtext">Not sure</div>
+                        <div class="emoji right">
+                            &#129295;
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <details>
+                <summary>Why do we ask?</summary>
+                <p>Grantors often want to see that your board supports your projects. An approved annual budget shows you have their backing and that funds will be used wisely.</p>
+            </details>
+        </div>
+
+        <div class="questioncontainer hidden-question card">
+            <label class="questiontext" for="entry.1864999914">
+                <h4>Do you have measurable goals and/or outcomes approved by your Board of Directors?</h4>
+            </label>
+
+            <div id="q7" class="answerblock radio">
+                <label>
+                    <input class="tenpoints hidden" type="radio" name="entry.1864999914" id="entry.1864999914" value="Yes">
+                    <div class="answercard">
+                        <div class="cardtext">Yes</div>
+                        <div class="emoji">
+                            &#128077;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="zeropoints hidden" type="radio" name="entry.1864999914" id="entry.1864999914" value="No">
+                    <div class="answercard">
+                        <div class="cardtext">No</div>
+                        <div class="emoji">
+                            &#128078;
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input class="fivepoints hidden" type="radio" name="entry.1864999914" id="entry.1864999914" value="Not sure">
+                    <div class="answercard">
+                        <div class="cardtext">Not sure</div>
+                        <div class="emoji right">
+                            &#129295;
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <details>
+                <summary>Why do we ask?</summary>
+                <p>Measurable goals and Board approval demonstrate clear planning and accountability. Funders value this for tracking progress and ensuring effective oversight.</p>
+            </details>
+        </div>
+        <input hidden type="text" name="entry.824949683" id="entry.824949683" placeholder="Quiz score">
+        <div id="nextprev">
+            <button class="disabled" id="prevQ">Previous</button>
+            <button id="nextQ">Next</button>
+        </div>
+
+    </form>
+    <div id="progressBar"></div>
+    <div hidden id="stuckpoints"></div>
+
+
+
+
+
+
+
+
+
+
+    <!-- END FORM BEGIN RESULTS -->
+
+
+
+
+
+
+
+
+
+
+    <div hidden class="resultsPage" id="lowScoreResult" style="background-color: var(--background);">
+        <div class="resultsHero">
+            <div class="resultGrid">
+                <div id="pie" class="pie animate" style="--c:var(--orange); --p:24;">24%</div>
+                <h2>Based on your quiz score,
+                    <span class="resultTitle">your nonprofit is in its early stages.</span>
+                    Every nonprofit starts somewhere, and you have room to grow!
+                </h2>
+            </div>
+        </div>
+
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfzWWm_Ba4uBP0Azp6sOeQlUap1AQoFccXfKOWS_TRw5cLfKg/formResponse" method="post" target="googleSubmission">
+            <div class="highlightsContainer">
+
+                <div class="lead">
+                    <label class="personalized" for="entry.1800511568">Your Name</label>
+                    <input hidden class="nameForEmailSubmit" type="text" name="entry.1463236143" id="entry.1463236143">
+                    <input hidden type="text" class="prodsForEmailSubmit" name="entry.872624969" id="entry.872624969">
+                    <h3>Let us put our expertise to work for you.</h3>
+                    <p>Opt in to some or all of these offers and we'll be in touch to discuss your specific grant needs.</p>
+                    <label class="emailLabel" for="entry.1573018482">Email address</label>
+                    <input class="emailInput" type="text" name="entry.1573018482" id="entry.1573018482" placeholder="you@where.what">
+                    <button type="submit" class="emailSubmitButton teal disabled">Send</button>
+                </div>
+
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/ChecklistIllustration1.png" alt="">
+                        <div class="highlightCopy">
+                            <h3>Grant-Ready Checklist</h3>
+                            <p>Sign up to receive Synergy Grant Solutions' free checklist, "You’re Grant Ready, Now What?" This guide offers tips on building a grant pipeline, crafting a compelling narrative, and conducting funder research.</p>
+                            <input type="checkbox" class="prodChecklist" value="Checklist">Opt in
+                        </div>
+                    </label>
+                </div>
+
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/LunchLearnIllustration1.png" alt="">
+                        <div class="highlightCopy">
+                            <h3>Lunch & Learn</h3>
+                            <p>Learn more about our upcoming Lunch & Learn sessions.
+                                Upcoming topics include: Managing Grant Applications, Storytelling with Data, and Utilizing AI.</p>
+                            <input type="checkbox" class="prodLunch" value="Lunch">Opt in
+                        </div>
+                    </label>
+                </div>
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/CallIllustration1.png" alt="">
+                        <div class="highlightCopy">
+                            <h3>Runway Call</h3>
+                            <p>Ready to take it a step further? Let’s schedule a Runway Call meeting to discuss your quiz results and address 1-3 key challenges you’re facing.</p>
+                            <input type="checkbox" class="prodCall" value="Call">Opt in
+                        </div>
+                    </label>
+                </div>
+                <input type="hidden" name="entry.872624969" id="combinedValues">
+
+            </div>
+
+        </form>
+    </div>
+
+    <div hidden class="resultsPage" id="midScoreResult" style="background-color: var(--background);">
+        <div class="resultsHero">
+            <div class="resultGrid">
+                <div id="pie" class="pie animate" style="--c:var(--orange); --p:72">72%</div>
+                <div>
+                    <h2>Based on your quiz score,
+                        <span class="resultTitle">you're almost there!</span>
+                        Your nonprofit has a solid foundation, and with some fine-tuning, you'll be in a strong position to apply for grants.
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfzWWm_Ba4uBP0Azp6sOeQlUap1AQoFccXfKOWS_TRw5cLfKg/formResponse" method="post" target="googleSubmission">
+            <div class="highlightsContainer">
+
+                <div class="lead">
+                    <label class="personalized" for="entry.1800511568">Your Name</label>
+                    <input hidden class="nameForEmailSubmit" type="text" name="entry.1463236143" id="entry.1463236143">
+                    <input hidden type="text" class="prodsForEmailSubmit" name="entry.872624969" id="entry.872624969">
+                    <h3>Here are some resources that can help you secure the funding you need.</h3>
+                    <p>Opt in to some or all of these offers to receive personalized recommendations and next steps.</p>
+                    <label class="emailLabel" for="entry.1573018482">Email address</label>
+                    <input class="emailInput" type="email" name="entry.1573018482" id="entry.1573018482" placeholder="you@where.what">
+                    <button type="submit" class="emailSubmitButton teal disabled">Send</button>
+                </div>
+
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/ChecklistIllustration1.png" alt="">
+                        <div class="highlightCopy">
+                            <h3>Grant-Ready Checklist</h3>
+                            <p>Opt in to some or all of these offers receive Synergy Grant Solutions' free checklist, "You’re Grant Ready, Now What?" This guide offers tips on building a grant pipeline, crafting a compelling narrative, and conducting funder research.</p>
+                            <input type="checkbox" class="prodChecklist" value="Checklist">Opt in
+                        </div>
+                    </label>
+                </div>
+
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/LunchLearnIllustration1.png" alt="">
+                        <div class="highlightCopy">
+                            <h3>Lunch & Learn</h3>
+                            <p>Learn more about our upcoming Lunch & Learn sessions.
+                                Upcoming topics include: Managing Grant Applications, Storytelling with Data, and Utilizing AI.</p>
+                            <input type="checkbox" class="prodLunch" value="Lunch">Opt in
+                        </div>
+                    </label>
+                </div>
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/CallIllustration1.png" alt="">
+                        <div class="highlightCopy">
+                            <h3>Runway Call</h3>
+                            <p>Ready to take it a step further? Let’s schedule a Runway Call meeting to discuss your quiz results and address 1-3 key challenges you’re facing.</p>
+                            <input type="checkbox" class="prodCall" value="Call">Opt in
+                        </div>
+                    </label>
+                </div>
+
+
+            </div>
+
+        </form>
+    </div>
+
+    <div hidden class="resultsPage" id="highScoreResult" style="background-color: var(--background);">
+        <div class="resultsHero">
+            <div class="resultGrid">
+                <div id="pie" class="pie animate" style="--c:var(--orange); --p:93">93%</div>
+                <h2>Based on your quiz score,
+                    <span class="resultTitle">you are grant ready!</span>
+                    Your nonprofit is well-positioned to apply for grants!
+                </h2>
+            </div>
+        </div>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfzWWm_Ba4uBP0Azp6sOeQlUap1AQoFccXfKOWS_TRw5cLfKg/formResponse" method="post" target="googleSubmission">
+            <div class="highlightsContainer">
+
+                <div class="lead">
+                    <label class="personalized" for="entry.1800511568">Your Name</label>
+                    <input hidden class="nameForEmailSubmit" type="text" name="entry.1463236143" id="entry.1463236143">
+                    <input hidden type="text" class="prodsForEmailSubmit" name="entry.872624969" id="entry.872624969">
+                    <h3>Here are a few ways we'd like to help you on your path</h3>
+                    <p>Get started today! Opt in to some or all of these offers and we'll connect you with the right resources.</p>
+                    <label class="emailLabel" for="entry.1573018482">Email address</label>
+                    <input class="emailInput" type="email" name="entry.1573018482" id="entry.1573018482" placeholder="you@where.what">
+                    <button type="submit" class="emailSubmitButton teal disabled">Send</button>
+                </div>
+
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/GuideIllustrations1.png">
+                        <div class="highlightCopy">
+                            <h3>Grant-Ready Checklist</h3>
+                            <p>Opt in to some or all of these offers receive Synergy Grant Solutions' free checklist, "You’re Grant Ready, Now What?" This guide offers tips on building a grant pipeline, crafting a compelling narrative, and conducting funder research.</p>
+                            <input type="checkbox" class="prodChecklist" value="Checklist">Opt in
+                        </div>
+                    </label>
+                </div>
+
+                <div class="highlight">
+                    <label>
+                        <img loading="lazy" src="images/CallIllustration1.png" alt="">
+                        <div class="highlightCopy">
+                            <h3>Runway Call</h3>
+                            <p>Schedule a free 30-minute consultation to explore how Synergy Grant Solutions can support your grant strategy and financial sustainability.</p>
+                            <input type="checkbox" class="prodCall" value="Call">Opt in
+                        </div>
+                    </label>
+                </div>
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div id="thankYouContainer">
+        <div>
+            <h3 class="nomarg"><span class="primary chonk">Thank you</span><br>for taking our quiz!</h3>
+            <p class="nomarg">We'll get back to you soon.</p>
+        </div>
+        <img class="profile" src="images/CircleProfileImage1.png" alt="">
+        
+    </div>
+
+    <iframe src="" frameborder="0" id="googleSubmission" name="googleSubmission"></iframe>
+
+    <script src="scripts/synergyscript.js"></script>
+
+
+</body>
+
+</html>

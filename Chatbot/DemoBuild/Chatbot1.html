@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chatbot Test 1</title>
+    <link rel="stylesheet" href="./Chatbot1.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <section class="page-img">
+        <img src="./images/MSStore_HP1.jpg" alt="">
+    </section>
+
+    <div class="button">
+        <div class="talkbubble">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 34.1"><path d="M31.5 21.5a4.2 4.2 0 0 1-1.2 3.1c-.4.4-.8.7-1.4.9-.5.2-1.1.3-1.7.3h-5.9l-9.8 8.4v-8.4H4.3a4.2 4.2 0 0 1-3.1-1.2c-.4-.4-.7-.8-.9-1.4L0 21.5V4.3a4.2 4.2 0 0 1 1.2-3.1C1.6.8 2 .5 2.6.3S3.7 0 4.3 0h22.9a4.2 4.2 0 0 1 3.1 1.2c.4.4.7.8.9 1.4.2.5.3 1.1.3 1.7v17.2z" fill="#2a395b"/></svg>
+        </div>
+        <div class="closex">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.2 7.2"><path d="M4.3 3.6L7.1.8c.2-.2.2-.5 0-.7s-.5-.1-.7 0L3.6 2.9.8.1H.1C-.1.2 0 .6.1.8l2.8 2.8L.1 6.4v.7l.3.1.3-.1 2.8-2.8 2.8 2.8.3.1.3-.1c.2-.2.2-.5 0-.7L4.3 3.6z" fill="#52e5ff"/></svg>
+        </div>
+    </div>
+
+    <div class="chat window">
+        <div class="header">
+            <h2 class="inline">How can we help?</h2>
+            <div class="minimize icon f-right">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 1"><style>.st0{fill:#50e6ff}</style><path class="st0" d="M0 .5h12M0 .2h12v.6H0z"/></svg>
+            </div>
+            <div class="refresh icon f-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M7.8.9c.5.3.9.7 1.2 1.1l.8 1.4c.2.5.2 1 .2 1.6l-.2 1.3-.5 1.2-.8 1-1 .8-1.2.5L5 10a5 5 0 0 1-2.5-.7l-1-.8-.8-1-.5-1.2A5 5 0 0 1 0 5l.2-1.3.5-1.2.8-1L2.6.7H1.3V0h2.5v2.5h-.7V1.1l-1 .7c-.3.2-.6.5-.8.9L.8 3.8.6 5l.2 1.2.4 1 .7.9.9.7 1 .4 1.2.2a5 5 0 0 0 1.2-.2l1-.4.9-.7.7-.9.4-1a4.3 4.3 0 0 0 0-2.6c-.2-.5-.4-.9-.7-1.2l-1-1c-.4-.3-.9-.5-1.3-.6l.2-.6c.5.1 1 .4 1.4.7z" fill="#50e6ff"/></svg>
+            </div>
+        </div>
+        <div class="agent card textform">
+            <h4>The Microsoft Virtual Agent is eager to assist you. Start chatting!</h4>
+            <form style="vertical-align:top;" class="inline" action="/">
+                <input type="text" placeholder="Start typing">
+            </form>
+            <div style="vertical-align:top; margin: 0 -2.5px;" class="attach icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3.9 8.9"><path d="M3.9 1.7V7l-.2.8c-.1.3-.2.3-.4.5l-.6.4-.8.2-.7-.2C1 8.6.7 8.5.6 8.3l-.4-.6-.2-.8V1.4L.1.8.4.4.8.1l.6-.1.5.1.4.3.3.4.2.6v5.5l-.1.3-.2.3-.2.2-.3.1-.3-.1-.3-.2-.2-.2-.1-.3V2.2h.6v4.7l.1.2.2.1.2-.1V1.4l-.1-.3L2 .8 1.7.6 1.4.5l-.3.1-.3.2-.2.3-.1.3v5.5l.1.5.4.5.4.3.5.1.5-.1.5-.3.3-.4.1-.5V1.7h.6z" fill="#ffffff"/></svg>
+            </div>
+            <div style="vertical-align:top; margin: 0 -2.5px;" class="send icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.6 5"><path d="M0 5l.8-2.5L0 0l7.6 2.5L0 5zm1.3-2.7h4.1L.8.8l.5 1.5zm-.5 2l4.6-1.5H1.3L.8 4.3z" fill="#ffffff"/></svg>
+            </div>
+            <!--            <p><a class="caret" href="/">Speak to a live agent</a></p>-->
+        </div>
+        <div class="agent card help">
+            <h4>Find product support</h4>
+            <ul class="three no-style">
+                <li><button>Office</button></li>
+                <li><button>Surface</button></li>
+                <li><button>Show more</button></li>
+            </ul>
+        </div>
+        <div class="agent card help two">
+            <h4>Get help with your order</h4>
+            <p>Your recent purchase on 11/02/2019:</p>
+            <ul class="two no-style">
+                <li class="center"><img src="./images/SurfaceLaptop1.png" alt=""></li>
+                <li>
+                    <ul class="no-style">
+                        <li>Surface Laptop 2</li>
+                        <li>&#9733;&#9733;&#9733;&#9733;&#9734; 21</li>
+                        <li>From $999.00</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="colorpicker-container">
+       <div class="colorpicker">
+        <div class="circle blue selected"></div>
+        <div class="circle orange"></div>
+        <div class="circle teal"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    $(document).ready(function() {
+        $(".button").click(function() {
+            $(this).toggleClass("next");
+            $(".chat.window").toggleClass("in");
+        });
+//        $(".button.next").click(function() {
+//            $(this).removeClass("next");
+//            $(".chat.window").removeClass("in");
+//        });
+        $(".colorpicker .circle").click(function() {
+            $(".colorpicker .circle").removeClass("selected");
+            $(this).addClass("selected");
+        });
+        $(".circle.blue").click(function() {
+            $(".window, .button").removeClass("orange teal");
+        });
+        $(".circle.orange").click(function() {
+            $(".window, .button").removeClass("teal");
+            $(".window, .button").addClass("orange");
+        });
+        $(".circle.teal").click(function() {
+            $(".window, .button").removeClass("orange");
+            $(".window, .button").addClass("teal");
+        });
+    });
+</script>
