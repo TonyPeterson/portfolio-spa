@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                         chevron.classList.add('visible');
                         chevron.style.top = (li.offsetTop + 9) + 'px'; // vertically center the 24px arrow
+                        
+                        li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
                         const bioTitle = document.querySelector('.view-portfolio [data-content="bio-title"]');
                         const bioText = document.querySelector('.view-portfolio [data-content="bio-text"]');
@@ -437,5 +439,44 @@ document.addEventListener('DOMContentLoaded', async () => {
                         closeModal();
                     }
                 });
+            }
+
+            // Idle Auto-Scroll for Active Project in .box-area-e
+            const boxAreaE = document.querySelector('.box-area-e');
+            let idleTimer = null;
+
+            function checkAndScrollActiveProject() {
+                const activeProject = document.querySelector('#project-list li.active');
+                if (!activeProject) return;
+                
+                const container = document.querySelector('.box-area-e .scrollable-list-content') || document.querySelector('.box-area-e');
+                if (!container) return;
+
+                const containerRect = container.getBoundingClientRect();
+                const activeRect = activeProject.getBoundingClientRect();
+
+                const isFullyVisible = (
+                    Math.floor(activeRect.top) >= Math.floor(containerRect.top) &&
+                    Math.ceil(activeRect.bottom) <= Math.ceil(containerRect.bottom)
+                );
+
+                if (!isFullyVisible) {
+                    activeProject.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+                idleTimer = setTimeout(checkAndScrollActiveProject, 5000);
+            }
+
+            if (boxAreaE) {
+                boxAreaE.addEventListener('mousemove', resetIdleTimer);
+                boxAreaE.addEventListener('scroll', resetIdleTimer, true);
+                boxAreaE.addEventListener('wheel', resetIdleTimer);
+                boxAreaE.addEventListener('touchstart', resetIdleTimer);
+                
+                // Start initial timer
+                resetIdleTimer();
             }
         });
