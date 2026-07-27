@@ -537,6 +537,53 @@
             transform: scale(1.02);
         }
 
+        .project-chevron {
+            position: absolute;
+            left: -6px;
+            transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+            color: #00bfff;
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .project-chevron.visible {
+            opacity: 1;
+        }
+
+        .project-list-item {
+            padding: 0.66rem 0;
+            padding-left: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
+            color: #fff;
+        }
+
+        .project-list-item.hovered {
+            color: #00bfff;
+        }
+
+        .project-list-item.active {
+            transform: translateX(15px);
+            color: #00bfff;
+        }
+
+        .portfolio-link-item {
+            display: block;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-link-item:hover {
+            color: #00bfff;
+        }
+
         /* Contact Form Styles */
         textarea[name="message"],
         input[name="name"],

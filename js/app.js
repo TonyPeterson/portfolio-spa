@@ -50,14 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 const chevron = document.createElement('div');
                 chevron.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="18" y2="12"></line><polyline points="11 5 18 12 11 19"></polyline></svg>';
-                chevron.style.position = 'absolute';
-                chevron.style.left = '-6px';
-                chevron.style.transition = 'top 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease';
-                chevron.style.color = '#00bfff';
-                chevron.style.display = 'flex';
-                chevron.style.alignItems = 'center';
-                chevron.style.pointerEvents = 'none';
-                chevron.style.opacity = '0'; // Hidden initially until an item is selected or we can show it immediately
+                chevron.classList.add('project-chevron');
                 projectList.appendChild(chevron);
 
                 let activeLi = null;
@@ -66,29 +59,24 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (!proj.title) return;
                     const li = document.createElement('li');
                     li.textContent = proj.title;
-                    li.style.padding = '0.66rem 0';
-                    li.style.paddingLeft = '20px';
-                    li.style.cursor = 'pointer';
-                    li.style.fontSize = '1.2rem';
-                    li.style.transition = 'transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease';
+                    li.classList.add('project-list-item');
                     
                     li.addEventListener('mouseenter', () => {
-                        if (activeLi !== li) li.style.color = '#00bfff';
+                        if (activeLi !== li) li.classList.add('hovered');
                     });
                     li.addEventListener('mouseleave', () => {
-                        if (activeLi !== li) li.style.color = '#fff';
+                        if (activeLi !== li) li.classList.remove('hovered');
                     });
                     
                     li.addEventListener('click', () => {
                         if (activeLi) {
-                            activeLi.style.transform = 'translateX(0)';
-                            activeLi.style.color = '#fff';
+                            activeLi.classList.remove('active');
+                            activeLi.classList.remove('hovered');
                         }
                         activeLi = li;
-                        li.style.transform = 'translateX(15px)';
-                        li.style.color = '#00bfff';
+                        li.classList.add('active');
 
-                        chevron.style.opacity = '1';
+                        chevron.classList.add('visible');
                         chevron.style.top = (li.offsetTop + 9) + 'px'; // vertically center the 24px arrow
 
                         const bioTitle = document.querySelector('.view-portfolio [data-content="bio-title"]');
@@ -140,15 +128,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                         a.href = link.url;
                                         a.textContent = link.text + ' ›';
                                         a.target = '_blank';
-                                        a.style.display = 'block';
-                                        a.style.marginBottom = '1rem';
-                                        a.style.fontSize = '1.2rem';
-                                        a.style.color = '#fff';
-                                        a.style.textDecoration = 'none';
-                                        a.style.cursor = 'pointer';
-                                        
-                                        a.addEventListener('mouseenter', () => a.style.color = '#00bfff');
-                                        a.addEventListener('mouseleave', () => a.style.color = '#fff');
+                                        a.classList.add('portfolio-link-item');
                                         
                                         linksContainer.appendChild(a);
                                     });
