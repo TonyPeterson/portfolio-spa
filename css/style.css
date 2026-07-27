@@ -131,7 +131,12 @@
             margin: 0;
         }
 
-        .box-area-a { grid-area: a; }
+        .box-area-a { grid-area: a; 
+        
+            .view-portfolio {
+                padding: 0;
+        }
+        }
         .box-area-b { 
             grid-area: b; 
             flex-direction: row; /* stacked horizontally */
@@ -223,7 +228,6 @@
         /* 5. INTERACTIONS */
         .wireframe-img {
             max-width: 100%;
-            margin-top: 1rem;
             transition: transform 0.3s ease;
             cursor: pointer;
         }
