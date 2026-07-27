@@ -53,7 +53,7 @@
             "text": "Visit the live site"
           }
         ],
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://modelviewer.dev/\" target=\"_blank\">Model-Viewer</a> - For rendering 3D models\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For coding the prototype\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://prepros.io/\" target=\"_blank\">Prepros</a> - For running local servers\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and some\r\n                        animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.babylonjs.com/\" target=\"_blank\">Babylon JS</a> - For rendering 3D models\r\n                        with physics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">Git</a> - For version history and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For wireframing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For pre-prototype motion mocks\r\n                    </li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>\r\n                        <a href=\"https://modelviewer.dev/\" target=\"_blank\">Model-Viewer</a> - For rendering 3D models\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For coding the prototype\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://prepros.io/\" target=\"_blank\">Prepros</a> - For running local servers\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and some\r\n                        animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.babylonjs.com/\" target=\"_blank\">Babylon JS</a> - For rendering 3D models\r\n                        with physics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">Git</a> - For version history and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For wireframing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For pre-prototype motion mocks\r\n                    </li></ul>",
         "what-i-did": "<h3>What I did</h3><p>As one of the two dedicated UX designers and the designated prototyper for this exciting project, my responsibilities spanned the full spectrum of design, from conceptualization and ideation to mock creation and presentation. My mission: to manifest the design team's vision into a captivating, high-fidelity, and interactive prototype—a blueprint that would guide the development efforts of the external company tasked with crafting the customer-facing tool.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "did-you-know": "<p>3D models on the web can increase user engagement by up to 50%.</p>"
@@ -67,14 +67,14 @@
             "text": "Play the Alpha"
           }
         ],
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://phaser.io/\" target=\"_blank\">Phaser</a> - The HTML5 game engine\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For writing Javascript\r\n                        and developing levels\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">GitHub</a> - For version control and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For level design and concept art\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For asset refinement\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For animated motion asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound compsition\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.bfxr.net/\">BFXR</a> - For sound design\r\n                    </li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>\r\n                        <a href=\"https://phaser.io/\" target=\"_blank\">Phaser</a> - The HTML5 game engine\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For writing Javascript\r\n                        and developing levels\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">GitHub</a> - For version control and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For level design and concept art\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For asset refinement\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For animated motion asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound compsition\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.bfxr.net/\">BFXR</a> - For sound design\r\n                    </li></ul>",
         "what-i-did": "<h3>My Role</h3><p>Within our close-knit Product Lab team, consisting of just five members, I assumed the pivotal role of Game Designer and Developer. My responsibilities encompassed conceiving and crafting engaging levels and puzzles using the Phaser game engine as our canvas. I played a crucial role in transforming our conceptual ideas into tangible game elements, coding them directly in JavaScript within the Phaser framework.</p>",
         "role": "<p>Game Developer & Designer</p>",
         "did-you-know": "<p>The Konami code was created by Kazuhisa Hashimoto because he found Gradius too hard to play during testing.</p>"
       },
       {
         "title": "Terra Mine Diver",
-        "content": "<h3>A nostalgic adventure game for the Playdate</h3><p>Your coworkers are going missing! Explore the haunted depths of an off-world mine in Terra Mine Diver, a game designed and developed exclusively for the Playdate handheld console. This unique experience blends classic exploration and puzzle-solving with innovative crank-powered mechanics, all wrapped in a charming 1-bit aesthetic.</p><h3>Unearthing the fun</h3><h4>Creative constraints</h4><ul class=\"white standard margin-left\"><li>low-resolution display</li>\r\n                    <li>Limited color palette</li>\r\n                    <li>Quirky crank controls</li>\r\n                    <li>Tiny filesize</li></ul><p>Inspired by the Playdate's distinctive hardware, I embraced the creative constraints. This allowed me to craft a truly unique gameplay experience where players utilize the crank to solve intricate puzzles and uncover the secrets hidden within the mine.</p><h3>Digging Deeper</h3><p>From the initial story concept and level design to the pixel-perfect visuals, engaging puzzles, and catchy chiptune soundtrack, I meticulously crafted every aspect of Terra Mine Diver using Lua - the same programming language used in Roblox. This project was a labor of love, showcasing my passion for game development and my ability to transform limitations into exciting opportunities.</p>",
+        "content": "<h3>A nostalgic adventure game for the Playdate</h3><p>Your coworkers are going missing! Explore the haunted depths of an off-world mine in Terra Mine Diver, a game designed and developed exclusively for the Playdate handheld console. This unique experience blends classic exploration and puzzle-solving with innovative crank-powered mechanics, all wrapped in a charming 1-bit aesthetic.</p><h3>Unearthing the fun</h3><h4>Creative constraints</h4><ul><li>low-resolution display</li>\r\n                    <li>Limited color palette</li>\r\n                    <li>Quirky crank controls</li>\r\n                    <li>Tiny filesize</li></ul><p>Inspired by the Playdate's distinctive hardware, I embraced the creative constraints. This allowed me to craft a truly unique gameplay experience where players utilize the crank to solve intricate puzzles and uncover the secrets hidden within the mine.</p><h3>Digging Deeper</h3><p>From the initial story concept and level design to the pixel-perfect visuals, engaging puzzles, and catchy chiptune soundtrack, I meticulously crafted every aspect of Terra Mine Diver using Lua - the same programming language used in Roblox. This project was a labor of love, showcasing my passion for game development and my ability to transform limitations into exciting opportunities.</p>",
         "links": [
           {
             "url": "https://tonypeterson.itch.io/terraminediver",
@@ -83,14 +83,14 @@
         ],
         "role": "<p>Game Developer & Designer</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>The Playdate console has a black-and-white 1-bit screen that does not have a backlight.</p>"
       },
       {
         "title": "CSO Showreel",
         "content": "<h3>2023 Video Montage</h3><p>In a dynamic design organization comprising more than 30 skilled designers, the landscape is constantly evolving. I undertook the exciting challenge of crafting a comprehensive compilation video that highlights the remarkable achievements of my team throughout FY23.</p><h3>Collaborating Cross Pod</h3><p>While my usual workflow entails receiving a design brief, maintaining regular communication with Project Managers (PMs) and stakeholders, iterating based on feedback, and delivering assets upon alignment with both parties and overarching business objectives, this project demanded a unique approach.</p>",
         "links": [],
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions\r\n                    </li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>\r\n                        <a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions\r\n                    </li></ul>",
         "what-i-did": "<h3>What I did</h3><p>This endeavor involved curating a video that harmoniously integrated diverse projects, each spearheaded by a multitude of designers within our organization. My role was to transform their static designs into a captivating narrative suitable for video and motion playback. To achieve this, I leveraged advanced 3D reconstruction techniques. This process entailed dissecting their deliverables into individual components and meticulously reconstructing the final design within a dynamic timeline.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "did-you-know": "<p>Video content accounts for over 80% of all internet traffic today.</p>"
@@ -101,7 +101,7 @@
         "links": [],
         "role": "<p>Lead Designer</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -110,7 +110,7 @@
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -119,7 +119,7 @@
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -131,7 +131,7 @@
             "text": "Give it a go"
           }
         ],
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://aframe.io/\" target=\"_blank\">A-Frame</a> - The 3D rendering engine\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For coding the prototype\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling, lighting,\r\n                        texturing, and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://unity.com/\" target=\"_blank\">Unity</a> - For rendering AR devices\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">Git</a> - For version history and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For wireframing and storyboarding\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For static asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For pre-prototype motion mocks\r\n                    </li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>\r\n                        <a href=\"https://aframe.io/\" target=\"_blank\">A-Frame</a> - The 3D rendering engine\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://code.visualstudio.com/\" target=\"_blank\">VS Code</a> - For coding the prototype\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling, lighting,\r\n                        texturing, and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://unity.com/\" target=\"_blank\">Unity</a> - For rendering AR devices\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://github.com/\" target=\"_blank\">Git</a> - For version history and collaboration\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For wireframing and storyboarding\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For static asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a> - For pre-prototype motion mocks\r\n                    </li></ul>",
         "what-i-did": "<h3>What I did</h3><p>Taking on a multifaceted role, I conceptualized, modeled, constructed, and coded this groundbreaking virtual store experience. This project served as a pioneering tool to push the boundaries and unlock the potential of emerging web 3D technology at that time.</p>",
         "role": "<p>Web Developer & Designer</p>",
         "did-you-know": "<p>WebVR and WebXR enable immersive VR experiences directly in the browser without any app installations.</p>"
@@ -147,7 +147,7 @@
         ],
         "role": "<p>Web Developer & Designer</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>Interactive content like quizzes can generate 2x more conversions than passive content.</p>"
       },
       {
@@ -161,7 +161,7 @@
         ],
         "role": "<p>Web Developer & Designer</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -170,7 +170,7 @@
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>Design systems can reduce product development time by up to 50% by reusing components.</p>"
       },
       {
@@ -184,14 +184,14 @@
         ],
         "role": "<p>Web Developer & Designer</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
         "title": "Motion Graphics Reel",
         "content": "<h3>Motion Graphics are the SECRET SAUCE</h3><p>This reel is a peek into my brain—a kaleidoscope of colors, shapes, and ideas bouncing around, begging to be animated. I see motion design as a way to make the complex simple, the mundane magical, and the everyday extraordinary. My playful spirit and love of creative expression have always fueled my creativity. I'm drawn toward blending technology with art, and love being part of teams that push the boundaries of what's possible.</p>",
         "links": [],
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions\r\n                    </li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>\r\n                        <a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions\r\n                    </li></ul>",
         "role": "<p>Motion Designer & Video Editor</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
@@ -207,7 +207,7 @@
         ],
         "what-i-did": "<h3>What I did</h3><p>Recognizing the imperative need for a tool that could empower designers to seamlessly craft page components in precise alignment with our nascent design standards, I undertook the task of conceiving and constructing the content block tool. This sophisticated tool was meticulously engineered to seamlessly harmonize with the evolving web standards we were concurrently shaping, fundamentally transforming the often repetitive and time-consuming process of content placement layout.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>WYSIWYG editors revolutionized web design by allowing users to see what the end result would look like while creating it.</p>"
       },
       {
@@ -216,14 +216,14 @@
         "links": [],
         "what-i-did": "<h3>My contributions</h3><p>Prototyping: I built interactive prototypes of MWF components using HTML, CSS, and JavaScript. These prototypes were essential for stakeholder presentations, real-world user testing, and ultimately, engineering handoff for CMS integration.</p><p>Accessibility: I championed accessibility best practices, ensuring MWF components met evolving standards and provided inclusive experiences for all users.</p><p>CMS Integration: I collaborated closely with developers to seamlessly integrate MWF with various content management systems, including the latest migration to Adobe Experience Manager (AEM).</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
         "title": "Teams Holiday Background",
         "content": "<h3>Willy Wonka Holiday</h3><p>Annually, the Campaigns team unveils their refreshed holiday marketing toolkit. In the year 2023, this comprehensive kit featured a novel addition—a 3D rendering, intended for utilization within Microsoft Teams as a backdrop image for conference calls. My design directive succinctly encapsulated the essence of the project: 'Craft a 3D environment that harmonizes with our style guide while infusing a whimsical 'Willy Wonka' touch.'</h3>\r\n                ",
         "links": [],
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and some\r\n                        animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For SVG creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For post processing and color correction\r\n                    </li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>\r\n                        <a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and some\r\n                        animations\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                        - For SVG creation\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> -\r\n                        For post processing and color correction\r\n                    </li></ul>",
         "what-i-did": "<h3>What I did</h3>\r\n                <p>Leveraging the toolkit's specifications as my guiding framework, I embarked on the creative journey. The outcome included multiple design alternatives and a meticulously structured working file, purposefully engineered to empower other Blender users in generating their own brand-compliant iterations.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
@@ -239,7 +239,7 @@
         ],
         "what-i-did": "<h3>What I did</h3><p>To facilitate the design transformation and decision-making process, I introduced a sophisticated design tool. This tool empowered stakeholders to explore a plethora of design possibilities, offering them the flexibility to experiment with 14 key controls to craft a customized design solution. Once a design direction was chosen and rigorously tested, I seamlessly transitioned into the implementation phase, furnishing the requisite CSS to bring the redesigned component to life. Throughout this journey, we iterated extensively based on insights gleaned from rounds of research and invaluable customer feedback, culminating in the successful deployment of the reimagined component in 2021.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -253,7 +253,7 @@
         ],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -262,7 +262,7 @@
         "links": [],
         "what-i-did": "<h3>What I did</h3><p>In this creative endeavor, I actively participated in the design process by conceptualizing and crafting placements, and I also played a key role in building several of the interactive components that enriched the page's user experience.</p>",
         "role": "<p>Game Developer & Designer</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -271,7 +271,7 @@
         "links": [],
         "what-i-did": "<h3>What I did</h3><p>In this imaginative endeavor, I played a pivotal role in crafting and designing all the strategic placements on the page. Additionally, I took charge of developing an innovative image slider, enabling seamless transitions between two distinct images. To further enhance the immersive experience, I introduced a dynamic 3D toggle, rendering every image on the page in anaglyphic (stereoscopic 3D), complete with retro glasses.</p>",
         "role": "<p>Game Developer & Designer</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -280,7 +280,7 @@
         "links": [],
         "what-i-did": "<h3>What I did</h3><p>I spearheaded the project by devising the app flow and crafting the user interface.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -289,14 +289,14 @@
         "links": [],
         "what-i-did": "<h3>My contributions</h3><p>One of two designers.  We split the graphics and animation, then I stitched it all together.  Seamlessly, of course.  Because that's what I do.  I bring the pieces together, make the whole greater than the sum of its parts.  And occasionally, I throw in a witty comment or two.  Just for fun.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
         "title": "Simplified Office",
         "content": "<h3>Why does Office need to be so complex?</h3><p>As a dedicated member of the Product Lab team at Microsoft, we were entrusted with the exciting mandate of brainstorming, conceptualizing, pitching, and ultimately bringing to life a diverse array of passion projects. Among these endeavors, \"Simplified Office\" held a special place in my heart—a project aimed at elevating and simplifying the user interface of Microsoft Office, a software suite used by millions worldwide.</p><h3>In Essence</h3><p>During the ideation phase within Product Lab, \"Simplified Office\" emerged as one of the three standout projects chosen for presentation to Microsoft executives. Ultimately, while it did not progress beyond this stage, it remains a testament to the team's innovative spirit. The project, while side-lined, contributed to the creative ecosystem that eventually birthed the Project Mio video game idea.</p>",
         "links": [],
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                    </li>\r\n                    <li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a></li>\r\n                    <li><a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a></li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a>\r\n                    </li>\r\n                    <li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a></li>\r\n                    <li><a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After\r\n                            Effects</a></li></ul>",
         "what-i-did": "<h3>What I did</h3><p>In the pursuit of this vision, I took the reins of the project by spearheading its conceptualization and crafting a compelling video presentation designed to captivate the attention of company executives. My role encompassed ideating and articulating the core concepts, illustrating how \"Simplified Office\" could enhance user experiences, and showcasing its potential to streamline complex workflows.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
@@ -307,7 +307,7 @@
         "links": [],
         "what-i-did": "<h3>What I did</h3><p>To address this challenge, I undertook the pivotal role of crafting a cohesive visual identity for Microsoft Complete. This encompassed the creation of a distinctive logo, the formulation of comprehensive branding guidelines, and the establishment of clear usage styles.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -321,7 +321,7 @@
         ],
         "what-i-did": "<h3>What I did</h3><p>My role in this endeavor encompassed the conceptualization and presentation of UI elements aligned with the brand's aesthetics. Once the design was approved, I played a pivotal role in translating it into reality by providing the requisite CSS for the third-party bot.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -335,7 +335,7 @@
         ],
         "what-i-did": "<h3>What I did</h3><p>Tasked with this challenge, I curated a refined collection of over 20 unique glyphs, some of which I designed from the ground up. These meticulously crafted icons were then seamlessly integrated into the Content Management System (CMS), with careful consideration for MARCOM placements. Additionally, I played a crucial role in the development of the accompanying stylesheets and guidelines to ensure consistent and coherent usage.</p>",
         "role": "<p>Lead Designer</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -344,7 +344,7 @@
         "links": [],
         "what-i-did": "<h3>What I did</h3><p>In this critical endeavor, I assumed a central role in designing and constructing a versatile 3D asset kit tailored explicitly for holiday MARCOM placements. This comprehensive kit encompassed a rich array of scenes, props, and animations, strategically engineered to seamlessly integrate with existing product renders. The outcome was a visually immersive experience, giving the impression that the featured products seamlessly belonged within the enchanting 3D holiday scenes.</p>",
         "role": "<p>Lead Designer</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -358,7 +358,7 @@
         ],
         "what-i-did": "<h3>What I did</h3><p>Within this vibrant initiative, my primary focus revolved around the creation of the captivating bumper animation. Drawing inspiration from the campaign's existing assortment of vibrant pins, each adorned with distinct calls to action, I envisioned an animation that would eloquently illuminate the colorful spectrum. This animation symbolized unity, beautifully merging the diverse voices within the campaign into a harmonious and coherent message.</p>",
         "role": "<p>Lead Designer</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -372,7 +372,7 @@
         ],
         "what-i-did": "<h3>My contributions</h3><p>Director, editor, videographer, producer, writer, lighting designer, sound engineer, colorist, therapist...  Okay, maybe not therapist.  But I did wrangle a team of volunteers, taught them the finer points of filmmaking, and somehow managed to capture the heart and soul of this quirky church.  6 months, countless miles, and a whole lot of coffee.  But hey, who needs sleep when you're making movie magic?</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -386,7 +386,7 @@
         ],
         "what-i-did": "<h3>My contributions</h3><p>Director, editor, camera operator, motion graphics artist, storyboarder, renderer, project manager, script writer...  I wear a lot of hats.  And sometimes, I even juggle them.  This project was a juggling act, but we pulled it off.</p>",
         "role": "<p>Lead Designer</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -395,7 +395,7 @@
         "links": [],
         "what-i-did": "<h3>My contributions</h3><p>Designer, installer, concept artist, print liaison.  Basically, I was the signage whisperer.  I spoke the language of wayfinding, translated it into clear and concise visuals, and then wrestled those designs onto the walls.  (Okay, maybe not wrestled.  But there was definitely some strategic hammering involved.)  The result?  Happy visitors, no interpretive dance required.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -404,7 +404,7 @@
         "links": [],
         "what-i-did": "<h3>My contributions</h3><p>Designer extraordinaire.  I crafted every piece of social marketing that fueled this movement.  Infographics, charts, visual stories—you name it, I designed it.  And because love is all about sharing, our materials even ended up in the hands of professional couples counselors.  So, yeah, you could say I played a small part in helping people #staymarried.  (But mostly, I just like making pretty things.)</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -413,7 +413,7 @@
         "links": [],
         "what-i-did": "<h3>My contributions</h3><p>I brought this origami-inspired concept to life with a video illustrating the transformation from box to lamp.  It's a step-by-step guide to eco-friendly illumination, with a touch of whimsy and a whole lot of \"reduce, reuse, recycle\" spirit.  Because sustainability can be fun, and design can make a difference.</p>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       },
       {
@@ -422,7 +422,7 @@
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "what-i-did": "<h3>What I did</h3><p>I led the end-to-end process from initial concept and ideation to final execution. I collaborated with stakeholders to gather requirements, designed the user experience, and implemented the final solution, ensuring it met all performance and usability standards.</p>",
-        "tools": "<h3>Tools I used</h3><ul class=\"white standard margin-left\"><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
+        "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>User-centered design can improve ROI by significantly reducing the time and cost associated with post-launch bug fixes.</p>"
       }
     ]

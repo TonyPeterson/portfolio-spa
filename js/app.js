@@ -234,25 +234,35 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             function updateBentoLabels(tabName) {
                 const portfolioLabels = {
-                    'socials-tile': 'links',
-                    'quote-tile': 'projects',
-                    'links-tile': 'role',
-                    'soft-skills-tile': 'what i did',
-                    'hard-skills-tile': 'tools i used',
-                    'did-you-know-tile': 'did you know',
-                    'hobbies-tile': 'tbd'
+                    'box-area-d': 'links',
+                    'box-area-e': 'projects',
+                    'box-area-f': 'role',
+                    'box-area-g': 'what i did',
+                    'box-area-h': 'tools i used',
+                    'box-area-i': 'did you know',
+                    'box-area-j': 'tbd'
+                };
+                
+                const aboutLabels = {
+                    'box-area-d': 'socials',
+                    'box-area-e': 'quote',
+                    'box-area-f': 'links',
+                    'box-area-g': 'soft skills',
+                    'box-area-h': 'hard skills',
+                    'box-area-i': 'did you know',
+                    'box-area-j': 'hobbies'
                 };
                 
                 document.querySelectorAll('.bento-label').forEach(labelEl => {
                     const parent = labelEl.parentElement;
-                    const tileClass = Array.from(parent.classList).find(cls => cls.endsWith('-tile') && cls !== 'grid-tile');
+                    const tileClass = Array.from(parent.classList).find(cls => cls.startsWith('box-area-'));
                     
                     if (!tileClass) return;
                     
                     if (tabName === 'arcade' || tabName === 'contact') {
                         labelEl.textContent = 'tbd';
                     } else if (tabName === 'about') {
-                        labelEl.textContent = tileClass.replace('-tile', '').replace(/-/g, ' ');
+                        labelEl.textContent = aboutLabels[tileClass] || 'tbd';
                     } else if (tabName === 'portfolio') {
                         labelEl.textContent = portfolioLabels[tileClass] || 'tbd';
                     }
@@ -370,7 +380,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const modalVideo = document.getElementById('modal-video');
             const modalIframe = document.getElementById('modal-iframe');
             const modalCloseBtn = document.querySelector('.modal-close');
-            const portfolioTopLeftImg = document.querySelector('.top-left .view-portfolio .wireframe-img');
+            const portfolioTopLeftImg = document.querySelector('.box-area-a .view-portfolio .wireframe-img');
 
             if (portfolioTopLeftImg && modal && modalImg && modalVideo && modalCloseBtn) {
                 portfolioTopLeftImg.addEventListener('click', () => {

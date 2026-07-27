@@ -98,14 +98,23 @@
 
             grid-template-columns: 1fr 1fr 1fr; /* Changed to 3 equal columns for the bento layout */
             grid-template-rows: 300px 200px 300px 200px 300px 250px; /* Specific row heights */
+            grid-template-areas:
+                "a b b"
+                "c c d"
+                "c c e"
+                "f g g"
+                "h h h"
+                "i i j";
         }
 
         /* Grid Tile Base Styling */
-        .grid-tile {
+        .box {
             display: flex;
             flex-direction: column;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 1);
+            padding: 0;
+            background: transparent;
             /* Allow hover effects to break cell boundaries where needed */
         }
 
@@ -122,20 +131,13 @@
             margin: 0;
         }
 
-        .grid-tile.top-left {
-            grid-column: 1;
-            grid-row: 1;
-        }
-
-        /* Nav Tile */
-        .nav-tile {
-            grid-column: 2 / -1; /* spans top two rightmost boxes */
-            grid-row: 1;
+        .box-area-a { grid-area: a; }
+        .box-area-b { 
+            grid-area: b; 
             flex-direction: row; /* stacked horizontally */
             justify-content: space-between;
             align-items: stretch;
             gap: 0;
-            padding: 0;
             z-index: 10;
         }
 
@@ -172,41 +174,14 @@
         }
 
         /* Layout for other areas */
-        .bio-tile {
-            grid-column: 1 / 3;
-            grid-row: 2 / 4;
-        }
-        .socials-tile {
-            grid-column: 3;
-            grid-row: 2;
-        }
-        .quote-tile {
-            grid-column: 3;
-            grid-row: 3;
-        }
-        
-        .links-tile {
-            grid-column: 1;
-            grid-row: 4;
-        }
-        .soft-skills-tile {
-            grid-column: 2 / 4;
-            grid-row: 4;
-        }
-        
-        .hard-skills-tile {
-            grid-column: 1 / 4;
-            grid-row: 5;
-        }
-        
-        .did-you-know-tile {
-            grid-column: 1 / 3;
-            grid-row: 6;
-        }
-        .hobbies-tile {
-            grid-column: 3;
-            grid-row: 6;
-        }
+        .box-area-c { grid-area: c; }
+        .box-area-d { grid-area: d; }
+        .box-area-e { grid-area: e; }
+        .box-area-f { grid-area: f; }
+        .box-area-g { grid-area: g; }
+        .box-area-h { grid-area: h; }
+        .box-area-i { grid-area: i; }
+        .box-area-j { grid-area: j; }
 
         /* 4. CONTENT CHOREOGRAPHY & TRANSITIONS */
         .stacked-content {
