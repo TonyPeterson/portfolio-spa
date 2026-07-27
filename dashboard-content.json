@@ -45,7 +45,7 @@
         "content": "<h3>Microsoft 3D Product Portal</h3><p>Amid the upheaval of the global pandemic, Microsoft made the strategic decision to shutter their physical stores, leaving a significant void in the realm of hands-on Microsoft device experiences. The tangible interaction with products is a pivotal aspect of the customer journey, instilling a sense of premium quality. However, with the transition to an online landscape, we sought to enhance the digital experience by transcending the confines of a flat and limited 2D image gallery. The goal was to empower customers to take control of their viewing experience, an ambitious endeavor that required the validation of research and customer feedback through prototyping.</p><h3>In Essence</h3><p>The 'Shop in 3D' experience originally served as a resource for sales associates to deliver immersive demonstrations of the Surface product line. However, Since its launch in April 2021, it has successfully enriched engagement with tens of thousands of enthusiastic customers.</p>",
         "links": [
           {
-            "url": "https://top-port.surge.sh/ShopIn3D",
+            "url": "https://tonypeterson.github.io/ShopIn3D/",
             "text": "Play with my prototype"
           },
           {
