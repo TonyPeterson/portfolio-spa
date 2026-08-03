@@ -480,3 +480,217 @@ document.addEventListener('DOMContentLoaded', async () => {
                 resetIdleTimer();
             }
         });
+
+// --- Interactive Timeline Logic ---
+
+document.addEventListener('DOMContentLoaded', () => {
+    const minYear = 2000;
+    const maxYear = 2026;
+    const totalYears = maxYear - minYear;
+
+    const jobs = [
+        { company: "DHL", role: "Customer Service Rep", start: 2000, end: 2004 },
+        { company: "Link Conference Service", role: "Web Development Assistant", start: 2004, end: 2005 },
+        { company: "Eastlake Community Church", role: "Media Director", start: 2005, end: 2008 },
+        { company: "Great Lakes Church", role: "Media Director", start: 2008, end: 2011 },
+        { company: "Timberlake Church", role: "Executive Director of Arts", start: 2011, end: 2012 },
+        { company: "Microsoft", role: "Marcom & UX/UI Designer", start: 2012, end: 2017,
+          details: [
+              "Spearheaded the evolution of the microsoft.com design system, unifying the user aesthetic across core properties including Xbox, Skype, HoloLens, and Office through rigorous UX research and heuristic validation.",
+              "Conceptualized and crafted web graphics for over 40 marketing campaigns, leveraging this strong visual communication foundation to transition into a core UX Prototyper and Researcher role driving data-backed aesthetic decisions.",
+              "Directed end-to-end UX/UI development as Design Lead for a tight-knit prototyping team, steering the research, testing, and dynamic presentations for specialized initiatives including the web app Tether and the video game Project Mio."
+          ]
+        },
+        { company: "Great Lakes Church", role: "Executive Pastor of Creative Arts", start: 2017, end: 2018,
+          details: [
+              "Played an integral role on the executive team, actively contributing to the formulation of strategic plans for the personal development of 66 volunteers. This encompassed providing one-on-one mentoring, coaching, and tailoring team management tools to optimize productivity.",
+              "Managed, executed, and oversaw the successful delivery of eight services per week across two campuses, catering to a diverse audience of over 1200 members and numerous guests.",
+              "Demonstrated exceptional productivity by successfully completing over 400 design projects within a span of 14 months. These projects encompassed a wide range of deliverables, including a comprehensive rebrand, compelling video stories, weekly presentation packages, digital and print content, and an In-depth website redesign."
+          ]
+        },
+        { company: "Microsoft", role: "Lead Interaction Designer & Prototyper", start: 2018, end: 2025,
+          details: [
+              "Drove a 3% uplift in Surface hardware sales conversions by pioneering and developing Microsoft’s first 3D immersive e-commerce platform utilizing WebGL and Babylon.js.",
+              "Increased customer engagement by 35% by orchestrating cross-functional creative collaboration to revamp core web experiences through elevated visual storytelling.",
+              "Drastically reduced development cycles and design-to-engineering friction by delivering production-ready front-end code alongside high-fidelity visual assets."
+          ]
+        },
+        { company: "SAP", role: "Lead UX & Visual Experience Designer", start: 2025, end: 2026,
+          details: [
+              "Spearheaded the UX and visual modernization of a global legacy architecture for the SAP Office of the CMO by redesigning data-dense B2B interfaces, resulting in highly scannable internal tools utilized daily by thousands of employees.",
+              "Elevated the internal brand story and user experience by partnering directly with executive leadership to translate complex, ambiguous business requirements into polished, user-centric visual narratives."
+          ]
+        },
+        { company: "Microsoft Digital", role: "Lead AI Comms Designer", start: 2026, end: 2026,
+          details: [
+              "Standardized visual design frameworks across Microsoft Digital by developing scalable graphic and email templates, resulting in strict brand consistency across internal campaigns executed by Program Managers.",
+              "Accelerated cross-company adoption of emerging AI workflows by directing and producing a high-visibility motion graphics video series highlighting internal AI agent innovations.",
+              "Optimized the internal design-to-delivery process by designing cohesive omni-channel assets spanning a centralized SharePoint hub to campus-wide physical marketing for the Microsoft Connector commute."
+          ]
+        },
+        { company: "TOP Graphic Design Studio", role: "Freelance UX/UI Designer", start: 2008, end: 2026, isSpecial: true,
+          details: [
+              "Freelance multidisciplinary UX, UI, and visual design."
+          ]
+        }
+    ];
+
+    const defaultSummaryTitle = "Summary";
+    const defaultSummaryDesc = "12+ years of experience bridging the gap between high-fidelity visual design and production-ready code. I translate complex, high-ambiguity requirements into robust design systems and measurable business impact.";
+
+    const ticksContainer = document.getElementById('ticks-container');
+    const nodesContainer = document.getElementById('nodes-container');
+    const detailBox = document.getElementById('detail-box');
+    const detailTitle = document.getElementById('detail-title');
+    const timelineModal = document.getElementById('timeline-modal');
+    
+    // Clear and build timeline only once if possible, but DOMContentLoaded is fine.
+    
+    // Generate ticks
+    if(ticksContainer) {
+        for (let year = minYear; year <= maxYear; year += 2) {
+            const tick = document.createElement('div');
+            tick.className = 'tick';
+            tick.innerText = year;
+            ticksContainer.appendChild(tick);
+        }
+    }
+
+    // Generate nodes
+    if(nodesContainer) {
+        jobs.forEach((job) => {
+            const node = document.createElement('div');
+            node.className = 'job-node';
+            
+            if (job.start >= 2024 && !job.isSpecial) {
+                node.classList.add('flip-label');
+            }
+            
+            const startPercent = ((job.start - minYear) / totalYears) * 100;
+            const durationPercent = ((job.end - job.start) / totalYears) * 100;
+
+            const label = document.createElement('div');
+            label.className = 'job-label';
+            label.innerHTML = `<h4>${job.company}</h4><p>${job.role}</p>`;
+            node.appendChild(label);
+
+            if (job.isSpecial) {
+                node.classList.add('special-node');
+                
+                node.style.left = `calc(100% + 16px)`;
+                node.style.width = `var(--timeline-special-dot-size)`;
+
+                node.addEventListener('mouseenter', () => {
+                    node.style.left = `calc(${startPercent}% + 16px)`;
+                    node.style.width = `calc(${durationPercent}% + 30px)`;
+                });
+
+                node.addEventListener('mouseleave', () => {
+                    node.style.left = `calc(100% + 16px)`;
+                    node.style.width = `var(--timeline-special-dot-size)`;
+                });
+            } else if (job.start === job.end) {
+                node.style.left = `${startPercent}%`;
+                node.style.width = `var(--timeline-dot-size)`;
+
+                node.addEventListener('mouseenter', () => {
+                    node.style.width = `var(--timeline-dot-size)`;
+                });
+
+                node.addEventListener('mouseleave', () => {
+                    node.style.width = `var(--timeline-dot-size)`;
+                });
+            } else {
+                node.style.left = `${startPercent}%`;
+                node.style.width = `var(--timeline-dot-size)`;
+
+                node.addEventListener('mouseenter', () => {
+                    node.style.width = `calc(${durationPercent}% - 4px)`;
+                });
+
+                node.addEventListener('mouseleave', () => {
+                    node.style.width = `var(--timeline-dot-size)`;
+                });
+            }
+
+            node.addEventListener('click', (e) => {
+                detailTitle.innerText = `${job.company} - ${job.role}`;
+                
+                const descEl = document.getElementById('detail-desc');
+                if (job.details && job.details.length > 0) {
+                    const ul = document.createElement('ul');
+                    ul.style.paddingLeft = '20px';
+                    ul.style.margin = '0';
+                    job.details.forEach(detail => {
+                        const li = document.createElement('li');
+                        li.textContent = detail;
+                        li.style.marginBottom = '8px';
+                        li.style.fontSize = '0.9rem';
+                        ul.appendChild(li);
+                    });
+                    descEl.innerHTML = '';
+                    descEl.appendChild(ul);
+                } else {
+                    descEl.innerHTML = '<p style="font-size: 0.9rem; margin: 0;">No additional details available.</p>';
+                }
+                
+                let boxX = e.clientX + 15;
+                let boxY = e.clientY + 15;
+                
+                detailBox.classList.remove('shift-left');
+                
+                // If box will overflow the viewport on the right (approx 550px wide)
+                if (e.clientX + 560 > window.innerWidth) {
+                    detailBox.classList.add('shift-left');
+                }
+                
+                detailBox.style.display = 'block';
+                detailBox.style.left = `${boxX}px`;
+                detailBox.style.top = `${boxY}px`;
+                
+                e.stopPropagation(); 
+            });
+
+            nodesContainer.appendChild(node);
+        });
+    }
+
+    if(timelineModal) {
+        timelineModal.addEventListener('click', (e) => {
+            if (e.target === timelineModal || e.target.id === 'timeline-close') {
+                timelineModal.style.display = 'none';
+            }
+        });
+    }
+
+    if(detailBox) {
+        const detailClose = document.getElementById('detail-close-btn');
+        if(detailClose) {
+            detailClose.addEventListener('click', (e) => {
+                detailBox.style.display = 'none';
+                e.stopPropagation();
+            });
+        }
+        
+        // Hide detail box on global click inside modal
+        timelineModal.addEventListener('click', () => {
+            detailBox.style.display = 'none';
+        });
+    }
+});
+
+// Event wireup for the "Interactive Career Timeline" link.
+// The link is created dynamically by app.js based on dashboard-content.json
+// So we attach a listener to document and delegate it.
+document.addEventListener('click', (e) => {
+    // Check if clicked element or its parent is the link-1 element
+    const linkEl = e.target.closest('[data-content="link-1"]');
+    if (linkEl && linkEl.textContent.includes('Interactive Career Timeline')) {
+        e.preventDefault();
+        const timelineModal = document.getElementById('timeline-modal');
+        if (timelineModal) {
+            timelineModal.style.display = 'block';
+        }
+    }
+});
+

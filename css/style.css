@@ -600,3 +600,217 @@
             background: #fff;
             color: #050510;
         }
+
+/* ================= INTERACTIVE TIMELINE ================= */
+
+:root {
+    --timeline-bg-color: transparent;
+    --timeline-text-color: #ffffff;
+    --timeline-dot-size: 24px;
+    --timeline-special-dot-size: 30px;
+}
+
+.timeline-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.timeline-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 100;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.timeline-modal-close:hover,
+.timeline-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.timeline-content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--timeline-text-color);
+}
+
+.timeline-content-wrapper h2 {
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+#timeline-container {
+    position: relative;
+    width: 90%; 
+    max-width: 1200px;
+    height: 200px; 
+}
+
+/* The main horizontal axis */
+#axis {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--timeline-text-color);
+}
+
+#ticks-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tick {
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: relative;
+    color: var(--timeline-text-color);
+}
+
+.tick::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    background-color: var(--timeline-text-color);
+}
+
+/* Standard Job Nodes */
+.job-node {
+    position: absolute;
+    height: var(--timeline-dot-size);
+    background-color: var(--timeline-text-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateX(calc(var(--timeline-dot-size) / -2));
+    bottom: 29px; 
+    z-index: 5;
+}
+
+/* The Special Ghost Node (TOP Graphic Design) */
+.job-node.special-node {
+    height: var(--timeline-special-dot-size);
+    background-color: transparent;
+    border: 2px solid var(--timeline-text-color);
+    box-sizing: border-box;
+    bottom: 26px; 
+    z-index: 10;
+    transform: none; 
+}
+
+.job-node:hover {
+    z-index: 20;
+}
+
+/* Label that appears on hover */
+.job-label {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.job-label h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    color: var(--timeline-text-color, #ffffff);
+}
+
+.job-label p {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--timeline-text-muted, #cccccc);
+}
+
+/* Overrides for nodes near the right edge of the screen */
+.job-node.flip-label .job-label {
+    left: auto;
+    right: 0;
+    transform: translate(0, 0);
+    text-align: right;
+}
+
+.job-node.special-node .job-label {
+    left: auto;
+    right: 0;
+    transform: translate(0, 0);
+    text-align: right;
+}
+
+.job-node:hover .job-label {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -10px);
+}
+
+.job-node.flip-label:hover .job-label,
+.job-node.special-node:hover .job-label {
+    transform: translate(0, -10px);
+}
+
+/* Detail Modal Pop-up */
+#detail-box {
+    display: none;
+    position: fixed;
+    background: #111111;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 24px;
+    width: 500px;
+    z-index: 100;
+}
+
+#detail-box.shift-left {
+    transform: translateX(calc(-100% - 30px));
+}
+
+#detail-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#detail-box .detail-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
