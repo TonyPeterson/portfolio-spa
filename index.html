@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timeline.css">
 </head>
 <body data-active-tab="about">
 
@@ -195,6 +196,24 @@
         </main>
     </div>
 
+    <!-- TIMELINE MODAL -->
+    <div id="timeline-modal" class="timeline-modal-overlay">
+        <span class="timeline-modal-close" id="timeline-close">&times;</span>
+        <div class="timeline-content-wrapper">
+            <h2>Career Timeline</h2>
+            <div id="timeline-container">
+                <div id="axis"></div>
+                <div id="ticks-container"></div>
+                <div id="nodes-container"></div>
+            </div>
+            <div id="detail-box">
+                <span class="detail-close-btn" id="detail-close-btn">✕</span>
+                <h3 id="detail-title">Company - Role</h3>
+                <p id="detail-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- MEDIA MODAL -->
     <div id="image-modal" class="modal-overlay">
         <span class="modal-close">&times;</span>
@@ -205,5 +224,6 @@
 
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="js/app.js"></script>
+    <script src="js/timeline.js"></script>
 </body>
 </html>

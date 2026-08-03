@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Timeline Prototype</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --dot-size: 24px;
+            --special-dot-size: 30px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 80px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #timeline-container {
+            position: relative;
+            width: 90%; 
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 200px; 
+        }
+
+        /* The main horizontal axis */
+        #axis {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-color);
+        }
+
+        #ticks-container {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tick {
+            font-size: 0.8rem;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tick::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 10px;
+            background-color: var(--text-color);
+        }
+
+        /* Standard Job Nodes */
+        .job-node {
+            position: absolute;
+            height: var(--dot-size);
+            background-color: var(--text-color);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transform: translateX(calc(var(--dot-size) / -2));
+            bottom: 29px; 
+            z-index: 5;
+        }
+
+        /* The Special Ghost Node (TOP Graphic Design) */
+        .job-node.special-node {
+            height: var(--special-dot-size);
+            background-color: transparent;
+            border: 2px solid var(--text-color);
+            box-sizing: border-box;
+            bottom: 26px; 
+            z-index: 10;
+            transform: none; 
+        }
+
+        .job-node:hover {
+            z-index: 20;
+        }
+
+        /* Label that appears on hover */
+        .job-label {
+            position: absolute;
+            bottom: 35px;
+            left: 12px; 
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            border-radius: 4px;
+        }
+
+        /* Overrides for nodes near the right edge of the screen */
+        .job-node.flip-label .job-label {
+            left: auto;
+            right: 12px;
+        }
+
+        .job-node.special-node .job-label {
+            left: auto;
+            right: 15px; 
+        }
+
+        .job-node:hover .job-label {
+            opacity: 1;
+        }
+
+        /* Detail Modal Pop-up */
+        #detail-box {
+            display: none;
+            position: fixed;
+            background: var(--bg-color);
+            border: 2px solid var(--text-color);
+            padding: 20px;
+            width: 300px;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        #detail-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        #detail-box .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Career Timeline</h1>
+
+    <div id="timeline-container">
+        <div id="axis"></div>
+        <div id="ticks-container"></div>
+        <div id="nodes-container"></div>
+    </div>
+
+    <div id="detail-box">
+        <span class="close-btn" onclick="closeDetails()">✕</span>
+        <h3 id="detail-title">Company - Role</h3>
+        <p id="detail-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <script>
+        const minYear = 2000;
+        const maxYear = 2026;
+        const totalYears = maxYear - minYear;
+
+        const jobs = [
+            { company: "DHL", role: "Customer Service Rep", start: 2000, end: 2004 },
+            { company: "Link Conference Service", role: "Web Development Assistant", start: 2004, end: 2005 },
+            { company: "Eastlake Community Church", role: "Media Director", start: 2005, end: 2008 },
+            { company: "Great Lakes Church", role: "Media Director", start: 2008, end: 2011 },
+            { company: "Timberlake Church", role: "Executive Director of Arts", start: 2011, end: 2012 },
+            { company: "Microsoft", role: "UX Designer & Researcher", start: 2012, end: 2017 },
+            { company: "Great Lakes Church", role: "Executive Pastor of Arts", start: 2017, end: 2018 },
+            { company: "Microsoft", role: "Lead UX/UI Prototyper", start: 2018, end: 2025 }, // Closing the gap to 2025
+            { company: "SAP", role: "Lead Digital Communications Designer oCMO", start: 2025, end: 2026 },
+            { company: "Microsoft", role: "Lead AI Comms Designer", start: 2026, end: 2026 },
+            { company: "TOP Graphic Design Studio", role: "Freelance UX/UI Designer", start: 2008, end: 2026, isSpecial: true }
+        ];
+
+        const ticksContainer = document.getElementById('ticks-container');
+        for (let year = minYear; year <= maxYear; year += 2) {
+            const tick = document.createElement('div');
+            tick.className = 'tick';
+            tick.innerText = year;
+            ticksContainer.appendChild(tick);
+        }
+
+        const nodesContainer = document.getElementById('nodes-container');
+        const detailBox = document.getElementById('detail-box');
+        const detailTitle = document.getElementById('detail-title');
+
+        jobs.forEach((job) => {
+            const node = document.createElement('div');
+            node.className = 'job-node';
+            
+            if (job.start >= 2024 && !job.isSpecial) {
+                node.classList.add('flip-label');
+            }
+            
+            const startPercent = ((job.start - minYear) / totalYears) * 100;
+            const durationPercent = ((job.end - job.start) / totalYears) * 100;
+
+            const label = document.createElement('div');
+            label.className = 'job-label';
+            label.innerText = `${job.company} - ${job.role}`;
+            node.appendChild(label);
+
+            if (job.isSpecial) {
+                node.classList.add('special-node');
+                
+                node.style.left = `calc(100% + 16px)`;
+                node.style.width = `var(--special-dot-size)`;
+
+                node.addEventListener('mouseenter', () => {
+                    node.style.left = `calc(${startPercent}% + 16px)`;
+                    node.style.width = `calc(${durationPercent}% + 30px)`;
+                });
+
+                node.addEventListener('mouseleave', () => {
+                    node.style.left = `calc(100% + 16px)`;
+                    node.style.width = `var(--special-dot-size)`;
+                });
+            } else if (job.start === job.end) {
+                node.style.left = `${startPercent}%`;
+                node.style.width = `var(--dot-size)`;
+
+                node.addEventListener('mouseenter', () => {
+                    node.style.width = `var(--dot-size)`;
+                });
+
+                node.addEventListener('mouseleave', () => {
+                    node.style.width = `var(--dot-size)`;
+                });
+            } else {
+                node.style.left = `${startPercent}%`;
+                node.style.width = `var(--dot-size)`;
+
+                node.addEventListener('mouseenter', () => {
+                    node.style.width = `calc(${durationPercent}% - 4px)`;
+                });
+
+                node.addEventListener('mouseleave', () => {
+                    node.style.width = `var(--dot-size)`;
+                });
+            }
+
+            node.addEventListener('click', (e) => {
+                detailTitle.innerText = `${job.company} - ${job.role}`;
+                
+                let boxX = e.clientX + 15;
+                let boxY = e.clientY + 15;
+                
+                if (boxX > window.innerWidth - 320) {
+                    boxX = window.innerWidth - 340; 
+                }
+                
+                detailBox.style.display = 'block';
+                detailBox.style.left = `${boxX}px`;
+                detailBox.style.top = `${boxY}px`;
+                
+                e.stopPropagation(); 
+            });
+
+            nodesContainer.appendChild(node);
+        });
+
+        document.addEventListener('click', () => {
+            detailBox.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
