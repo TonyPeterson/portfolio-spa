@@ -191,7 +191,10 @@
         }
 
         /* Layout for other areas */
-        .box-area-c { grid-area: c; }
+        .box-area-c { 
+            grid-area: c; 
+            position: relative; /* Anchors the absolute buttons to this grid cell */
+        }
         .box-area-d { grid-area: d; }
         .box-area-e { grid-area: e; }
         .box-area-f { grid-area: f; }
@@ -379,6 +382,10 @@
 
         .project-content-container {
             width: 100%;
+        }
+
+        #portfolio-project-content {
+            padding-bottom: 4rem; /* Prevents paragraph text from hiding behind the fixed buttons */
         }
 
         .social-link-item {
@@ -838,4 +845,64 @@
 }
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+/* Fixed Action Buttons in Content Area */
+.content-area-parent { 
+    position: relative; 
+}
+.action-buttons-container {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+.action-btn {
+    background: transparent;
+    border: 1px solid var(--timeline-text-color, #fff);
+    color: var(--timeline-text-color, #fff);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.action-btn:hover {
+    background: var(--timeline-text-color, #fff);
+    color: #000;
+}
+
+/* Hover Tooltip Styling */
+.hover-tooltip {
+    position: fixed;
+    background: #111;
+    color: #eee;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 1.5rem;
+    width: max-content;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    z-index: 1000;
+    pointer-events: none; /* Prevents the tooltip from interfering with hover states */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.hover-tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.hover-tooltip h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+.hover-tooltip p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ensure buttons ONLY show when the portfolio tab is active */
+body:not([data-active-tab="portfolio"]) .action-buttons-container {
+    display: none !important;
 }
