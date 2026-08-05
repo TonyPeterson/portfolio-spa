@@ -281,7 +281,7 @@
             transform-origin: 100px 0px;
             transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
             z-index: 0;
-            opacity: 0.8;
+            opacity: 1;
         }
 
         .hover .hover_inner video {
@@ -813,4 +813,29 @@
     cursor: pointer;
     font-weight: bold;
     color: #ffffff;
+}
+
+/* Minimalist Footer */
+.minimalist-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 2rem;
+    font-size: 0.75rem;
+    color: var(--timeline-text-muted, rgba(255, 255, 255, 0.4));
+    font-family: monospace;
+    line-height: 1.4;
+}
+.minimalist-footer p {
+    margin: 0 0 0.25rem 0;
+}
+.status-line {
+    color: var(--timeline-text-color, rgba(255, 255, 255, 0.7));
+}
+.cursor {
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
 }

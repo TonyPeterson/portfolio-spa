@@ -241,8 +241,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     'box-area-f': 'role',
                     'box-area-g': 'what i did',
                     'box-area-h': 'tools i used',
-                    'box-area-i': 'did you know',
-                    'box-area-j': 'tbd'
+                    'box-area-i': 'did you know'
                 };
                 
                 const aboutLabels = {
@@ -251,8 +250,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     'box-area-f': 'links',
                     'box-area-g': 'soft skills',
                     'box-area-h': 'hard skills',
-                    'box-area-i': 'did you know',
-                    'box-area-j': 'hobbies'
+                    'box-area-i': 'did you know'
                 };
                 
                 document.querySelectorAll('.bento-label').forEach(labelEl => {
@@ -692,5 +690,54 @@ document.addEventListener('click', (e) => {
             timelineModal.style.display = 'block';
         }
     }
+});
+
+// --- Typewriter Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const statuses = [
+        "Compiling Pulpscript & evading cache bugs.",
+        "Building interactive DOM timelines.",
+        "Watching sequential James Bond films.",
+        "Wrenching on 2015 Mini Cooper mass air flow sensors.",
+        "Cooking Earthenware Chili Colorado.",
+        "Negotiating peace treaties with three teenagers.",
+        "Tracking down missing guitar picks."
+    ];
+    
+    const typewriterText = document.getElementById('typewriter-text');
+    if (!typewriterText) return;
+
+    let statusIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function type() {
+        const currentStatus = statuses[statusIndex];
+        
+        if (isDeleting) {
+            typewriterText.textContent = currentStatus.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typewriterText.textContent = currentStatus.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        
+        // Type out characters one by one (approx 50ms - 100ms per character).
+        // Backspace/delete the characters rapidly (approx 30ms - 50ms per character) until the string is completely empty.
+        let typeSpeed = isDeleting ? 30 + Math.random() * 20 : 50 + Math.random() * 50;
+        
+        if (!isDeleting && charIndex === currentStatus.length) {
+            typeSpeed = 8000; // Pause for exactly 8 seconds when fully typed out
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            statusIndex = (statusIndex + 1) % statuses.length;
+            typeSpeed = 500; // Small pause before next string
+        }
+        
+        setTimeout(type, typeSpeed);
+    }
+    
+    setTimeout(type, 500); // Initial start delay
 });
 
