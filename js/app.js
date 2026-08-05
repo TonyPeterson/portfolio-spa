@@ -139,11 +139,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 // Make visible immediately to calculate dimensions
                                 tooltip.classList.add('visible');
                                 
-                                // Calculate tactile position (15px above the hovered button, right-aligned)
+                                // Calculate tactile position (24px above the hovered button, right-aligned)
                                 const btnRect = e.target.getBoundingClientRect();
                                 const tooltipRect = tooltip.getBoundingClientRect();
                                 
-                                let topPos = btnRect.top - tooltipRect.height - 15; 
+                                let topPos = btnRect.top - tooltipRect.height - 24; 
                                 let leftPos = btnRect.right - tooltipRect.width;    
                                 
                                 // Prevent clipping off-screen
