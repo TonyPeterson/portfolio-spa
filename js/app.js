@@ -146,29 +146,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const linksContainer = document.getElementById('portfolio-links-container');
                 const wireframeImg = document.querySelector('.view-portfolio .wireframe-img');
 
-                const elementsToAnimate = [bioTitle, projContent, toolsContainer, whatIDidContainer, roleContainer, didYouKnowContainer, linksContainer, wireframeImg].filter(el => el);
+                const changingGridItems = document.querySelectorAll('.dashboard-grid > section:not(.box-area-e):not(nav):not(.box-area-j)');
                 const isTabSwitching = window._isTabSwitching;
 
-                elementsToAnimate.forEach(el => {
-                    el.style.transition = isTabSwitching ? 'none' : 'opacity 0.3s ease, transform 0.3s ease';
-                    el.style.opacity = '0';
-                    el.style.transform = isTabSwitching ? 'translateY(0)' : 'translateY(10px)';
-                });
+                const changingViews = [];
+                if (!isTabSwitching) {
+                    changingGridItems.forEach(item => {
+                        const view = item.querySelector('.view-portfolio');
+                        if (view) {
+                            view.classList.remove('view-portfolio');
+                            changingViews.push(view);
+                        }
+                    });
+
+                    applyRandomStagger();
+
+                    void document.body.offsetHeight;
+                }
 
                 setTimeout(() => {
-                    if (!isTabSwitching) {
-                        const views = document.querySelectorAll('.view-portfolio');
-                        views.forEach(view => {
-                            view.style.transition = 'none';
-                            view.style.opacity = '0';
-                            view.style.transform = 'translateY(50px)';
-                        });
-
-                        applyRandomStagger();
-
-                        void document.body.offsetHeight;
-                    }
-
                     bioTitle.textContent = proj.title;
                     bioText.style.display = 'none';
                     projContent.style.display = 'block';
@@ -279,24 +275,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
 
                     if (!isTabSwitching) {
-                        const views = document.querySelectorAll('.view-portfolio');
-                        views.forEach(view => {
-                            view.style.transition = '';
-                            view.style.opacity = '';
-                            view.style.transform = '';
+                        changingViews.forEach(view => {
+                            view.classList.add('view-portfolio');
                         });
                     }
-
-                    // Force reflow
-                    elementsToAnimate.forEach(el => void el.offsetWidth);
-
-                    elementsToAnimate.forEach(el => {
-                        if (!isTabSwitching) {
-                            el.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                        }
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    });
                 }, isTabSwitching ? 0 : 300);
             });
 
