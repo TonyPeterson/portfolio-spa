@@ -156,6 +156,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
 
                 setTimeout(() => {
+                    if (!isTabSwitching) {
+                        const views = document.querySelectorAll('.view-portfolio');
+                        views.forEach(view => {
+                            view.style.transition = 'none';
+                            view.style.opacity = '0';
+                            view.style.transform = 'translateY(50px)';
+                        });
+
+                        applyRandomStagger();
+
+                        void document.body.offsetHeight;
+                    }
+
                     bioTitle.textContent = proj.title;
                     bioText.style.display = 'none';
                     projContent.style.display = 'block';
@@ -263,6 +276,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                         } else {
                             wireframeImg.style.display = 'none';
                         }
+                    }
+
+                    if (!isTabSwitching) {
+                        const views = document.querySelectorAll('.view-portfolio');
+                        views.forEach(view => {
+                            view.style.transition = '';
+                            view.style.opacity = '';
+                            view.style.transform = '';
+                        });
                     }
 
                     // Force reflow
