@@ -1,3 +1,57 @@
+const projectImages = {
+    'Shop in 3D': 'images/ShopIn3D_Menus2.gif',
+    'Project Mio': 'images/ProjectMio1.jpg',
+    'Terra Mine Diver': 'images/TerraMineDiver1.jpg',
+    'CSO Showreel': 'images/CSOStudio_SizzleReel_June302023a051.jpg',
+    'Microsoft Commute Poster': 'images/MS_ConnectorPoster1.png',
+    'SAP Keynote': 'images/DES2020_CityscapeBG2.jpg',
+    'Engage Series Bumper': 'images/RotatingSurface1.gif',
+    'Virtual Store': 'images/VirtualStore1.gif',
+    'Synergy Grant Quiz': 'images/SynergyQuizPhone1.jpg',
+    'Optic8 Website': 'images/Optic8_Site1.jpg',
+    'Picchu': 'images/PicchuRender1.jpg',
+    'Trilogy Studios Website': 'images/TrilogySite1.jpg',
+    'Motion Graphics Reel': 'images/SizzleReel1.gif',
+    'Content Block Builder': 'images/ContentBlockBuilder_Render1.jpg',
+    'Microsoft Web Framework': 'images/GuideIllustrations1.png',
+    'Teams Holiday Background': 'images/3D_Holiday_Landscape_SledBox5.jpg',
+    'Proactive Chat Invite': 'images/ProChat1.jpg',
+    'Fluent Icon Refresh': 'images/FluentIcons2.gif',
+    '8-Bit Takeover': 'images/8Bit_Render1.png',
+    'Back to the Future Takeover': 'images/BTTF_Render1.jpg',
+    'Tether': 'images/TetherPhone1.gif',
+    'Xbox Gift Card': 'images/GiftCard1.jpg',
+    'Simplified Office': 'images/SimplifiedOffice1.jpg',
+    'Microsoft Complete Rebrand': 'images/CompleteLogo1.jpg',
+    'Chatbot Redesign': 'images/ChatbotCompare1.jpg',
+    'Value Prop Glyphs': 'images/ValueProps1.jpg',
+    'Microsoft Holiday Campaign': 'images/HolidayMaterials1.jpg',
+    'Microsoft Pride Campaign': 'images/PridePins3.jpg',
+    'This is Our Story': 'images/GLC_Documentary1.jpg',
+    'GLC Design Makeover': 'images/GLC_Redesign1.jpg',
+    'Great Lakes Church': 'images/BuildingSignage1.jpg',
+    '#staymarried': 'images/StaymarriedSocial1.jpg',
+    'Eco Packaging Concept': 'images/EcoPackaging1.jpg',
+    'Mailers & Invites': 'images/Invites1.jpg'
+};
+
+const projectVideos = {
+    'Back to the Future Takeover': 'videos/BackToTheFuture1.mp4',
+    'Chatbot Redesign': 'videos/ChatbotLogoAnims1.mp4',
+    'CSO Showreel': 'videos/CSOStudio_SizzleReel_June302023a.mp4',
+    'Xbox Gift Card': 'videos/GiftCardAnimation1_1106_1920x1080_EN-US.mp4',
+    '8-Bit Takeover': 'videos/Microsoft8BitDay1.mp4',
+    'Optic8 Website': 'videos/Optic8_Site1.mp4',
+    'Eco Packaging Concept': 'videos/PackagingAnim3.mp4',
+    'Microsoft Pride Campaign': 'videos/Pride_ButtonAnimBumper8.mp4',
+    'Project Mio': 'videos/ProjectMioOverview.mp4',
+    'Simplified Office': 'videos/SimplifiedOfficeDemo.mp4',
+    'Virtual Store': 'videos/SurfaceHelpMe_Conversational_2up.mp4',
+    'Terra Mine Diver': 'videos/TerraMineDiver_Gamepaly1.mp4',
+    'Motion Graphics Reel': 'videos/TonyPeterson_MotionGraphicsReel1.mp4',
+    'Trilogy Studios Website': 'videos/Trilogy_Site1.mp4'
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
     const body = document.body;
     const grid = document.querySelector('.dashboard-grid');
@@ -8,6 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('dashboard-content.json');
         dashboardData = await response.json();
+        window.portfolioData = dashboardData.portfolio;
 
         const initialHash = window.location.hash.replace('#', '');
         const initialTab = (initialHash && ['about', 'portfolio', 'arcade', 'contact'].includes(initialHash)) ? initialHash : 'about';
@@ -193,60 +248,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
 
                     if (wireframeImg) {
-                        const projectImages = {
-                            'Shop in 3D': 'images/ShopIn3D_Menus2.gif',
-                            'Project Mio': 'images/ProjectMio1.jpg',
-                            'Terra Mine Diver': 'images/TerraMineDiver1.jpg',
-                            'CSO Showreel': 'images/CSOStudio_SizzleReel_June302023a051.jpg',
-                            'Microsoft Commute Poster': 'images/MS_ConnectorPoster1.png',
-                            'SAP Keynote': 'images/DES2020_CityscapeBG2.jpg',
-                            'Engage Series Bumper': 'images/RotatingSurface1.gif',
-                            'Virtual Store': 'images/VirtualStore1.gif',
-                            'Synergy Grant Quiz': 'images/SynergyQuizPhone1.jpg',
-                            'Optic8 Website': 'images/Optic8_Site1.jpg',
-                            'Picchu': 'images/PicchuRender1.jpg',
-                            'Trilogy Studios Website': 'images/TrilogySite1.jpg',
-                            'Motion Graphics Reel': 'images/SizzleReel1.gif',
-                            'Content Block Builder': 'images/ContentBlockBuilder_Render1.jpg',
-                            'Microsoft Web Framework': 'images/GuideIllustrations1.png',
-                            'Teams Holiday Background': 'images/3D_Holiday_Landscape_SledBox5.jpg',
-                            'Proactive Chat Invite': 'images/ProChat1.jpg',
-                            'Fluent Icon Refresh': 'images/FluentIcons2.gif',
-                            '8-Bit Takeover': 'images/8Bit_Render1.png',
-                            'Back to the Future Takeover': 'images/BTTF_Render1.jpg',
-                            'Tether': 'images/TetherPhone1.gif',
-                            'Xbox Gift Card': 'images/GiftCard1.jpg',
-                            'Simplified Office': 'images/SimplifiedOffice1.jpg',
-                            'Microsoft Complete Rebrand': 'images/CompleteLogo1.jpg',
-                            'Chatbot Redesign': 'images/ChatbotCompare1.jpg',
-                            'Value Prop Glyphs': 'images/ValueProps1.jpg',
-                            'Microsoft Holiday Campaign': 'images/HolidayMaterials1.jpg',
-                            'Microsoft Pride Campaign': 'images/PridePins3.jpg',
-                            'This is Our Story': 'images/GLC_Documentary1.jpg',
-                            'GLC Design Makeover': 'images/GLC_Redesign1.jpg',
-                            'Great Lakes Church': 'images/BuildingSignage1.jpg',
-                            '#staymarried': 'images/StaymarriedSocial1.jpg',
-                            'Eco Packaging Concept': 'images/EcoPackaging1.jpg',
-                            'Mailers & Invites': 'images/Invites1.jpg'
-                        };
-
-                        const projectVideos = {
-                            'Back to the Future Takeover': 'videos/BackToTheFuture1.mp4',
-                            'Chatbot Redesign': 'videos/ChatbotLogoAnims1.mp4',
-                            'CSO Showreel': 'videos/CSOStudio_SizzleReel_June302023a.mp4',
-                            'Xbox Gift Card': 'videos/GiftCardAnimation1_1106_1920x1080_EN-US.mp4',
-                            '8-Bit Takeover': 'videos/Microsoft8BitDay1.mp4',
-                            'Optic8 Website': 'videos/Optic8_Site1.mp4',
-                            'Eco Packaging Concept': 'videos/PackagingAnim3.mp4',
-                            'Microsoft Pride Campaign': 'videos/Pride_ButtonAnimBumper8.mp4',
-                            'Project Mio': 'videos/ProjectMioOverview.mp4',
-                            'Simplified Office': 'videos/SimplifiedOfficeDemo.mp4',
-                            'Virtual Store': 'videos/SurfaceHelpMe_Conversational_2up.mp4',
-                            'Terra Mine Diver': 'videos/TerraMineDiver_Gamepaly1.mp4',
-                            'Motion Graphics Reel': 'videos/TonyPeterson_MotionGraphicsReel1.mp4',
-                            'Trilogy Studios Website': 'videos/Trilogy_Site1.mp4'
-                        };
-
                         const imgSrc = projectImages[proj.title];
                         const vidSrc = projectVideos[proj.title];
 
@@ -325,6 +326,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function switchTab(tabName) {
+        applyRandomStagger();
         populateContent(tabName);
         updateBentoLabels(tabName);
 
@@ -811,5 +813,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setTimeout(type, 500); // Initial start delay
+});
+
+function applyRandomStagger() {
+    const gridItems = Array.from(document.querySelectorAll('.dashboard-grid > section, .dashboard-grid > nav'));
+    const shuffled = gridItems.sort(() => 0.5 - Math.random());
+    shuffled.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.04}s`; 
+    });
+}
+
+window.addEventListener('load', () => {
+    if (typeof portfolioData !== 'undefined' && portfolioData.projects) {
+        portfolioData.projects.forEach(project => {
+            const imageUrl = projectImages[project.title];
+            if (imageUrl) {
+                const preloadImg = new Image();
+                preloadImg.src = imageUrl;
+            }
+        });
+    }
 });
 
