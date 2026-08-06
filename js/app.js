@@ -154,14 +154,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     changingGridItems.forEach(item => {
                         const view = item.querySelector('.view-portfolio');
                         if (view) {
+                            view.style.transitionDelay = '0s';
                             view.classList.remove('view-portfolio');
                             changingViews.push(view);
                         }
                     });
-
-                    applyRandomStagger();
-
-                    void document.body.offsetHeight;
                 }
 
                 setTimeout(() => {
@@ -275,11 +272,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
 
                     if (!isTabSwitching) {
+                        applyRandomStagger(changingViews);
+                        
+                        void document.body.offsetHeight;
+
                         changingViews.forEach(view => {
                             view.classList.add('view-portfolio');
                         });
                     }
-                }, isTabSwitching ? 0 : 300);
+                }, isTabSwitching ? 0 : 600);
             });
 
             projectList.appendChild(li);
@@ -330,33 +331,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function switchTab(tabName) {
-        applyRandomStagger();
-        populateContent(tabName);
-        updateBentoLabels(tabName);
+        const elementsToClear = document.querySelectorAll('.dashboard-grid > section, .dashboard-grid > nav, .stacked-content');
+        elementsToClear.forEach(item => {
+            item.style.transitionDelay = '0s';
+        });
 
-        // Destroy portfolio action buttons when navigating away
-        const orphanButtons = document.querySelector('.box-area-c .action-buttons-container');
-        if (orphanButtons) {
-            orphanButtons.remove();
-        }
-
-        if (tabName === 'portfolio') {
-            const firstProject = document.querySelector('#project-list li');
-            if (firstProject) {
-                window._isTabSwitching = true;
-                firstProject.click();
-                window._isTabSwitching = false;
-            }
-        }
-
-        grid.setAttribute('data-active-tab', tabName);
-        body.setAttribute('data-active-tab', tabName);
+        grid.setAttribute('data-active-tab', 'switching');
+        body.setAttribute('data-active-tab', 'switching');
 
         buttons.forEach(btn => {
             btn.classList.toggle('is-active', btn.getAttribute('data-tab') === tabName);
         });
 
-        history.pushState({ tab: tabName }, '', `#${tabName}`);
+        setTimeout(() => {
+            populateContent(tabName);
+            updateBentoLabels(tabName);
+
+            // Destroy portfolio action buttons when navigating away
+            const orphanButtons = document.querySelector('.box-area-c .action-buttons-container');
+            if (orphanButtons) {
+                orphanButtons.remove();
+            }
+
+            if (tabName === 'portfolio') {
+                const firstProject = document.querySelector('#project-list li');
+                if (firstProject) {
+                    window._isTabSwitching = true;
+                    firstProject.click();
+                    window._isTabSwitching = false;
+                }
+            }
+
+            const elementsToStagger = document.querySelectorAll('.dashboard-grid > section, .dashboard-grid > nav, .stacked-content');
+            applyRandomStagger(elementsToStagger);
+
+            void document.body.offsetHeight;
+
+            grid.setAttribute('data-active-tab', tabName);
+            body.setAttribute('data-active-tab', tabName);
+
+            history.pushState({ tab: tabName }, '', `#${tabName}`);
+        }, 300);
     }
 
     buttons.forEach(button => {
@@ -819,10 +834,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 500); // Initial start delay
 });
 
-function applyRandomStagger() {
-    const gridItems = Array.from(document.querySelectorAll('.dashboard-grid > section, .dashboard-grid > nav'));
+function applyRandomStagger(elements) {
+    const gridItems = Array.from(elements);
     const shuffled = gridItems.sort(() => 0.5 - Math.random());
+    
     shuffled.forEach((item, index) => {
+        // Only vary the arrival delay (e.g., 0ms, 40ms, 80ms...)
         item.style.transitionDelay = `${index * 0.04}s`; 
     });
 }
