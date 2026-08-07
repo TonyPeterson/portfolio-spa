@@ -134,7 +134,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 chevron.classList.add('visible');
                 chevron.style.top = (li.offsetTop + 9) + 'px'; // vertically center the 24px arrow
 
-                li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                if (window.innerWidth > 768) {
+                    li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
 
                 const bioTitle = document.querySelector('.view-portfolio [data-content="bio-title"]');
                 const bioText = document.querySelector('.view-portfolio [data-content="bio-text"]');
@@ -541,7 +543,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         );
 
         if (!isFullyVisible) {
-            activeProject.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            if (window.innerWidth > 768) {
+                activeProject.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         }
     }
 

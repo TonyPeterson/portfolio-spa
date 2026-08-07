@@ -922,7 +922,7 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 250px 250px 150px 200px 250px 150px;
         height: auto;
-        min-height: 100vh;
+        min-height: 100dvh;
         grid-template-areas:
             "b b"
             "a e"
@@ -935,22 +935,48 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
 }
 
 @media (max-width: 768px) {
+    /* Cleaned up tab logic for mobile */
+    .box {
+        overflow: hidden;
+    }
+
+    /* Make the active tab relative so it pushes the min-content fluid rows open naturally */
+    .dashboard-grid[data-active-tab="about"] .view-about,
+    .dashboard-grid[data-active-tab="portfolio"] .view-portfolio,
+    .dashboard-grid[data-active-tab="arcade"] .view-arcade,
+    .dashboard-grid[data-active-tab="contact"] .view-contact {
+        position: relative;
+        height: auto;
+    }
+
+    /* Ensure fixed structural rows keep their content absolute so they don't break explicit grid heights */
+    .box-area-a .stacked-content,
+    .box-area-b .stacked-content,
+    .box-area-e .stacked-content {
+        position: absolute !important;
+        height: 100% !important;
+    }
+
+    .box-area-d,
+    .box-area-h,
+    .box-area-i {
+        display: none !important;
+    }
+
     .dashboard-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 100px 70px 200px 300px 150px 100px 300px 300px 100px 200px;
+        /* grid-template-rows: 100px 60px 180px min-content min-content min-content min-content; */
+        grid-template-rows: 100px 60px 180px 600px 100px 450px 160px;
         height: auto;
-        min-height: 100vh;
+        min-height: 100dvh;
         grid-template-areas:
             "b"
             "e"
             "a"
             "c"
-            "d"
             "f"
             "g"
-            "h"
-            "i"
             "j";
     }
     
@@ -966,8 +992,8 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
         overflow-x: auto !important;
         white-space: nowrap !important;
         gap: 12px !important;
-        padding-bottom: 10px !important;
-        scroll-snap-type: x mandatory !important;
+        padding: 12px !important;
+        scroll-snap-type: x proximity !important;
         justify-content: flex-start !important;
         /* Hide scrollbar for a native app feel */
         -ms-overflow-style: none !important;
@@ -976,17 +1002,23 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
     .box-area-e .stacked-content::-webkit-scrollbar {
         display: none !important;
     }
-    .box-area-e .stacked-content > * {
+    .box-area-e .stacked-content .project-chevron {
+        display: none !important;
+    }
+    .box-area-e .stacked-content .project-list-item {
         flex: 0 0 auto !important; /* Strictly prevents shrinking or stretching */
         scroll-snap-align: start !important;
         padding: 10px 20px !important;
-        border-radius: 30px !important;
-        background-color: rgba(255, 255, 255, 0.1) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
         text-decoration: none !important;
         margin: 0 !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
+    }
+
+    .box-area-b a, 
+    .box-area-b .tab-btn { 
+        font-size: 1rem !important; /* Shrink the text */
+        padding: 0 4px !important; /* Squeeze the padding so they fit side-by-side */
     }
 }
