@@ -840,7 +840,7 @@ function applyRandomStagger(elements) {
     
     shuffled.forEach((item, index) => {
         // Only vary the arrival delay (e.g., 0ms, 40ms, 80ms...)
-        item.style.transitionDelay = `${index * 0.04}s`; 
+        item.style.transitionDelay = `${index * 0.02}s`; 
     });
 }
 

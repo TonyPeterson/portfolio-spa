@@ -920,7 +920,7 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
     .dashboard-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 100px 250px 250px 150px 200px 250px 150px;
         height: auto;
         min-height: 100vh;
         grid-template-areas:
@@ -938,7 +938,7 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
     .dashboard-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 100px 70px 200px 300px 150px 100px 300px 300px 100px 200px;
         height: auto;
         min-height: 100vh;
         grid-template-areas:
