@@ -143,11 +143,17 @@
             margin: 0;
         }
 
-        .box-area-a { grid-area: a; 
+        .box-area-a { grid-area: a; }
         
-            .view-portfolio {
-                padding: 0;
+        .box-area-a .stacked-content {
+            padding: 0;
         }
+
+        .box-area-a .wireframe-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
         }
         .box-area-b { 
             grid-area: b; 
@@ -259,16 +265,6 @@
             position: relative;
         }
 
-        .top-left .view-portfolio {
-            padding: 0;
-        }
-
-        .top-left .view-portfolio .wireframe-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            margin: 0;
-        }
         
         /* Map Hover Effect */
         .hover {
@@ -513,9 +509,6 @@
         }
 
         .view-portfolio .wireframe-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
             cursor: pointer;
             transition: transform 0.2s ease;
         }
