@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const data = dashboardData[tabName];
 
-        // For keys in the JSON for this tab, find all elements with matching data-content
         Object.keys(data).forEach(key => {
             const elements = document.querySelectorAll(`[data-content="${key}"]`);
             elements.forEach(el => {
@@ -97,7 +96,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Generate projects from dashboardData
     const projectList = document.getElementById('project-list');
     if (projectList && dashboardData && dashboardData.portfolio && dashboardData.portfolio.projects) {
         projectList.innerHTML = '';
@@ -132,7 +130,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 li.classList.add('active');
 
                 chevron.classList.add('visible');
-                chevron.style.top = (li.offsetTop + 9) + 'px'; // vertically center the 24px arrow
+                chevron.style.top = (li.offsetTop + 9) + 'px';
+
 
                 if (window.innerWidth > 768) {
                     li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -171,11 +170,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     const boxAreaC = document.querySelector('.box-area-c');
 
-                    // Clean up previous buttons
                     const oldButtons = boxAreaC.querySelector('.action-buttons-container');
                     if (oldButtons) oldButtons.remove();
 
-                    // Generate dynamic buttons based on JSON keys
                     let buttonsHTML = '<div class="action-buttons-container">';
                     if (proj.hype) {
                         buttonsHTML += `<button class="action-btn hover-trigger" data-key="hype">The Impact</button>`;
@@ -189,27 +186,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                         boxAreaC.insertAdjacentHTML('beforeend', buttonsHTML);
                     }
 
-                    // Attach event listeners to the new buttons
                     const tooltip = document.getElementById('project-tooltip');
 
                     if (tooltip) {
                         boxAreaC.querySelectorAll('.hover-trigger').forEach(btn => {
-                            // Show tooltip on hover
                             btn.addEventListener('mouseenter', (e) => {
                                 const key = e.target.getAttribute('data-key');
                                 tooltip.innerHTML = proj[key];
                                 
-                                // Make visible immediately to calculate dimensions
                                 tooltip.classList.add('visible');
                                 
-                                // Calculate tactile position (24px above the hovered button, right-aligned)
                                 const btnRect = e.target.getBoundingClientRect();
                                 const tooltipRect = tooltip.getBoundingClientRect();
                                 
                                 let topPos = btnRect.top - tooltipRect.height - 24; 
                                 let leftPos = btnRect.right - tooltipRect.width;    
                                 
-                                // Prevent clipping off-screen
                                 if (topPos < 10) topPos = 10;
                                 if (leftPos < 10) leftPos = 10;
                                 
@@ -217,7 +209,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 tooltip.style.left = `${leftPos}px`;
                             });
 
-                            // Hide tooltip when mouse leaves
                             btn.addEventListener('mouseleave', () => {
                                 tooltip.classList.remove('visible');
                             });
@@ -287,9 +278,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             projectList.appendChild(li);
 
-            // Select first project by default so chevron is always present
             if (i === 0) {
-                // wait for render
                 setTimeout(() => {
                     li.click();
                 }, 50);
@@ -349,7 +338,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             populateContent(tabName);
             updateBentoLabels(tabName);
 
-            // Destroy portfolio action buttons when navigating away
             const orphanButtons = document.querySelector('.box-area-c .action-buttons-container');
             if (orphanButtons) {
                 orphanButtons.remove();
@@ -388,7 +376,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         switchTab(activeTab);
     });
 
-    // Contact Form Logic
     const contactForm = document.getElementById('top-contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -398,11 +385,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const formData = new FormData();
 
-            // Access key
             const accessKey = document.querySelector('input[name="access_key"]');
             if (accessKey) formData.append('access_key', accessKey.value);
 
-            // Main inputs
             const nameInput = document.querySelector('input[name="name"]');
             const emailInput = document.querySelector('input[name="email"]');
             const msgInput = document.querySelector('textarea[name="message"]');
@@ -411,7 +396,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (emailInput) formData.append('email', emailInput.value);
             if (msgInput) formData.append('message', msgInput.value);
 
-            // Optional hidden spam/config inputs
             const subjectInput = document.querySelector('input[name="subject"]');
             const fromNameInput = document.querySelector('input[name="from_name"]');
             const replytoInput = document.querySelector('input[name="replyto"]');
@@ -422,7 +406,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (replytoInput) formData.append('replyto', replytoInput.value);
             if (botcheckInput && botcheckInput.checked) formData.append('botcheck', botcheckInput.value);
 
-            // hCaptcha token
             const hCaptchaResponse = document.querySelector('[name="h-captcha-response"]');
             if (hCaptchaResponse) {
                 formData.append('h-captcha-response', hCaptchaResponse.value);
@@ -458,7 +441,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Image Modal Logic
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
     const modalVideo = document.getElementById('modal-video');
@@ -470,7 +452,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         portfolioTopLeftImg.addEventListener('click', () => {
             const videoSrc = portfolioTopLeftImg.getAttribute('data-video');
 
-            // Reset all displays
             modalImg.style.display = 'none';
             modalVideo.style.display = 'none';
             if (modalIframe) modalIframe.style.display = 'none';
@@ -480,7 +461,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (videoSrc) {
                 if (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')) {
-                    // Extract video ID and create embed URL
                     let videoId = '';
                     if (videoSrc.includes('youtube.com/watch')) {
                         videoId = new URL(videoSrc).searchParams.get('v');
@@ -515,7 +495,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         modalCloseBtn.addEventListener('click', closeModal);
 
-        // Close modal when clicking outside the image/video
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal();
@@ -523,7 +502,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Idle Auto-Scroll for Active Project in .box-area-e
     const boxAreaE = document.querySelector('.box-area-e');
     let idleTimer = null;
 
@@ -560,12 +538,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         boxAreaE.addEventListener('wheel', resetIdleTimer);
         boxAreaE.addEventListener('touchstart', resetIdleTimer);
 
-        // Start initial timer
         resetIdleTimer();
     }
 });
 
-// --- Interactive Timeline Logic ---
 
 document.addEventListener('DOMContentLoaded', () => {
     const minYear = 2000;
@@ -625,18 +601,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    const defaultSummaryTitle = "Summary";
-    const defaultSummaryDesc = "12+ years of experience bridging the gap between high-fidelity visual design and production-ready code. I translate complex, high-ambiguity requirements into robust design systems and measurable business impact.";
-
     const ticksContainer = document.getElementById('ticks-container');
     const nodesContainer = document.getElementById('nodes-container');
     const detailBox = document.getElementById('detail-box');
     const detailTitle = document.getElementById('detail-title');
     const timelineModal = document.getElementById('timeline-modal');
 
-    // Clear and build timeline only once if possible, but DOMContentLoaded is fine.
 
-    // Generate ticks
     if (ticksContainer) {
         for (let year = minYear; year <= maxYear; year += 2) {
             const tick = document.createElement('div');
@@ -646,7 +617,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Generate nodes
     if (nodesContainer) {
         jobs.forEach((job) => {
             const node = document.createElement('div');
@@ -729,7 +699,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 detailBox.classList.remove('shift-left');
 
-                // If box will overflow the viewport on the right (approx 550px wide)
                 if (e.clientX + 560 > window.innerWidth) {
                     detailBox.classList.add('shift-left');
                 }
@@ -762,18 +731,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Hide detail box on global click inside modal
         timelineModal.addEventListener('click', () => {
             detailBox.style.display = 'none';
         });
     }
 });
 
-// Event wireup for the "Interactive Career Timeline" link.
-// The link is created dynamically by app.js based on dashboard-content.json
-// So we attach a listener to document and delegate it.
 document.addEventListener('click', (e) => {
-    // Check if clicked element or its parent is the link-1 element
     const linkEl = e.target.closest('[data-content="link-1"]');
     if (linkEl && linkEl.textContent.includes('Interactive Career Timeline')) {
         e.preventDefault();
@@ -784,7 +748,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// --- Typewriter Logic ---
 document.addEventListener('DOMContentLoaded', () => {
     const statuses = [
         "Compiling Pulpscript & evading cache bugs.",
@@ -819,23 +782,24 @@ document.addEventListener('DOMContentLoaded', () => {
             charIndex++;
         }
 
-        // Type out characters one by one (approx 50ms - 100ms per character).
-        // Backspace/delete the characters rapidly (approx 30ms - 50ms per character) until the string is completely empty.
         let typeSpeed = isDeleting ? 30 + Math.random() * 20 : 50 + Math.random() * 50;
 
         if (!isDeleting && charIndex === currentStatus.length) {
-            typeSpeed = 8000; // Pause for exactly 8 seconds when fully typed out
+            typeSpeed = 8000;
+
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             statusIndex = (statusIndex + 1) % statuses.length;
-            typeSpeed = 500; // Small pause before next string
+            typeSpeed = 500;
+
         }
 
         setTimeout(type, typeSpeed);
     }
 
-    setTimeout(type, 500); // Initial start delay
+    setTimeout(type, 500);
+
 });
 
 function applyRandomStagger(elements) {
@@ -843,7 +807,6 @@ function applyRandomStagger(elements) {
     const shuffled = gridItems.sort(() => 0.5 - Math.random());
     
     shuffled.forEach((item, index) => {
-        // Only vary the arrival delay (e.g., 0ms, 40ms, 80ms...)
         item.style.transitionDelay = `${index * 0.02}s`; 
     });
 }

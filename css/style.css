@@ -1,3 +1,14 @@
+:root {
+    --color-bg: #050510;
+    --color-text: #fff;
+    --color-accent: #00bfff;
+    --font-primary: "Roboto Flex", sans-serif;
+    --font-secondary: 'Tonyhandwritting1', cursive, sans-serif;
+    --font-system: system-ui, -apple-system, sans-serif;
+    --font-mono: monospace;
+    --border-radius-sm: 4px;
+}
+
 @font-face {
     font-family: 'Tonyhandwritting1';
     src: url('../fonts/Tonyhandwritting1-Regular.ttf') format('truetype');
@@ -13,9 +24,9 @@
         }
 
         body {
-            background-color: #050510;
-            color: #fff;
-            font-family: "Roboto Flex", sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-primary);
             position: relative;
             overflow-x: hidden; /* removed overflow: hidden to allow scroll */
         }
@@ -29,7 +40,7 @@
         }
 
         a {
-            color: #fff;
+            color: var(--color-text);
         }
 
         ul {
@@ -106,7 +117,7 @@
             max-width: 1600px;
             /* removed strict 100% height */
             /* gap: 1px; */
-            border: 1.5px solid #fff;
+            border: 1.5px solid var(--color-text);
 
             grid-template-columns: 1fr 1fr 1fr; /* Changed to 3 equal columns for the bento layout */
             grid-template-rows: 300px 200px 300px 200px 300px 250px; /* Specific row heights */
@@ -124,7 +135,7 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 1);
+            border: 1px solid var(--color-text);
             padding: 0;
             background: transparent;
             /* Allow hover effects to break cell boundaries where needed */
@@ -167,8 +178,8 @@
         .tab-btn {
             background: transparent;
             border: none;
-            border-left: 1px solid rgba(255, 255, 255, 1); /* border between nav buttons horizontally */
-            color: #fff;
+            border-left: 1px solid var(--color-text); /* border between nav buttons horizontally */
+            color: var(--color-text);
             padding: 0;
             cursor: pointer;
             flex: 1;
@@ -335,7 +346,7 @@
         
         .logo-container svg {
             width: 120px;
-            fill: #fff;
+            fill: var(--color-text);
         }
 
         /* 7. EXTRACTED INLINE STYLES */
@@ -356,7 +367,7 @@
         }
 
         .bento-heading-secondary {
-            font-family: 'Tonyhandwritting1', cursive, sans-serif;
+            font-family: var(--font-secondary);
             letter-spacing: -0.1em;
             font-weight: 300;
             font-size: 2.5rem;
@@ -406,7 +417,7 @@
         }
 
         .handwriting-title {
-            font-family: 'Tonyhandwritting1', cursive, sans-serif;
+            font-family: var(--font-secondary);
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: normal;
@@ -480,21 +491,21 @@
         #modal-image, #modal-video {
             max-width: 90%;
             max-height: 90vh;
-            border: 1.5px solid #fff; /* Cline! Stop removing this style and stop making the corner round! */
+            border: 1.5px solid var(--color-text); /* Cline! Stop removing this style and stop making the corner round! */
         }
 
         #modal-iframe {
             width: 90%;
             height: 80vh;
             max-width: 1200px;
-            border: 1.5px solid #fff;
+            border: 1.5px solid var(--color-text);
         }
 
         .modal-close {
             position: absolute;
             top: 20px;
             right: 30px;
-            color: #fff;
+            color: var(--color-text);
             font-size: 80px;
             font-weight: 100;
             cursor: pointer;
@@ -521,7 +532,7 @@
             position: absolute;
             left: -6px;
             transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
-            color: #00bfff;
+            color: var(--color-accent);
             display: flex;
             align-items: center;
             pointer-events: none;
@@ -538,30 +549,30 @@
             cursor: pointer;
             font-size: 1.2rem;
             transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
-            color: #fff;
+            color: var(--color-text);
         }
 
         .project-list-item.hovered {
-            color: #00bfff;
+            color: var(--color-accent);
         }
 
         .project-list-item.active {
             transform: translateX(15px);
-            color: #00bfff;
+            color: var(--color-accent);
         }
 
         .portfolio-link-item {
             display: block;
             margin-bottom: 1rem;
             font-size: 1.2rem;
-            color: #fff;
+            color: var(--color-text);
             text-decoration: none;
             cursor: pointer;
             transition: color 0.3s ease;
         }
 
         .portfolio-link-item:hover {
-            color: #00bfff;
+            color: var(--color-accent);
         }
 
         /* Contact Form Styles */
@@ -572,7 +583,7 @@
             background: transparent;
             border: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-            color: #fff;
+            color: var(--color-text);
             font-family: inherit;
             font-size: 1.2rem;
             padding: 0.5rem;
@@ -594,7 +605,7 @@
 
         #contact-submit-btn {
             border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 4px;
+            border-radius: var(--border-radius-sm);
             cursor: pointer;
             transition: background 0.3s, color 0.3s;
             text-transform: uppercase;
@@ -603,8 +614,8 @@
         }
 
         #contact-submit-btn:hover {
-            background: #fff;
-            color: #050510;
+            background: var(--color-text);
+            color: var(--color-bg);
         }
 
 /* ================= INTERACTIVE TIMELINE ================= */
@@ -654,7 +665,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: var(--font-system);
     color: var(--timeline-text-color);
 }
 
@@ -664,7 +675,7 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 #timeline-container {
@@ -796,8 +807,8 @@
     display: none;
     position: fixed;
     background: #111111;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
     padding: 24px;
     width: 500px;
     z-index: 100;
@@ -818,7 +829,7 @@
     right: 15px;
     cursor: pointer;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 /* Minimalist Footer */
@@ -830,7 +841,7 @@
     padding: 2rem;
     font-size: 0.75rem;
     color: var(--timeline-text-muted, rgba(255, 255, 255, 0.4));
-    font-family: monospace;
+    font-family: var(--font-mono);
     line-height: 1.4;
 }
 .minimalist-footer p {
