@@ -42,9 +42,9 @@
     "projects": [
       {
         "title": "Shop in 3D",
-        "hook": "<h3>Microsoft 3D Product Portal</h3><p>Amid the upheaval of the global pandemic, Microsoft made the strategic decision to shutter their physical stores, leaving a significant void in the realm of hands-on Microsoft device experiences. The tangible interaction with products is a pivotal aspect of the customer journey, instilling a sense of premium quality. However, with the transition to an online landscape, we sought to enhance the digital experience by transcending the confines of a flat and limited 2D image gallery. The goal was to empower customers to take control of their viewing experience, an ambitious endeavor that required the validation of research and customer feedback through prototyping.</p>",
-        "hustle": "<p>As one of the two dedicated UX designers and the designated prototyper for this exciting project, my responsibilities spanned the full spectrum of design, from conceptualization and ideation to mock creation and presentation. My mission: to manifest the design team's vision into a captivating, high-fidelity, and interactive prototype—a blueprint that would guide the development efforts of the external company tasked with crafting the customer-facing tool.</p>",
-        "hype": "<p>The 'Shop in 3D' experience originally served as a resource for sales associates to deliver immersive demonstrations of the Surface product line. However, Since its launch in April 2021, it has successfully enriched engagement with tens of thousands of enthusiastic customers.</p>",
+        "hook": "<h3>Microsoft 3D Product Portal</h3><p>The global pandemic killed the Microsoft Store, leaving a massive void in our customer journey. You cannot feel premium build quality through a screen, and relying on a static 2D image gallery is about as premium as a dial-up modem. We set out to hand the controls back to the user with a fully interactive digital experience that let them explore the hardware on their own terms. It was a wildly ambitious pivot, which meant I had to prototype the hell out of it to get the hard data and user feedback needed to prove it wasn't just a pipe dream.</p>",
+        "hustle": "<p>Being one of only two UX designers, and the sole prototyper, meant my hands were in every phase of this project, from early concepts to the final pitch. My real mission was taking the team's lofty vision and hammering it into a high-fidelity, fully interactive prototype. I essentially had to build a bulletproof blueprint so the external dev agency wouldn't have to guess how to actually build the customer-facing tool.</p>",
+        "hype": "<p>Originally built just to help sales associates run remote demos, it launched to the public in April 2021. Since then, it has successfully enriched engagement with tens of thousands of enthusiastic customers.</p>",
         "links": [
           {
             "url": "https://tonypeterson.github.io/ShopIn3D/",
@@ -61,9 +61,9 @@
       },
       {
         "title": "Project Mio",
-        "hook": "<h3>Overview</h3><p>In 2016, a small but passionate team of Microsoft employees embarked on an ambitious mission: to revolutionize coding education by making it engaging and accessible. Fueled by our love for classic platform-style gaming, we conceived Project Mio, a groundbreaking initiative aimed at teaching JavaScript without overwhelming or boring learners.</p>",
-        "hustle": "<p>Within our close-knit Product Lab team, consisting of just five members, I assumed the pivotal role of Game Designer and Developer. My responsibilities encompassed conceiving and crafting engaging levels and puzzles using the Phaser game engine as our canvas. I played a crucial role in transforming our conceptual ideas into tangible game elements, coding them directly in JavaScript within the Phaser framework.</p>",
-        "hype": "<p>The apex of our journey culminated in a memorable middle school coding day challenge, where our team presented Project Mio to hundreds of students. We not only showcased the game but also offered students within our target demographic the opportunity to experience it firsthand and provide valuable feedback.</p>",
+        "hook": "<h3>Overview</h3><p>In 2016, a passionate Microsoft Product Lab team set out to revolutionize coding education. Fueled by our love for classic platformers, we conceptualized Project Mio, a game designed to teach JavaScript without boring our target demographic to tears.</p>",
+        "hustle": "<p>As the Game Designer and Developer for our five-person team, I built the engaging levels and puzzles using the Phaser HTML5 engine. I transformed our whiteboard concepts into tangible, playable mechanics by writing the JavaScript directly within the framework.</p>",
+        "hype": "<p>The highlight of the project was dropping our alpha build in front of hundreds of middle school students during a coding day challenge. We let our exact target demographic break the game and give us the unfiltered feedback we needed to refine it.</p>",
         "links": [
           {
             "url": "https://project-mio.onrender.com/en-us/projectmio/",
@@ -76,8 +76,8 @@
       },
       {
         "title": "Terra Mine Diver",
-        "hook": "<h3>A nostalgic adventure game for the Playdate</h3><p>Your coworkers are going missing! Explore the haunted depths of an off-world mine in Terra Mine Diver, a game designed and developed exclusively for the Playdate handheld console. This unique experience blends classic exploration and puzzle-solving with innovative crank-powered mechanics, all wrapped in a charming 1-bit aesthetic.</p>",
-        "hustle": "<p>Inspired by the Playdate's distinctive hardware, I embraced the creative constraints (low-resolution display, limited color palette, quirky crank controls, tiny filesize). From the initial story concept and level design to the pixel-perfect visuals, engaging puzzles, and catchy chiptune soundtrack, I meticulously crafted every aspect of Terra Mine Diver using Pulpscript. This project was a labor of love, showcasing my passion for game development and my ability to transform limitations into exciting opportunities.</p>",
+        "hook": "<h3>A nostalgic adventure game for the Playdate</h3><p>Your coworkers are missing, and you have to explore the haunted depths of an off-world mine to find them. I designed and developed Terra Mine Diver exclusively for the Playdate handheld console. It blends classic exploration and puzzles with innovative crank-powered mechanics, all wrapped in a strict 1-bit aesthetic.</p>",
+        "hustle": "<p>The Playdate's hardware constraints, low resolution, zero backlight, and tiny file limits, forced me to get incredibly creative. I wrote the entire game in Pulpscript, meticulously crafting everything from the story and level design to the pixel art and chiptune soundtrack.</p>",
         "links": [
           {
             "url": "https://tonypeterson.itch.io/terraminediver",
@@ -90,8 +90,9 @@
       },
       {
         "title": "CSO Showreel",
-        "hook": "<h3>2023 Video Montage</h3><p>In a dynamic design organization comprising more than 30 skilled designers, the landscape is constantly evolving. I undertook the exciting challenge of crafting a comprehensive compilation video that highlights the remarkable achievements of my team throughout FY23.</p>",
-        "hustle": "<p>While my usual workflow entails receiving a design brief, maintaining regular communication with PMs and stakeholders, and delivering assets, this project demanded a unique approach. This endeavor involved curating a video that harmoniously integrated diverse projects, each spearheaded by a multitude of designers within our organization. My role was to transform their static designs into a captivating narrative suitable for video and motion playback. To achieve this, I leveraged advanced 3D reconstruction techniques, dissecting their deliverables into individual components and meticulously reconstructing the final design within a dynamic timeline.</p>",
+        "hook": "<h3>2023 Video Montage</h3><p>In a dynamic organization with over 30 skilled designers, the sheer volume of high-quality work is staggering. I took on the massive challenge of crafting a comprehensive compilation video to highlight the team's best FY23 achievements.</p>",
+        "hustle": "<p>My typical workflow is a predictable loop: get the brief, appease the PMs, deliver the UI, and repeat. But this project was a totally different beast. I was handed a massive pile of flat, static designs from across the organization and tasked with turning them into a cohesive video narrative. Naturally, I had to play Frankenstein. I digitally dismantled their files layer by layer, rebuilt them using some advanced 3D sorcery, and brought the pieces back to life on a dynamic timeline so they would actually shine on screen.</p>",
+        "hype": "<p>The final montage successfully highlighted the remarkable achievements of our team, transforming static UI into a captivating sizzle reel that celebrated everyone's hard work.</p>",
         "links": [],
         "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions </li><li><a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing </li><li><a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations </li><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics </li><li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation </li><li><a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions </li></ul>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
@@ -99,28 +100,18 @@
       },
       {
         "title": "Microsoft Commute Poster",
-        "hook": "<h3>Helping New Employees Navigate the Campus</h3><p>When a massive influx of employees relocated to a new building, unfamiliarity with the sprawling campus became a pain point. To encourage the use of the Microsoft Connector bus system, we launched an awareness campaign tied to a single-day scavenger hunt.</p>",
-        "hustle": "<p>The stakeholders initially requested a poster crammed with multiple calls to action. I successfully advocated for a massive simplification, narrowing the focus to a single, powerful CTA. After several iterations, I designed and pitched a concept in Illustrator that evoked the feeling of an 'unending bus'—visually communicating that there was always plenty of room for everyone.</p>",
+        "hook": "<h3>Helping New Employees Navigate the Campus</h3><p>When a massive wave of employees relocated to a new building, navigating the sprawling campus became an immediate pain point. To drive awareness for the Microsoft Connector bus system, we launched a campaign tied to a single-day scavenger hunt.</p>",
+        "hustle": "<p>The stakeholders initially requested a poster crammed with multiple conflicting calls to action. I successfully pushed back and advocated for a massive simplification, narrowing the design down to a single, powerful message. I pitched an Illustrator concept evoking an unending bus to visually communicate that there was always plenty of room.</p>",
         "links": [],
         "role": "<p>Lead Designer</p>",
         "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics and layout</li></ul>",
         "did-you-know": "<p>Consistent user interfaces can increase users' task completion rates by up to 200%.</p>"
       },
       {
-        "title": "SAP Keynote",
-        "hook": "<h3>Elevating the Executive Vision</h3><p>When the SAP Office of the CMO needed to deliver high-stakes presentations at major conferences like SAP Sapphire, they frequently started with dense, 100-slide decks of raw data. My job was to transform those sprawling spreadsheets into a cohesive, compelling, and visually stunning narrative.</p>",
-        "hustle": "<p>I partnered directly with the C-suite to craft presentation designs that resonated with massive global audiences.</p>",
-        "hype": "<p>The impact was immediate and the executives absolutely adored the visual upgrade. What started as dedicated support for the CMO quickly spread organically, and soon my design marks were shaping the keynotes for executives across the entire organization.</p>",
-        "links": [],
-        "role": "<p>UX/UI Designer & Prototyper</p>",
-        "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector assets</li><li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For image manipulation</li><li>PowerPoint - For final presentation delivery</li></ul>",
-        "did-you-know": "<p>A well-designed user interface could raise your website’s conversion rate by up to 200%, and a better UX design could yield conversion rates up to 400%.</p>"
-      },
-      {
         "title": "Meet the Makers Campaign",
-        "hook": "<h3>Engage: Meet the Makers</h3><p>For the internal Engage platform, Microsoft launched 'Meet the Makers'—a series of stories and interviews highlighting the employees building innovative Copilot AI agents. The Program Managers had a fantastic foundational vision, but prior to having a dedicated designer, they were relying entirely on raw AI outputs to generate their campaign art.</p>",
-        "hustle": "<p>I stepped in to bridge the gap between their creative vision and professional execution. Utilizing Blender and After Effects, I produced high-fidelity motion graphics and video bumpers.</p>",
-        "hype": "<p>The final assets significantly elevated the visual impact of the series, far exceeding the team's initial expectations for the campaign's aesthetic.</p>",
+        "hook": "<h3>Engage: Meet the Makers</h3><p>Microsoft launched 'Meet the Makers' on the internal Engage platform to highlight employees building innovative Copilot AI agents. The Program Managers had a great vision, but without a dedicated designer, they were relying entirely on raw, unpolished AI outputs for their campaign art.</p>",
+        "hustle": "<p>I stepped in to rescue the campaign's aesthetic. I utilized Blender and After Effects to replace the raw AI generation with high-fidelity, bespoke motion graphics and video bumpers.</p>",
+        "hype": "<p>The final assets significantly elevated the visual impact of the series, blowing past the team's initial expectations and giving the campaign the professional polish it deserved.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For 3D modeling and animation</li><li><a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For motion graphics and compositing</li></ul>",
@@ -128,9 +119,9 @@
       },
       {
         "title": "Virtual Store",
-        "hook": "<h3>Bringing Virtual Reality to Microsoft Store</h3><p>In 2017, I was a part of the Microsoft.com UX design team, embarking on an innovative exploration: the concept of an online retail store translated into a virtual space. The challenge was to envision what this digital retail environment would entail. How would users accessing it through various means—mouse, touch, VR headset—engage with and experience this unified environment in vastly different ways?</p>",
-        "hustle": "<p>Taking on a multifaceted role, I conceptualized, modeled, constructed, and coded this groundbreaking virtual store experience. This project served as a pioneering tool to push the boundaries and unlock the potential of emerging web 3D technology at that time.</p>",
-        "hype": "<p>While the virtual store primarily functioned as a high-fidelity interactive concept, it was not intended for direct customer engagement. Instead, it was strategically employed as a demonstrative platform for testing and presentation purposes, providing valuable insights for discussions with other product teams.</p>",
+        "hook": "<h3>Bringing Virtual Reality to Microsoft Store</h3><p>Back in 2017, the Microsoft.com UX team embarked on a wildly ambitious exploration into translating an online retail store into a virtual reality space. We had to figure out how users would navigate a unified environment across totally different inputs like a mouse, touch screen, or VR headset.</p>",
+        "hustle": "<p>Wearing multiple hats, I conceptualized, modeled, and coded the entire virtual store experience from the ground up. It was a pioneering project that pushed the absolute limits of emerging web 3D technology at the time.</p>",
+        "hype": "<p>While it was never meant for direct customer checkout, this high-fidelity interactive concept became a powerful demonstrative tool. We used it to test theories and pitch future spatial computing possibilities to other product teams.</p>",
         "links": [
           {
             "url": "https://store-demo.surge.sh/store.html",
@@ -143,9 +134,9 @@
       },
       {
         "title": "Synergy Grant Quiz",
-        "hook": "<h3>The Challenge</h3><p>When Synergy Grant Solutions, a startup focused on helping businesses secure grant funding, needed a unique and engaging quiz for their website, they faced a challenge: existing quiz plugins were either too expensive, too limited in functionality, or didn't align with their branding. That's where I stepped in.</p>",
-        "hustle": "<p>As the web designer tasked with building their online presence, I saw an opportunity to go above and beyond. I crafted a custom quiz from scratch using JavaScript, tailoring it precisely to Synergy's needs and branding. This bespoke solution not only provided them with a versatile and engaging tool but also saved them the significant costs associated with third-party plugins and database hosting.</p>",
-        "hype": "<p>By integrating the quiz with Google Sheets, I provided a simple and cost-effective way for Synergy to collect and manage user data. The result? A polished, user-friendly quiz that delighted Synergy's clients and helped them launch their first product offering with confidence. This project showcases my commitment to customer obsession, my ability to think creatively, and my dedication to delivering high-quality solutions that exceed expectations.</p>",
+        "hook": "<h3>The Challenge</h3><p>Synergy Grant Solutions needed a unique, engaging quiz for their startup's website. The problem was that existing third-party quiz plugins were either wildly expensive, functionally limited, or completely clashed with their branding.</p>",
+        "hustle": "<p>I bypassed the bloated plugins entirely and hand-coded a custom JavaScript quiz from scratch. This bespoke solution was tailored precisely to their brand, saving them significant database hosting costs and subscription fees.</p>",
+        "hype": "<p>By seamlessly integrating the custom quiz with Google Sheets, I gave the client a cost-effective way to manage their user data. It was a polished, lightweight tool that helped them confidently launch their first product offering.</p>",
         "links": [
           {
             "url": "https://synergy-test.surge.sh/",
@@ -158,8 +149,8 @@
       },
       {
         "title": "Optic8 Website",
-        "hook": "<h3>A Digital Stage for Innovation</h3><p>For this project I partnered with Optic8, a leader in virtual production and immersive technology, to modernize their online presence. I reconstructed the website's design and user experience within the Squarespace framework, ensuring it reflected the company's innovative spirit and visual prowess.</p>",
-        "hustle": "<p>Squarespace is fantastic for casual users, which means it is notoriously rigid for developers. To make a template-based platform feel like a cutting-edge virtual production studio, I had to get a little ruthless. I injected a heavy dose of custom CSS and bespoke components to completely break the mold and push the platform's limits. I paired this custom front-end with a robust, tailored CMS so the client could easily manage their content without accidentally breaking the styling.</p>",
+        "hook": "<h3>A Digital Stage for Innovation</h3><p>I partnered with Optic8, an innovative virtual production studio, to modernize their digital presence. The goal was to rebuild their website within Squarespace while ensuring it actually looked like a cutting-edge immersive technology company.</p>",
+        "hustle": "<p>Squarespace is notoriously rigid for developers. To make a template platform feel bespoke, I had to inject a heavy dose of custom CSS to completely break the mold. I paired that aggressive front-end styling with a tailored CMS so the client could easily update content without accidentally breaking the layout.</p>",
         "links": [
           {
             "url": "https://www.optic8.com/",
@@ -172,10 +163,10 @@
       },
       {
         "title": "Picchu",
-        "hook": "<h3>Hey Microsoft! Let's align</h3><p>Picchu, the codename for the ambitious overhaul of our design system, later evolved into the formidable MWF (Microsoft Web Framework). Preceding the advent of Picchu, Microsoft's web landscape was a patchwork of distinct identities. Each web property, be it microsoft.com, windows.com, or office.com, stood as an independent entity, drawing from its unique web component repository, brand guidelines, and asset library. The absence of a central point of reference had underscored the urgent need for brand alignment across the organization.</p>",
-        "hustle": "<p>The situation was so fragmented that certain microsoft.com pages were entirely disconnected from the broader network, leaving users stranded without a route back to the homepage. Consequently, our foremost mission, aptly dubbed UHF (United Header Footer), was to unify this disparate ecosystem. As the lead UX designer, my role was pivotal in spearheading the development of a new, consistent header, navigation, and footer that would extend across every page within the microsoft.com umbrella. Remarkably, this foundational component remains largely unchanged to this day, a testament to its enduring success.</p>",
+        "hook": "<h3>Hey Microsoft! Let's align</h3><p>Before the Microsoft Web Framework existed, the company's web landscape was a fragmented patchwork. Properties like windows.com and office.com were independent silos with unique component libraries and conflicting brand guidelines. We desperately needed a central point of truth to align the entire organization.</p>",
+        "hustle": "<p>The ecosystem was so disconnected that users were regularly getting stranded on isolated pages without a route back home. As the lead UX designer, I spearheaded the 'United Header Footer' initiative to unify the chaos. I helped develop the consistent navigation architecture that still spans the microsoft.com umbrella today.</p>",
         "behind-the-scenes": "<p>With the 'bread' of the sandwich in place (UHF), our subsequent endeavor was to ensure that every contributor adhered to the right 'ingredients' and refrain from making 'sandwiches' out of breakfast cereal. This phase demanded meticulous consideration of the latest web technology, adherence to accessibility standards, and compatibility with various browsers. Designers sought guidance on image selection, dimensions, style guidance, fonts, colors, and brand voice alignment, while developers craved code and the knowledge to deploy it effectively. Picchu was conceived as a comprehensive portal, meticulously designed to cater to the unique requirements of both groups, streamlining their workflows without overwhelming them.</p>",
-        "hype": "<p>Following months of tireless effort encompassing design, strategy, reviews, testing, prototyping, redesigns, and deployments, we successfully birthed a fully functional web framework that the entirety of Microsoft seamlessly aligned with.</p>",
+        "hype": "<p>After months of relentless design, prototyping, and testing, we birthed a fully functional web framework. It gave developers the code they craved and designers the strict brand guardrails they needed, finally bringing the entire company into alignment.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -183,8 +174,8 @@
       },
       {
         "title": "Trilogy Studios Website",
-        "hook": "<h3>From Blueprint to Launchpad</h3><p>I spearheaded the online transformation of Trilogy Studios during their nationwide expansion. I also led the strategy, design, and execution of a comprehensive web presence, encompassing brand identity, website architecture, and targeted marketing campaigns. This holistic approach ensured a cohesive user experience and positioned the company for rapid growth.</p>",
-        "hustle": "<p>This was a completely blank canvas, so I made the executive call to build the entire architecture from scratch in Webflow. I wanted total design freedom without the bloat, so I skipped heavy plugins and Lottie files entirely. Instead, I kept the site lightning-fast by hand-coding the interactions using pure CSS and SVGs. To support their nationwide expansion, I backed that lightweight front-end with a robust custom CMS designed specifically for their operational needs.</p>",
+        "hook": "<h3>From Blueprint to Launchpad</h3><p>During their nationwide expansion, I spearheaded the complete online transformation for Trilogy Studios. I led the strategy and design of their comprehensive web architecture to ensure their digital presence was ready for rapid growth.</p>",
+        "hustle": "<p>Working with a completely blank canvas, I made the executive call to build the architecture from scratch in Webflow. I skipped heavy plugins and bloated files, opting instead to hand-code the interactions using pure CSS and SVGs to keep the site lightning fast.</p>",
         "links": [
           {
             "url": "https://www.trilogystudios.com/",
@@ -197,8 +188,8 @@
       },
       {
         "title": "Motion Graphics Reel",
-        "hook": "<h3>Motion Graphics are the SECRET SAUCE</h3><p>This reel is a peek into my brain—a kaleidoscope of colors, shapes, and ideas bouncing around, begging to be animated. I see motion design as a way to make the complex simple, the mundane magical, and the everyday extraordinary. My playful spirit and love of creative expression have always fueled my creativity. I'm drawn toward blending technology with art, and love being part of teams that push the boundaries of what's possible.</p>",
-        "hustle": "<p>Honestly, half the battle of cutting a reel is going full digital archaeologist on dusty external hard drives. Some of the clips in here are over a decade old, and watching them now makes me cringe just a tiny bit. But they are a massive part of my creative DNA. I dusted them off, embraced the nostalgia, and stitched them together into a high-energy montage—proving that good motion design holds up, even if the software used to make it belongs in a museum.</p>",
+        "hook": "<h3>Motion Graphics are the SECRET SAUCE</h3><p>This reel is a peek into my brain, showcasing the shapes, colors, and ideas I use to make complex concepts simple and magical. I have always been drawn to blending art with technology, and motion design is my favorite way to push those boundaries.</p>",
+        "hustle": "<p>Half the battle of cutting a reel is going full digital archaeologist on dusty external hard drives. I dug up clips that are over a decade old, embraced the nostalgia, and stitched them into a high-energy montage. It is proof that solid motion design holds up, even if the software used to make it now belongs in a museum.</p>",
         "links": [],
         "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.adobe.com/products/premiere.html\" target=\"_blank\">Adobe Premiere</a> - For video editing and title captions </li><li><a href=\"https://www.reaper.fm/\" target=\"_blank\">Reaper</a> - For sound and music editing </li><li><a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and animations </li><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics </li><li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For page asset creation </li><li><a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a> - For mograph and transitions </li></ul>",
         "role": "<p>Motion Designer & Video Editor</p>",
@@ -206,9 +197,9 @@
       },
       {
         "title": "Content Block Builder",
-        "hook": "<h3>A Tool For Page Layouts</h3><p>When I first started my journey at Microsoft in 2012, I served as a MARCOM designer, primarily engaged in the creation of placement and hero banners for the homepage of microsoft.com. A year later, my transition to the UX team marked the initiation of a pivotal chapter as we embarked on the development of the next iteration of microsoft.com. During this transformative phase, we embarked on the formulation of an innovative suite of design standards and components, intended for widespread adoption across the entire organization, powering the development of web properties.</p>",
-        "hustle": "<p>Recognizing the imperative need for a tool that could empower designers to seamlessly craft page components in precise alignment with our nascent design standards, I undertook the task of conceiving and constructing the content block tool. This sophisticated tool was meticulously engineered to seamlessly harmonize with the evolving web standards we were concurrently shaping, fundamentally transforming the often repetitive and time-consuming process of content placement layout.</p>",
-        "hype": "<p>The implementation of this groundbreaking tool ushered in a new era of efficiency for UX and MARCOM designers, accelerating the design process to unparalleled speeds while eradicating the potential for even the slightest brand misalignment errors.</p>",
+        "hook": "<h3>A Tool For Page Layouts</h3><p>Back in 2012, I was a MARCOM designer churning out hero banners for the Microsoft homepage. As we transitioned into building the next iteration of microsoft.com, we desperately needed a suite of design standards that the entire organization could actually adopt without breaking things.</p>",
+        "hustle": "<p>Placing content manually was repetitive and prone to human error. I recognized the need for a dedicated tool, so I designed and engineered the content block builder from scratch. It empowered designers to effortlessly craft page layouts that were mathematically locked into our nascent design standards.</p>",
+        "hype": "<p>This tool ushered in a new era of efficiency for our UX and MARCOM teams. It accelerated the layout process to unparalleled speeds and completely eradicated the risk of brand misalignment.</p>",
         "links": [
           {
             "url": "ContentBlockBuilder/ContentBlockBuilder.html",
@@ -221,9 +212,9 @@
       },
       {
         "title": "Microsoft Web Framework",
-        "hook": "<h3>We're aligned! Now let's improve and optimize</h3><p>Returning to Microsoft's MSCOM team, I joined a ~10 person design team focused on evolving the Microsoft Web Framework (MWF), a company-wide design system powering Microsoft's web identity. As the Design Technologist, I played a crucial role in modernizing this foundational framework, which had undergone significant enhancements during my absence.</p>",
-        "hustle": "<p>Prototyping: I built interactive prototypes of MWF components using HTML, CSS, and JavaScript. These prototypes were essential for stakeholder presentations, real-world user testing, and ultimately, engineering handoff for CMS integration. Accessibility: I championed accessibility best practices. CMS Integration: I collaborated closely with developers to seamlessly integrate MWF with various content management systems, including the latest migration to Adobe Experience Manager (AEM).</p>",
-        "hype": "<p>MWF serves as the single source of truth for Microsoft's web design needs, enabling consistency and efficiency across the organization.</p>",
+        "hook": "<h3>We're aligned! Now let's improve and optimize</h3><p>When I returned to the MSCOM team, I joined a specialized crew tasked with evolving the Microsoft Web Framework. It was the company-wide design system powering Microsoft's digital identity, and I stepped in as a Design Technologist to modernize it.</p>",
+        "hustle": "<p>I built highly interactive prototypes of the MWF components using HTML, CSS, and JavaScript. These prototypes were absolutely essential for stakeholder pitches, real-world user testing, and ensuring a flawless engineering handoff for the Adobe Experience Manager migration.</p>",
+        "hype": "<p>By championing accessibility and ruthless consistency, we solidified MWF as the single source of truth for the organization's web properties.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -231,8 +222,8 @@
       },
       {
         "title": "Teams Holiday Background",
-        "hook": "<h3>Willy Wonka Holiday</h3><p>Annually, the Campaigns team unveils their refreshed holiday marketing toolkit. In the year 2023, this comprehensive kit featured a novel addition—a 3D rendering, intended for utilization within Microsoft Teams as a backdrop image for conference calls. My design directive succinctly encapsulated the essence of the project: 'Craft a 3D environment that harmonizes with our style guide while infusing a whimsical 'Willy Wonka' touch.'</p>",
-        "hustle": "<p>Leveraging the toolkit's specifications as my guiding framework, I embarked on the creative journey. The outcome included multiple design alternatives and a meticulously structured working file, purposefully engineered to empower other Blender users in generating their own brand-compliant iterations.</p>",
+        "hook": "<h3>Willy Wonka Holiday</h3><p>Every year, the Campaigns team rolls out a massive holiday marketing toolkit. In 2023, they added a new requirement: a 3D environment designed specifically to be used as a Microsoft Teams background. My creative brief was simply to make it compliant with the style guide, but infuse it with a whimsical Willy Wonka vibe.</p>",
+        "hustle": "<p>I took their brand specifications and ran with them. I modeled and rendered multiple design alternatives in Blender, deliberately structuring the master files so that other designers could easily generate their own brand-compliant scenes.</p>",
         "links": [],
         "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.blender.org/\" target=\"_blank\">Blender</a> - For modeling and some animations </li><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For SVG creation </li><li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For post processing and color correction </li></ul>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
@@ -240,9 +231,9 @@
       },
       {
         "title": "Proactive Chat Invite",
-        "hook": "<h3>New functionality - new design</h3><p>When visiting any Microsoft.com page, it's a matter of seconds before you're greeted with an invitation to initiate a chat conversation with a knowledgeable sales associate. Recognizing an opportunity to enhance the user experience, the business team sought to augment this chat component by incorporating the capability to schedule shopping appointments while also aligning the design with the latest web standards.</p>",
-        "hustle": "<p>To facilitate the design transformation and decision-making process, I introduced a sophisticated design tool. This tool empowered stakeholders to explore a plethora of design possibilities, offering them the flexibility to experiment with 14 key controls to craft a customized design solution. Once a design direction was chosen and rigorously tested, I seamlessly transitioned into the implementation phase, furnishing the requisite CSS to bring the redesigned component to life. Throughout this journey, we iterated extensively based on insights gleaned from rounds of research and invaluable customer feedback.</p>",
-        "hype": "<p>Through strategic UX enhancements, we have witnessed a substantial uptick in customer engagement and satisfaction, accompanied by heightened awareness of our Personal Shopper offering, culminating in the successful deployment of the reimagined component in 2021.</p>",
+        "hook": "<h3>New functionality - new design</h3><p>Microsoft.com prompts users to chat with a sales associate within seconds of landing on a page. The business team wanted to upgrade this massive touchpoint, adding appointment scheduling features while completely overhauling the visual design to meet modern web standards.</p>",
+        "hustle": "<p>To stop the endless cycle of subjective design revisions, I built a sophisticated prototyping tool for the stakeholders. I gave them 14 distinct controls to experiment with the UI themselves. Once they locked in a direction they loved, I wrote the production CSS overrides to force the clunky third-party bot to render beautifully on our pages.</p>",
+        "hype": "<p>The redesign launched in 2021, driving a massive uptick in customer engagement and drastically boosting awareness for the Personal Shopper program.</p>",
         "links": [
           {
             "url": "chatbot/ProChatDesignTool/index.html",
@@ -255,8 +246,8 @@
       },
       {
         "title": "Fluent Icon Refresh",
-        "hook": "<h3>What about these old icons?</h3><p>When it comes to online iconography, SVG stands as the reigning champion among file formats. Regrettably, until recently, Microsoft's Digital Asset Management (DAM) and Content Management System (CMS) did not offer support for this versatile format. Recognized as the 'SVG Fanboy' within the organization, I have spearheaded the transition from not only an outdated icon design language to a contemporary one but also advocated for the widespread adoption of vector assets across all Microsoft online platforms.</p>",
-        "hustle": "<p>In my pursuit of eradicating bitmap icons from the digital landscape, I took a proactive approach by developing an online tool. This multifaceted tool not only serves as a persuasive aid in my efforts to convince skeptics but also serves as a central hub for tracking the progress of our ongoing initiatives in creating and implementing these modern vector assets.</p>",
+        "hook": "<h3>What about these old icons?</h3><p>SVG is the undisputed king of web iconography, but Microsoft's legacy CMS did not support the format. As the resident vector advocate, I spearheaded the massive transition away from outdated, pixelated bitmaps to a crisp, modern icon language.</p>",
+        "hustle": "<p>To eradicate bitmaps from the digital landscape, I built a custom online tool. It served dual purposes: a persuasive pitch deck to convince skeptical stakeholders, and a centralized hub to track the rollout of our new vector assets across the entire ecosystem.</p>",
         "links": [
           {
             "url": "https://store-icons.surge.sh/StoreIcons2.html",
@@ -269,9 +260,9 @@
       },
       {
         "title": "8-Bit Takeover",
-        "hook": "<h3>Microsoft.com got a retro remake</h3><p>As an initiative purely for the enjoyment of it, a small, spirited team hailing from the Microsoft.com design team came together to orchestrate an unforgettable homepage takeover. On the 256th day of the year, we engineered a delightful surprise for users: by inputting the iconic Konami code on their keyboard while visiting the Microsoft home page, the entire website would undergo a whimsical transformation.</p>",
-        "hustle": "<p>In this creative endeavor, I actively participated in the design process by conceptualizing and crafting placements, and I also played a key role in building several of the interactive components that enriched the page's user experience. The reskinned page featured enchanting 8-bit themed graphics, meticulously designed placements, captivating animations, and interactive links. Notably, it included a hero section spotlighting 8-bit renditions of each member of the MSCOM design team, creatively crafted by Dan Schlitzkus.</p>",
-        "hype": "<p>While the project was primarily designed for sheer enjoyment, it sparked substantial social media buzz and, in turn, generated a notable increase of 3 - 10% in unique visitors to the homepage.</p>",
+        "hook": "<h3>Microsoft.com got a retro remake</h3><p>On the 256th day of the year, a small crew of us on the design team decided to hijack the Microsoft homepage purely for the fun of it. We engineered a hidden easter egg that triggered a complete, whimsical 8-bit reskin of the site when users typed the Konami code.</p>",
+        "hustle": "<p>I helped conceptualize the retro placements and actively coded several of the interactive components that brought the gag to life. We packed the page with pixel-art animations, including 8-bit renditions of our entire design team.</p>",
+        "hype": "<p>We built it just to make people smile, but it went incredibly viral. The social media buzz ended up driving a massive 3 to 10 percent spike in unique visitors to the homepage that day.</p>",
         "links": [],
         "role": "<p>Game Developer & Designer</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -279,9 +270,9 @@
       },
       {
         "title": "Back to the Future Takeover",
-        "hook": "<h3>Great Scott!</h3><p>Drawing inspiration from the iconic movie \"Back to the Future 2,\" where Marty embarks on a thrilling adventure to the year 2015 with Doc Brown, the Microsoft.com design team orchestrated a playful homage. On the very day of their fictional arrival, October 21st, we embedded a hidden secret code on the Microsoft home page. For a single day, users who visited the website and entered the license plate of the time-traveling DeLorean were in for a delightful surprise. The entire page underwent a remarkable transformation, with every component meticulously themed to juxtapose past and future technology.</p>",
-        "hustle": "<p>In this imaginative endeavor, I played a pivotal role in crafting and designing all the strategic placements on the page. Additionally, I took charge of developing an innovative image slider, enabling seamless transitions between two distinct images. To further enhance the immersive experience, I introduced a dynamic 3D toggle, rendering every image on the page in anaglyphic (stereoscopic 3D), complete with retro glasses.</p>",
-        "hype": "<p>Beyond its intrinsic entertainment value, this takeover generated significant social media buzz, ultimately driving an impressive 3 - 10% increase in unique visitors to the homepage.</p>",
+        "hook": "<h3>Great Scott!</h3><p>October 21, 2015, was the exact date Marty McFly traveled to in Back to the Future 2. To celebrate, we hid a secret code on the Microsoft homepage. If users typed in the DeLorean's license plate, the entire site transformed into a retro-futuristic homage juxtaposing past and present technology.</p>",
+        "hustle": "<p>I was responsible for designing all the strategic placements and engineering the interactive elements. I built a custom image slider to seamlessly compare timelines and coded a dynamic toggle that rendered the entire page in stereoscopic anaglyphic 3D.</p>",
+        "hype": "<p>Just like our 8-bit stunt, this takeover exploded on social media and drove another massive 3 to 10 percent increase in unique traffic.</p>",
         "links": [],
         "role": "<p>Game Developer & Designer</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -289,9 +280,9 @@
       },
       {
         "title": "Tether",
-        "hook": "<h3>Finding time to meet shouldn't be so hard</h3><p>Efficiently coordinating schedules can be a real challenge, especially when multiple individuals are involved. Factor in diverse scheduling habits, like Justin's meticulous planning months in advance, Heidi's penchant for tardiness, and Sam's indecisiveness, and the complexity only intensifies.</p>",
-        "hustle": "<p>In the Tether app, we aimed to simplify this process. Users had the capability to curate a recipient list with associated text numbers. After naming the event and specifying several date/time options, Tether seamlessly dispatched a text message to all recipients. The recipients could then cast their votes on their preferred date/time directly from their texting app—no additional Tether download or app installation was required. I spearheaded the project by devising the app flow and crafting the user interface.</p>",
-        "hype": "<p>This initiative, part of our Product Lab, successfully progressed into development and testing. Several team members enthusiastically utilized the app, but our project focus later shifted to the development of the Project Mio video game.</p>",
+        "hook": "<h3>Finding time to meet shouldn't be so hard</h3><p>Trying to schedule a meeting with a group of people is a nightmare of conflicting habits and endless text threads. We wanted to completely eliminate that friction with Tether, an app concept born inside the Microsoft Product Lab.</p>",
+        "hustle": "<p>I designed the user interface and built the core application flow. The brilliant part of Tether was that only the host needed the app. They would select dates, and the system would text the recipients, allowing them to vote on the best time directly from their native SMS client without downloading anything.</p>",
+        "hype": "<p>We successfully moved the app into internal development and testing, where the team used it heavily before our focus eventually pivoted to the Project Mio game.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -299,8 +290,9 @@
       },
       {
         "title": "Xbox Gift Card",
-        "hook": "<h3>Gifting Made Easy (and Animated)</h3><p>Need to give the gift of gaming? Xbox Gift Cards. But let's be honest, they could be a bit... static. So, we brought in the animation cavalry. Two designers, two months, countless pixels, and some very talented voice actors. The result? A dynamic gift card experience that graced the homepage of microsoft.com (and other digital domains). Because gifting should be exciting, not just transactional.</p>",
-        "hustle": "<p>As one of two designers on the project, we split the graphics and animation, then I stitched it all together. Seamlessly, of course. Because that's what I do. I bring the pieces together, make the whole greater than the sum of its parts. And occasionally, I throw in a witty comment or two. Just for fun.</p>",
+        "hook": "<h3>Gifting Made Easy (and Animated)</h3><p>Let us be honest, digital gift cards are usually about as exciting as an email receipt. When tasked with designing the Xbox Gift Card experience, we knew we had to bring in the animation cavalry to elevate it. It took two designers, two months, and a lot of pixels to turn a static transaction into a dynamic experience worthy of the microsoft.com homepage.</p>",
+        "hustle": "<p>I teamed up with one other designer to split the core graphics and animation workload. My primary responsibility was stitching the disparate assets together into a seamless, high-energy final composite. I took the scattered pieces and made sure the final output looked incredible before it shipped out.</p>",
+        "hype": "<p>By adding professional voice actors and high-end motion design, we successfully transformed a standard e-commerce purchase into an exciting digital unboxing experience.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -308,9 +300,9 @@
       },
       {
         "title": "Simplified Office",
-        "hook": "<h3>Why does Office need to be so complex?</h3><p>As a dedicated member of the Product Lab team at Microsoft, we were entrusted with the exciting mandate of brainstorming, conceptualizing, pitching, and ultimately bringing to life a diverse array of passion projects. Among these endeavors, \"Simplified Office\" held a special place in my heart—a project aimed at elevating and simplifying the user interface of Microsoft Office, a software suite used by millions worldwide.</p>",
-        "hustle": "<p>In the pursuit of this vision, I took the reins of the project by spearheading its conceptualization and crafting a compelling video presentation designed to captivate the attention of company executives. My role encompassed ideating and articulating the core concepts, illustrating how \"Simplified Office\" could enhance user experiences, and showcasing its potential to streamline complex workflows.</p>",
-        "hype": "<p>During the ideation phase within Product Lab, \"Simplified Office\" emerged as one of the three standout projects chosen for presentation to Microsoft executives. Ultimately, while it did not progress beyond this stage, it remains a testament to the team's innovative spirit. The project, while side-lined, contributed to the creative ecosystem that eventually birthed the Project Mio video game idea.</p>",
+        "hook": "<h3>Why does Office need to be so complex?</h3><p>Microsoft Office is incredibly powerful, but the interface can be overwhelmingly complex. While working in the Product Lab, I championed a passion project called Simplified Office, aiming to ruthlessly declutter the software suite used by millions worldwide.</p>",
+        "hustle": "<p>I spearheaded the conceptualization phase and crafted a compelling video presentation to pitch the C-suite. My goal was to visually prove how stripping away the noise could vastly improve the user experience and streamline complex workflows.</p>",
+        "hype": "<p>Out of a massive pool of ideas, Simplified Office was selected as one of just three standout projects to be presented directly to Microsoft executives.</p>",
         "links": [],
         "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> </li> <li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a></li> <li><a href=\"https://www.adobe.com/products/aftereffects.html\" target=\"_blank\">Adobe After Effects</a></li></ul>",
         "role": "<p>UX/UI Designer & Prototyper</p>",
@@ -318,9 +310,9 @@
       },
       {
         "title": "Microsoft Complete Rebrand",
-        "hook": "<h3>Branding, and stylesheets, and logos, OH MY!</h3><p>Microsoft Complete is a comprehensive offering encompassing warranties, tech support, and value-added services to enhance your purchase. However, the absence of a distinctive visual identity left it lacking the appearance of a tangible product, hindering customer recognition and engagement.</p>",
-        "hustle": "<p>To address this challenge, I undertook the pivotal role of crafting a cohesive visual identity for Microsoft Complete. This encompassed the creation of a distinctive logo, the formulation of comprehensive branding guidelines, and the establishment of clear usage styles.</p>",
-        "hype": "<p>The result of this initiative has been transformative. The Complete logo and branding elements are now prominently featured across the landscape of microsoft.com, significantly enhancing product recognition and driving increased traffic to the Complete product page.</p>",
+        "hook": "<h3>Branding, and stylesheets, and logos, OH MY!</h3><p>Microsoft Complete offered fantastic extended warranties and tech support, but it suffered from a major identity crisis. It lacked a cohesive visual brand, making it feel like an afterthought rather than a premium, tangible product.</p>",
+        "hustle": "<p>I stepped in to give the warranty a real soul. I designed a distinctive new logo, authored the comprehensive brand guidelines, and established strict usage styles to ensure it was applied correctly across the digital ecosystem.</p>",
+        "hype": "<p>The rebrand was a massive success. The Complete identity is now prominently featured across microsoft.com, drastically improving product recognition and driving highly qualified traffic to the purchase page.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -328,9 +320,9 @@
       },
       {
         "title": "Chatbot Redesign",
-        "hook": "<h3>Good Functionality - bad design</h3><p>At a critical juncture, I undertook the task of revitalizing the interactive chat widget on Microsoft.com, a fixture that had been in use for years but had lost its visual appeal. As depicted in the image above, the old design on the left was in stark contrast to my revamped design on the right. The original layout suffered from limited content real estate, resulting in a cramped interface. What the bot truly needed was a breath of fresh air and a much-needed facelift.</p>",
-        "hustle": "<p>My role in this endeavor encompassed the conceptualization and presentation of UI elements aligned with the brand's aesthetics. Once the design was approved, I played a pivotal role in translating it into reality by providing the requisite CSS for the third-party bot.</p>",
-        "hype": "<p>The results of this redesign effort have been remarkable. It not only elevated customer satisfaction levels with the service but also introduced enhanced functionality, seamlessly integrating AI capabilities and real-time customer feedback mechanisms.</p>",
+        "hook": "<h3>Good Functionality - bad design</h3><p>The interactive chat widget on Microsoft.com had fantastic underlying functionality, but the UI was horribly outdated and visually cramped. It was desperately in need of a modern facelift to match the rest of the site.</p>",
+        "hustle": "<p>I completely reimagined the widget, expanding the content real estate and aligning the UI with our strict brand aesthetics. Once my concepts were approved, I wrote the production CSS overrides to force the clunky third-party bot to render beautifully on our pages.</p>",
+        "hype": "<p>The redesign seamlessly integrated new AI capabilities and drove a measurable increase in customer satisfaction.</p>",
         "links": [
           {
             "url": "https://www.microsoft.com/en-us/surface/devices/surface-duo?activetab=overview",
@@ -343,9 +335,9 @@
       },
       {
         "title": "Value Prop Glyphs",
-        "hook": "<h3>One glyph, two glyph, red glyph, blue glyph</h3><p>Microsoft Store embarked on the creation of a centralized web page to showcase the array of unique offerings available for direct purchase from Microsoft. These distinct value propositions demanded distinctive branded identities to effectively resonate with our audience.</p>",
-        "hustle": "<p>Tasked with this challenge, I curated a refined collection of over 20 unique glyphs, some of which I designed from the ground up. These meticulously crafted icons were then seamlessly integrated into the Content Management System (CMS), with careful consideration for MARCOM placements. Additionally, I played a crucial role in the development of the accompanying stylesheets and guidelines to ensure consistent and coherent usage.</p>",
-        "hype": "<p>The end result of this endeavor has been a transformation in the visibility and recognition of these value propositions. Each now possesses a strong visual identity that empowers them to shine independently throughout microsoft.com, serving as compelling product placements and dynamic links.</p>",
+        "hook": "<h3>One glyph, two glyph, red glyph, blue glyph</h3><p>The Microsoft Store needed a centralized hub to highlight its unique direct-to-consumer value propositions. To make these offers truly stand out, they needed a cohesive, branded iconography system.</p>",
+        "hustle": "<p>I designed and curated a pristine collection of over 20 unique vector glyphs. I then integrated the entire library into our CMS, authored the stylesheets, and wrote the strict deployment guidelines to ensure MARCOM teams used them consistently.</p>",
+        "hype": "<p>The new visual system empowered these value propositions to shine independently across the site, turning them into highly recognizable and dynamic marketing placements.</p>",
         "links": [
           {
             "url": "https://www.microsoft.com/en-us/store/b/why-microsoft-store",
@@ -358,9 +350,9 @@
       },
       {
         "title": "Microsoft Holiday Campaign",
-        "hook": "<h3>Make it snow!</h3><p>The holiday season represents a pivotal period for Microsoft, demanding meticulous preparation and strategic presentation of products and devices that resonate with customers. Months in advance, dedicated teams focus their efforts on creating a captivating holiday narrative and showcasing the offerings that customers eagerly anticipate.</p>",
-        "hustle": "<p>In this critical endeavor, I assumed a central role in designing and constructing a versatile 3D asset kit tailored explicitly for holiday MARCOM placements. This comprehensive kit encompassed a rich array of scenes, props, and animations, strategically engineered to seamlessly integrate with existing product renders. The outcome was a visually immersive experience, giving the impression that the featured products seamlessly belonged within the enchanting 3D holiday scenes.</p>",
-        "hype": "<p>One of the pivotal achievements of this project was the successful transition from outsourcing holiday campaign efforts to an in-house approach. This strategic shift not only translated into substantial cost savings, amounting to hundreds of thousands of dollars in reduced agency expenses, but also significantly heightened awareness of our holiday product offerings.</p>",
+        "hook": "<h3>Make it snow!</h3><p>The holiday season is a massive push for Microsoft, and our products need to be presented flawlessly across every digital storefront. I was tasked with building a 3D asset kit specifically for our holiday marketing placements.</p>",
+        "hustle": "<p>I designed and constructed a versatile kit of 3D scenes, props, and animations built to seamlessly integrate with our existing product renders. I engineered the assets so it genuinely looked like the hardware belonged inside the enchanting 3D environments.</p>",
+        "hype": "<p>By transitioning the holiday campaign efforts in-house, we saved the company hundreds of thousands of dollars in external agency fees while significantly elevating the visual quality of the product offerings.</p>",
         "links": [],
         "role": "<p>Lead Designer</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -368,8 +360,8 @@
       },
       {
         "title": "Microsoft Pride Campaign",
-        "hook": "<h3>Embrace the Spectrum</h3><p>At Microsoft, our commitment to being a steadfast ally in the pursuit of equality is unwavering. To breathe new life into the annual Pride campaign, our goal was to refresh its visual elements. Collaborating closely with the design team, I embarked on a mission to contribute a dynamic video bumper that could be seamlessly integrated into presentations, live streams, and social media channels.</p>",
-        "hustle": "<p>Within this vibrant initiative, my primary focus revolved around the creation of the captivating bumper animation. Drawing inspiration from the campaign's existing assortment of vibrant pins, each adorned with distinct calls to action, I envisioned an animation that would eloquently illuminate the colorful spectrum. This animation symbolized unity, beautifully merging the diverse voices within the campaign into a harmonious and coherent message.</p>",
+        "hook": "<h3>Embrace the Spectrum</h3><p>Microsoft is fiercely committed to equality, and the team wanted to breathe new life into the visual elements of the annual Pride campaign. I stepped in to design a dynamic video bumper that could scale across presentations, live streams, and social media.</p>",
+        "hustle": "<p>I built a captivating animation inspired by the campaign's assortment of vibrant pins. I used motion design to elegantly illuminate the colorful spectrum, symbolizing unity and merging diverse voices into one cohesive message.</p>",
         "hype": "<p>The introduction of this visually engaging video bumper breathed new life into the Pride campaign's visual arsenal. It empowered the campaign to amplify its message across various platforms, reinforcing Microsoft's steadfast commitment to equality and diversity.</p>",
         "links": [
           {
@@ -383,8 +375,8 @@
       },
       {
         "title": "This is Our Story",
-        "hook": "<h3>Church? Documentary? Challenge Accepted.</h3><p>45-minute documentary chronicling the unconventional beginnings of a church in a very conventional Midwestern town.</p>",
-        "hustle": "<p>Director, editor, videographer, producer, writer, lighting designer, sound engineer, colorist, therapist... Okay, maybe not therapist. But I did wrangle a team of volunteers, taught them the finer points of filmmaking, and somehow managed to capture the heart and soul of this quirky church. 6 months, countless miles, and a whole lot of coffee. But hey, who needs sleep when you're making movie magic?</p>",
+        "hook": "<h3>Church? Documentary? Challenge Accepted.</h3><p>I took on the challenge of shooting a 45-minute documentary chronicling the wildly unconventional beginnings of a church located in a very traditional Midwestern town.</p>",
+        "hustle": "<p>I wore every single hat on this production. Director, editor, videographer, producer, writer, lighting designer, and sound engineer. Over the course of six months, I wrangled a team of volunteers, taught them the basics of filmmaking, and managed to capture the absolute heart of the community.</p>",
         "links": [
           {
             "url": "https://www.youtube.com/watch?v=OpTSOeOKPqU",
@@ -397,8 +389,8 @@
       },
       {
         "title": "GLC Design Makeover",
-        "hook": "<h3>GLC Design Makeover</h3><p>Rebranding a church? Not your typical design challenge. New logo, style language, and a video to bring the congregation along for the ride. Because who doesn't love a good makeover montage?</p>",
-        "hustle": "<p>Director, editor, camera operator, motion graphics artist, storyboarder, renderer, project manager, script writer... I wear a lot of hats. And sometimes, I even juggle them. This project was a juggling act, but we pulled it off.</p>",
+        "hook": "<h3>GLC Design Makeover</h3><p>Rebranding an entire organization is always a massive undertaking, but doing it for a church requires a completely different level of nuance. I was tasked with developing a new logo and visual language, alongside a compelling video to cast the vision to the congregation.</p>",
+        "hustle": "<p>This project was an absolute juggling act. I served as the director, editor, motion graphics artist, storyboarder, and scriptwriter, managing the entire production pipeline to ensure we delivered a beautiful, cohesive rebrand.</p>",
         "links": [
           {
             "url": "https://www.youtube.com/watch?v=3WG30LL09FQ",
@@ -410,10 +402,10 @@
         "did-you-know": "<p>Gestalt principles of visual perception explain how humans group similar elements, recognize patterns, and simplify complex images in UX.</p>"
       },
       {
-        "title": "Great Lakes Church",
-        "hook": "<h3>GLC Interior Signage Overhaul</h3><p>Two locations, six phases, three months. My mission? Help visitors find their way around Great Lakes Church without resorting to interpretive dance. (Though that would be entertaining.) New signage for the existing Racine, WI building, plus a complete signage suite for the new Kenosha, WI location. Main auditorium, restrooms, kids' areas, teen areas, cafe—we covered it all.</p>",
-        "hustle": "<p>Designer, installer, concept artist, print liaison. Basically, I was the signage whisperer. I spoke the language of wayfinding, translated it into clear and concise visuals, and then wrestled those designs onto the walls. (Okay, maybe not wrestled. But there was definitely some strategic hammering involved.)</p>",
-        "hype": "<p>The result? Happy visitors, no interpretive dance required.</p>",
+        "title": "Great Lakes Church Signage",
+        "hook": "<h3>GLC Interior Signage Overhaul</h3><p>We had three months to completely overhaul the interior signage across two separate campus locations. The goal was to build a foolproof wayfinding system so visitors could navigate the auditoriums, cafes, and kids areas without getting lost.</p>",
+        "hustle": "<p>I designed the entire environmental graphics suite, translating complex wayfinding needs into clear, beautiful visual communication. I then managed the print liaison duties and physically installed the artwork onto the walls.</p>",
+        "hype": "<p>The result? Happy visitors and a flawless navigation experience.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -421,9 +413,9 @@
       },
       {
         "title": "#staymarried",
-        "hook": "<h3>From Blog to Movement: The #staymarried Story</h3><p>Marriage? It's a wild ride. But with a little help, it can be a wild ride worth taking. #staymarried started as a humble blog in 2012, a passion project by my partner Michelle and myself.</p>",
-        "hustle": "<p>Designer extraordinaire. I crafted every piece of social marketing that fueled this movement. Infographics, charts, visual stories—you name it, I designed it. And because love is all about sharing, our materials even ended up in the hands of professional couples counselors. So, yeah, you could say I played a small part in helping people #staymarried. (But mostly, I just like making pretty things.)</p>",
-        "hype": "<p>Fast forward to 2018, and it had blossomed into a full-fledged movement—a blog, a community, a podcast, and a book with over 100,000 copies sold. Millions of views, countless conversations, and a whole lot of love. (And maybe a few tears along the way.)</p>",
+        "hook": "<h3>From Blog to Movement: The #staymarried Story</h3><p>What started in 2012 as a humble passion project blog by my partner Michelle and myself quickly evolved into a massive, thriving community.</p>",
+        "hustle": "<p>I designed every single piece of social marketing that fueled the movement. I built the infographics, charts, and visual stories that resonated so deeply with our audience that they eventually ended up being utilized by professional couples counselors.</p>",
+        "hype": "<p>The project exploded into a fully fledged brand featuring a podcast and a published book with over 100,000 copies sold. It generated millions of views and sparked countless healthy conversations.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -431,8 +423,8 @@
       },
       {
         "title": "Eco Packaging Concept",
-        "hook": "<h3>From Trash to Treasure: The Cardboard Lamp</h3><p>Packaging waste? Not on my watch. As a UX designer on the Microsoft Store team, we tackled the challenge of reducing the environmental impact of our Surface Notebook packaging. One idea that sparked joy (and light): repurposing the shipping box into a DIY cardboard lamp. Because who needs another trip to the landfill when you can have a stylish new light fixture?</p>",
-        "hustle": "<p>I brought this origami-inspired concept to life with a video illustrating the transformation from box to lamp. It's a step-by-step guide to eco-friendly illumination, with a touch of whimsy and a whole lot of \"reduce, reuse, recycle\" spirit. Because sustainability can be fun, and design can make a difference.</p>",
+        "hook": "<h3>From Trash to Treasure: The Cardboard Lamp</h3><p>As a UX designer on the Store team, I helped tackle the massive environmental impact of our hardware packaging. We came up with a brilliant concept to prevent Surface Notebook shipping boxes from immediately hitting the landfill: repurpose the cardboard into a DIY origami lamp.</p>",
+        "hustle": "<p>I brought the concept to life by designing and animating a step-by-step video guide. It beautifully illustrated the transformation from a piece of trash into a functional, stylish light fixture, proving that sustainable design can be genuinely fun.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
@@ -440,9 +432,9 @@
       },
       {
         "title": "Mailers & Invites",
-        "hook": "<h3>Rebranding the Church Experience</h3><p>For various church organizations, the primary marketing challenge was overcoming the deep skepticism and preconceived notions many people hold about attending church. Our goal was ambitious: to design outreach campaigns that would appeal specifically to people who typically hate going to church.</p>",
-        "hustle": "<p>I designed physical invite cards and massive direct-mail campaigns targeting up to 50,000 local addresses. The design strategy relied on normalizing the experience—we were 'transparently un-weird,' utilizing everyday language rather than alienating 'christianese.'</p>",
-        "hype": "<p>The resulting marketing pieces successfully broke down visual barriers and drove significant engagement from our target demographic.</p>",
+        "hook": "<h3>Rebranding the Church Experience</h3><p>Reaching people who are deeply skeptical of attending church requires throwing out the traditional religious playbook. Our goal was to design a massive outreach campaign that explicitly appealed to a demographic that would normally throw a church mailer straight into the recycling bin.</p>",
+        "hustle": "<p>I designed high-quality physical invites and executed a direct mail campaign targeting 50,000 local addresses. I strictly avoided alienating language and focused on a 'transparently un-weird' visual strategy to normalize the experience.</p>",
+        "hype": "<p>The fresh approach successfully broke down long-standing visual barriers and drove measurable engagement from a highly skeptical target audience.</p>",
         "links": [],
         "role": "<p>UX/UI Designer & Prototyper</p>",
         "tools": "<h3>Tools I used</h3><ul><li><a href=\"https://www.adobe.com/products/illustrator.html\" target=\"_blank\">Adobe Illustrator</a> - For vector graphics and layout</li><li><a href=\"https://www.adobe.com/products/photoshop.html\" target=\"_blank\">Adobe Photoshop</a> - For image manipulation</li><li><a href=\"https://www.adobe.com/products/indesign.html\" target=\"_blank\">Adobe InDesign</a> - For print preparation</li></ul>",
