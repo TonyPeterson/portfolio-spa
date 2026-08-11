@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             proj.links.forEach(link => {
                                 const a = document.createElement('a');
                                 a.href = link.url;
-                                a.textContent = link.text + ' ›';
+                                a.textContent = link.text + ' \u203A';
                                 a.target = '_blank';
                                 a.classList.add('portfolio-link-item');
 
@@ -249,11 +249,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (wireframeImg) {
                         const imgSrc = projectImages[proj.title];
                         const vidSrc = projectVideos[proj.title];
+                        const boxAreaA = wireframeImg.closest('.box-area-a');
 
                         if (vidSrc) {
                             wireframeImg.setAttribute('data-video', vidSrc);
+                            if (boxAreaA) {
+                                boxAreaA.classList.add('has-video');
+                            }
                         } else {
                             wireframeImg.removeAttribute('data-video');
+                            if (boxAreaA) {
+                                boxAreaA.classList.remove('has-video');
+                            }
                         }
 
                         if (imgSrc) {
@@ -341,8 +348,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const boxAreaCView = document.querySelector('.box-area-c .view-arcade');
                 const boxAreaAView = document.querySelector('.box-area-a .view-arcade');
                 const arcadeWhyContainer = document.getElementById('arcade-why-container');
+                const arcadePlatformContainer = document.getElementById('arcade-platform-container');
                 
                 const isTabSwitching = window._isTabSwitching;
+
+                const changingArcadeViews = [];
+                if (!isTabSwitching) {
+                    const changingGridItems = document.querySelectorAll('.dashboard-grid > section:not(.box-area-e):not(nav):not(.box-area-j)');
+                    changingGridItems.forEach(item => {
+                        const view = item.querySelector('.view-arcade');
+                        if (view) {
+                            view.style.transitionDelay = '0s';
+                            view.classList.remove('view-arcade');
+                            changingArcadeViews.push(view);
+                        }
+                    });
+                }
 
                 setTimeout(() => {
                     if (boxAreaCView) {
@@ -356,6 +377,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (arcadeWhyContainer) {
                         arcadeWhyContainer.innerHTML = `<p>${game.intention || ''}</p>`;
                     }
+                    if (arcadePlatformContainer) {
+                        arcadePlatformContainer.innerHTML = `<p>${game.platform || ''}</p>`;
+                    }
                     if (boxAreaAView) {
                         let img = boxAreaAView.querySelector('.wireframe-img');
                         if (!img) {
@@ -368,6 +392,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
                         img.src = game.image || 'images/placeholder.jpg';
                         img.style.display = 'block';
+                    }
+
+                    if (!isTabSwitching) {
+                        applyRandomStagger(changingArcadeViews);
+                        
+                        void document.body.offsetHeight;
+
+                        changingArcadeViews.forEach(view => {
+                            view.classList.add('view-arcade');
+                        });
                     }
                 }, isTabSwitching ? 0 : 600);
             });
@@ -400,6 +434,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             'box-area-h': 'hard skills',
             'box-area-i': 'did you know'
         };
+        
+        const arcadeLabels = {
+            'box-area-e': 'GAMES',
+            'box-area-f': 'PLATFORM',
+            'box-area-g': 'WHY'
+        };
 
         document.querySelectorAll('.bento-label').forEach(labelEl => {
             const parent = labelEl.parentElement;
@@ -407,12 +447,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (!tileClass) return;
 
-            if (tabName === 'arcade' || tabName === 'contact') {
-                if (tabName === 'arcade' && tileClass === 'box-area-e') {
-                    labelEl.textContent = 'GAMES';
-                } else {
-                    labelEl.textContent = 'tbd';
-                }
+            if (tabName === 'arcade') {
+                labelEl.textContent = arcadeLabels[tileClass] || 'tbd';
+            } else if (tabName === 'contact') {
+                labelEl.textContent = 'tbd';
             } else if (tabName === 'about') {
                 labelEl.textContent = aboutLabels[tileClass] || 'tbd';
             } else if (tabName === 'portfolio') {
