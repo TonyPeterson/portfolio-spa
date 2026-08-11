@@ -286,6 +286,102 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    const arcadeListContainer = document.querySelector('.box-area-e .view-arcade');
+    let arcadeList = document.getElementById('arcade-list');
+    if (!arcadeList && arcadeListContainer) {
+        arcadeListContainer.innerHTML = '';
+        arcadeList = document.createElement('ul');
+        arcadeList.id = 'arcade-list';
+        arcadeList.classList.add('project-list');
+        arcadeListContainer.appendChild(arcadeList);
+        arcadeListContainer.classList.add('scrollable-list-content');
+    }
+
+    if (arcadeList && dashboardData && dashboardData.arcade && dashboardData.arcade.games) {
+        arcadeList.innerHTML = '';
+        arcadeList.style.position = 'relative';
+
+        const arcadeChevron = document.createElement('div');
+        arcadeChevron.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="18" y2="12"></line><polyline points="11 5 18 12 11 19"></polyline></svg>';
+        arcadeChevron.classList.add('project-chevron');
+        arcadeList.appendChild(arcadeChevron);
+
+        let activeArcadeLi = null;
+
+        dashboardData.arcade.games.forEach((game, i) => {
+            if (!game.title) return;
+            const li = document.createElement('li');
+            li.textContent = game.title;
+            li.classList.add('project-list-item');
+
+            li.addEventListener('mouseenter', () => {
+                if (activeArcadeLi !== li) li.classList.add('hovered');
+            });
+            li.addEventListener('mouseleave', () => {
+                if (activeArcadeLi !== li) li.classList.remove('hovered');
+            });
+
+            li.addEventListener('click', () => {
+                if (activeArcadeLi) {
+                    activeArcadeLi.classList.remove('active');
+                    activeArcadeLi.classList.remove('hovered');
+                }
+                activeArcadeLi = li;
+                li.classList.add('active');
+
+                arcadeChevron.classList.add('visible');
+                arcadeChevron.style.top = (li.offsetTop + 9) + 'px';
+
+                if (window.innerWidth > 768) {
+                    li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+
+                window._activeArcadeUrl = game.url;
+
+                const boxAreaCView = document.querySelector('.box-area-c .view-arcade');
+                const boxAreaAView = document.querySelector('.box-area-a .view-arcade');
+                const arcadeWhyContainer = document.getElementById('arcade-why-container');
+                
+                const isTabSwitching = window._isTabSwitching;
+
+                setTimeout(() => {
+                    if (boxAreaCView) {
+                        boxAreaCView.innerHTML = `
+                            <h2 class="bento-heading-secondary">${game.title}</h2>
+                            <div class="project-content-container" style="display: block;">
+                                <p>${game.pitch || ''}</p>
+                            </div>
+                        `;
+                    }
+                    if (arcadeWhyContainer) {
+                        arcadeWhyContainer.innerHTML = `<p>${game.intention || ''}</p>`;
+                    }
+                    if (boxAreaAView) {
+                        let img = boxAreaAView.querySelector('.wireframe-img');
+                        if (!img) {
+                            boxAreaAView.innerHTML = '';
+                            img = document.createElement('img');
+                            img.classList.add('wireframe-img');
+                            img.style.display = 'block';
+                            img.style.cursor = 'pointer';
+                            boxAreaAView.appendChild(img);
+                        }
+                        img.src = game.image || 'images/placeholder.jpg';
+                        img.style.display = 'block';
+                    }
+                }, isTabSwitching ? 0 : 600);
+            });
+
+            arcadeList.appendChild(li);
+
+            if (i === 0) {
+                setTimeout(() => {
+                    li.click();
+                }, 50);
+            }
+        });
+    }
+
     function updateBentoLabels(tabName) {
         const portfolioLabels = {
             'box-area-d': 'links',
@@ -312,7 +408,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!tileClass) return;
 
             if (tabName === 'arcade' || tabName === 'contact') {
-                labelEl.textContent = 'tbd';
+                if (tabName === 'arcade' && tileClass === 'box-area-e') {
+                    labelEl.textContent = 'GAMES';
+                } else {
+                    labelEl.textContent = 'tbd';
+                }
             } else if (tabName === 'about') {
                 labelEl.textContent = aboutLabels[tileClass] || 'tbd';
             } else if (tabName === 'portfolio') {
@@ -446,11 +546,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const modalVideo = document.getElementById('modal-video');
     const modalIframe = document.getElementById('modal-iframe');
     const modalCloseBtn = document.querySelector('.modal-close');
-    const portfolioTopLeftImg = document.querySelector('.box-area-a .view-portfolio .wireframe-img');
+    const boxAreaA = document.querySelector('.box-area-a');
 
-    if (portfolioTopLeftImg && modal && modalImg && modalVideo && modalCloseBtn) {
-        portfolioTopLeftImg.addEventListener('click', () => {
-            const videoSrc = portfolioTopLeftImg.getAttribute('data-video');
+    if (boxAreaA && modal && modalImg && modalVideo && modalCloseBtn) {
+        boxAreaA.addEventListener('click', (e) => {
+            const targetImg = e.target.closest('.view-portfolio .wireframe-img, .view-arcade .wireframe-img');
+            if (!targetImg) return;
+            
+            const isArcade = targetImg.closest('.view-arcade') !== null;
 
             modalImg.style.display = 'none';
             modalVideo.style.display = 'none';
@@ -459,30 +562,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             modalVideo.src = "";
             if (modalIframe) modalIframe.src = "";
 
-            if (videoSrc) {
-                if (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')) {
-                    let videoId = '';
-                    if (videoSrc.includes('youtube.com/watch')) {
-                        videoId = new URL(videoSrc).searchParams.get('v');
-                    } else if (videoSrc.includes('youtu.be/')) {
-                        videoId = videoSrc.split('youtu.be/')[1].split('?')[0];
-                    }
-
-                    if (videoId && modalIframe) {
-                        modalIframe.src = `https://www.youtube.com/embed/${videoId}`;
-                        modalIframe.style.display = 'block';
-                        modal.classList.add('active');
-                    }
-                } else {
-                    modalVideo.style.display = 'block';
-                    modalVideo.src = videoSrc;
-                    modalVideo.play();
+            if (isArcade) {
+                if (window._activeArcadeUrl && modalIframe) {
+                    modalIframe.src = window._activeArcadeUrl;
+                    modalIframe.style.display = 'block';
                     modal.classList.add('active');
                 }
-            } else if (portfolioTopLeftImg.src) {
-                modalImg.style.display = 'block';
-                modalImg.src = portfolioTopLeftImg.src;
-                modal.classList.add('active');
+            } else {
+                const videoSrc = targetImg.getAttribute('data-video');
+                if (videoSrc) {
+                    if (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')) {
+                        let videoId = '';
+                        if (videoSrc.includes('youtube.com/watch')) {
+                            videoId = new URL(videoSrc).searchParams.get('v');
+                        } else if (videoSrc.includes('youtu.be/')) {
+                            videoId = videoSrc.split('youtu.be/')[1].split('?')[0];
+                        }
+
+                        if (videoId && modalIframe) {
+                            modalIframe.src = `https://www.youtube.com/embed/${videoId}`;
+                            modalIframe.style.display = 'block';
+                            modal.classList.add('active');
+                        }
+                    } else {
+                        modalVideo.style.display = 'block';
+                        modalVideo.src = videoSrc;
+                        modalVideo.play();
+                        modal.classList.add('active');
+                    }
+                } else if (targetImg.src) {
+                    modalImg.style.display = 'block';
+                    modalImg.src = targetImg.src;
+                    modal.classList.add('active');
+                }
             }
         });
 
@@ -549,11 +661,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalYears = maxYear - minYear;
 
     const jobs = [
-        { company: "DHL", role: "Customer Service Rep", start: 2000, end: 2004 },
-        { company: "Link Conference Service", role: "Web Development Assistant", start: 2004, end: 2005 },
-        { company: "Eastlake Community Church", role: "Media Director", start: 2005, end: 2008 },
-        { company: "Great Lakes Church", role: "Media Director", start: 2008, end: 2011 },
-        { company: "Timberlake Church", role: "Executive Director of Arts", start: 2011, end: 2012 },
+        { 
+            company: "DHL", role: "Customer Service Rep", start: 2000, end: 2004,
+            details: [
+                "Served as a customer service contract manager stationed directly onsite at Microsoft, acting as the primary logistics liaison between the two corporate giants.",
+                "Handled high-level service communications and managed complex shipping logistics to ensure seamless operations for a massive enterprise client.",
+                "Navigated daily operational challenges and tracked critical deliveries, keeping the corporate supply chain moving without a hitch."
+            ]
+        },
+        { 
+            company: "Link Conference Service", role: "Web Development Assistant", start: 2004, end: 2005,
+            details: [
+                "Designed and maintained both the public-facing and internal company websites to ensure a seamless digital presence.",
+                "Built interactive marketing presentations and managed all print materials for trade shows and direct mailers.",
+                "Engineered online sales forms and developed client care reporting macros using SQL and .NET to streamline internal workflows."
+            ]
+        },
+        { 
+            company: "Eastlake Community Church", role: "Media Director", start: 2005, end: 2008,
+            details: [
+                "Managed the end-to-end creation of graphic elements, web development, and video production to support both weekly services and broader marketing initiatives.",
+                "Produced and edited a massive volume of video components, ranging from motion graphics to personal testimonies, to elevate the visual narrative of the organization.",
+                "Handled the technical execution and live media setups to ensure seamless, high-quality presentations for weekly services."
+            ]
+        },
+        { 
+            company: "Great Lakes Church", role: "Media Director", start: 2008, end: 2011,
+            details: [
+                "Owned the entire creative pipeline, managing all graphic design, video production, and web development from concept to final delivery.",
+                "Designed and deployed massive outreach campaigns targeting 50,000 local households, intentionally dropping the alienating jargon for a transparent visual strategy that actually drove community engagement.",
+                "Shot, directed, edited, and produced a 45-minute documentary chronicling the unconventional origins of the organization, wrangling a team of volunteers to help capture the story over a six-month production schedule."
+            ]
+        },
+        { 
+            company: "Timberlake Church", role: "Executive Director of Arts", start: 2011, end: 2012,
+            details: [
+                "Served on the executive board to guide high-level organizational strategy and make critical structural decisions.",
+                "Led a six-person creative department consisting of four full-time staff and two interns. I managed the entire output pipeline, overseeing all graphics, video production, web development, environmental signage, and digital communications.",
+                "Directed the technical crew and musicians to build welcoming, high-energy environments. We consistently delivered engaging live experiences across five weekly services for an audience of 3,000 members and guests."
+            ]
+        },
         {
             company: "Microsoft", role: "Marcom & UX/UI Designer", start: 2012, end: 2017,
             details: [
@@ -565,9 +712,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             company: "Great Lakes Church", role: "Executive Pastor of Creative Arts", start: 2017, end: 2018,
             details: [
-                "Played an integral role on the executive team, actively contributing to the formulation of strategic plans for the personal development of 66 volunteers. This encompassed providing one-on-one mentoring, coaching, and tailoring team management tools to optimize productivity.",
-                "Managed, executed, and oversaw the successful delivery of eight services per week across two campuses, catering to a diverse audience of over 1200 members and numerous guests.",
-                "Demonstrated exceptional productivity by successfully completing over 400 design projects within a span of 14 months. These projects encompassed a wide range of deliverables, including a comprehensive rebrand, compelling video stories, weekly presentation packages, digital and print content, and an In-depth website redesign."
+                "Directed and executed over 400 design projects within a 14-month window. This included a comprehensive organizational rebrand, digital and print campaigns, and end-to-end web development for a massive website redesign.",
+                "Managed the execution of eight weekly live services across two separate campuses, delivering highly polished presentations and video storytelling to a diverse audience of over 1,200 attendees.",
+                "Served on the executive board and directly managed the personal development of 66 volunteers. I built tailored team management tools and provided one-on-one coaching to keep the creative pipeline moving without burning people out.",
+                "Completely overhauled the interior wayfinding signage across both campus locations in three months, ensuring visitors could actually navigate the new spaces without needing a map."
             ]
         },
         {

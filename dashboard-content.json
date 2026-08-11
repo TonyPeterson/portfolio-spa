@@ -445,10 +445,83 @@
   "arcade": {
     "top-left-title": "Arcade",
     "top-left-text": "Select a game",
+    "wireframe-img": "",
     "bio-title": "Game Screen",
     "bio-text": "Game canvas goes here...",
     "quote-title": "High Scores",
-    "quote-text": "Score details..."
+    "quote-text": "Score details...",
+    "games": [
+      {
+        "title": "Chick Collect",
+        "url": "games/chickcollect.html",
+        "image": "images/ChickCollect1.png",
+        "pitch": "You play as a frantically dedicated mama bird on a mission. Your tiny chicks have wandered off and gotten themselves completely lost around the farm. It is your job to track them down, scoop them up, and safely guide your ever-growing, trailing flock back to the nest.",
+        "intention": "I built this prototype to figure out two specific technical hurdles. First, I wanted to test out smooth fade transitions between different game states. Second, I really needed to wrestle with an array-based following mechanic. I wanted to figure out the exact logic of picking up interactive items and having them dynamically align to trail directly behind the player character."
+      },
+      {
+        "title": "Forest Adventure",
+        "url": "games/forestadventure.html",
+        "image": "images/ForestAdventure1.png",
+        "pitch": "You play as a young girl who wakes up in a mysterious forest with absolutely zero memory of who she is or how she got there. To piece together your identity and eventually find your way home, you have to explore the environment, collect scattered items, and solve a series of puzzles. Amnesia is tough, but wandering aimlessly until things make sense is a surprisingly solid strategy.",
+        "intention": "I built this prototype to figure out how to recreate that classic, top-down adventure view from the original Zelda, just with much smoother, modern movement. I also used this project to test screen-to-screen sideways scrolling transitions. Beyond the camera mechanics, I needed to figure out the underlying logic for map teleportation when entering doors and wrap my head around building a basic inventory management system."
+      },
+      {
+        "title": "Identity Theft",
+        "url": "games/identitytheft.html",
+        "image": "images/IdentityTheft1.png",
+        "pitch": "You play as a master of disguise whose entire identity is dictated by whatever happens to be sitting on your head. Slap on a cowboy hat, and you are instantly a cowboy. Find a crown, and you are suddenly royalty. The core gameplay loop revolves around swapping headwear to solve puzzles and bypass stubborn NPCs. A guard is not going to let you out of your cell unless you look like a king, or perhaps another guard. Want access to the restricted kitchen? Better go track down that chef hat. It is a point and click puzzle game where your wardrobe is your security clearance.",
+        "intention": "Pico-8 is famous for its classic directional pad and button controls, which means mouse-driven games are a rarity on the platform. While the engine absolutely has built-in mouse functionality, it is rarely the avenue developers choose. I built this prototype to step away from the keyboard and explore those lesser-used capabilities. I wanted to completely map out the cursor behaviors and understand the exact mechanics required to build a functional point and click system in an environment that usually defaults to a D-pad."
+      },
+      {
+        "title": "Turnip Head Balance",
+        "url": "games/turnipheadbalance1.html",
+        "image": "images/TurnipHead1.png",
+        "pitch": "You play as Turnip Head, and your only goal is to stay upright. That is really the entire premise. The controls are stripped down to just left and right, and you are simply trying to maintain your balance for as long as possible.",
+        "intention": "This is my most polished prototype to date. Instead of relying on traditional sprites and sprite sheets, the visuals are almost completely rendered using raw geometry. It also features a custom soundtrack I scored myself, based on the movie, which I am genuinely proud of. Technically, I built this to test out a balancing physics mechanic for a larger, WarioWare style game concept themed around 'Howl's Moving Castle'. This was designed to be one of the rapid-fire mini-games, and I needed to ensure the physics felt plausible and fun on their own before building out the rest of the castle."
+      },
+      {
+        "title": "Howls",
+        "url": "games/howls.html",
+        "image": "images/Howls1.png",
+        "pitch": "Welcome to the main living area of the moving castle. You play as Howl, hanging out next to Calcifer, and your objective is to walk around and interact with various objects scattered across the room. Ultimately, this environment acts as the central hub, serving as a WarioWare style launcher designed to house and trigger all the other mini-games.",
+        "intention": "My primary goal for building this specific room was to tackle complicated, multi-frame animated walking cycles. I also wanted to spend some serious time fussing with the camera logic, specifically locking the viewport directly onto the player character so the environment pans smoothly around them as they explore."
+      },
+      {
+        "title": "Tony's Breakout",
+        "url": "games/tonysbreakout.html",
+        "image": "images/Breakout1.png",
+        "pitch": "It is traditional Breakout at its core. Keep the ball bouncing and smash every brick on the screen so you can progress to the next level. To keep things interesting, you can grab various power-ups that speed up the ball, multiply them into a chaotic swarm, or make them delightfully sticky.",
+        "intention": "I followed a tutorial for this one, and it served as a fantastic exercise in pure game polish. I used it as a hands-on crash course to learn how to build particle systems, write simple arcade physics, and manage complex game states."
+      },
+      {
+        "title": "Graveyard Test",
+        "url": "games/graveyardtest.html",
+        "image": "images/Graveyard1.png",
+        "pitch": "You play as a ghost wandering through a graveyard that is inexplicably covered in garbage. Your singular mission is to clean up the afterlife by picking up the trash and returning it to the proper bin. It is essentially a spooky sanitation job wrapped in a dark, atmospheric visual style.",
+        "intention": "This prototype was born from a tutorial, and it is entirely responsible for sparking my interest in top-down adventure games. Mechanically, there is not much going on beyond the core visuals and basic screen-to-screen movement. However, this served as the alpha version that directly inspired the 'Forest Adventure' prototype, where I eventually doubled down on smooth camera transitions and built a proper inventory system."
+      },
+      {
+        "title": "Tony Shmup",
+        "url": "games/tonyshmup.html",
+        "image": "images/Shmup1.png",
+        "pitch": "You are in a spaceship, and you shoot aliens. That is the entire premise.",
+        "intention": "Building a shoot 'em up is basically a game designer's rite of passage, and this prototype is my official contribution to the genre. I followed a tutorial to learn how to wire up classic shooting mechanics, manage game states, and program power moves. The main goal was just to get under the hood and feel out some authentic, old-school arcade mechanics."
+      },
+      {
+        "title": "Tony Pork",
+        "url": "games/tonypork.html",
+        "image": "images/Porklike1.png",
+        "pitch": "You play as a pig navigating a treacherous dungeon tower, climbing higher and higher with each floor. Along the way, you collect items and battle enemies, but since you are a pig, the loot is entirely food-themed. Prepare to wield weapons like a salami sword as you fight your way to the top in this highly enjoyable dungeon crawler.",
+        "intention": "This prototype is based on an incredibly in-depth tutorial that served as a masterclass in game design concepts. My main goal was to explore grid-based movement and classic roguelike mechanics, specifically the turn-based system where enemies only move when you make a move. It was also a deep dive into pathfinding algorithms, teaching the NPCs how to calculate the most efficient route to hunt down the player. It was a fantastic exercise in bringing a high level of polish to a complex system."
+      },
+      {
+        "title": "Robo Farming",
+        "url": "games/robofarming.html",
+        "image": "images/RoboFarming1.png",
+        "pitch": "You play as an agricultural robot in a farming simulator reminiscent of Stardew Valley. The core loop is familiar: plant seeds, water your crops, reap the harvest, and sell your bounty to buy even more seeds. The catch is that every single action drains your battery level. You have to carefully manage your energy and plan your daily tasks before you completely run out of juice.",
+        "intention": "I built this prototype by following a tutorial specifically to get a solid grasp on general farming game mechanics. It served as a highly practical way to learn how to build and manage in-game menus, track resources, and wire up a functional economic loop."
+      }
+    ]
   },
   "contact": {
     "top-left-title": "Contact",
