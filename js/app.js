@@ -308,6 +308,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         arcadeList.innerHTML = '';
         arcadeList.style.position = 'relative';
 
+        const initialBoxAreaA = document.querySelector('.box-area-a');
+        if (initialBoxAreaA) {
+            initialBoxAreaA.classList.add('has-game');
+        }
+
         const arcadeChevron = document.createElement('div');
         arcadeChevron.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="18" y2="12"></line><polyline points="11 5 18 12 11 19"></polyline></svg>';
         arcadeChevron.classList.add('project-chevron');
@@ -352,6 +357,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 const isTabSwitching = window._isTabSwitching;
 
+                const boxAreaA = document.querySelector('.box-area-a');
+                if (boxAreaA) {
+                    boxAreaA.classList.remove('has-game');
+                }
+
                 const changingArcadeViews = [];
                 if (!isTabSwitching) {
                     const changingGridItems = document.querySelectorAll('.dashboard-grid > section:not(.box-area-e):not(nav):not(.box-area-j)');
@@ -392,6 +402,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
                         img.src = game.image || 'images/placeholder.jpg';
                         img.style.display = 'block';
+                    }
+
+                    if (boxAreaA) {
+                        boxAreaA.classList.add('has-game');
                     }
 
                     if (!isTabSwitching) {
