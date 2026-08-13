@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const buttons = document.querySelectorAll('.tab-btn');
 
     let dashboardData = null;
+    let activePortfolioIndex = 0;
 
     try {
         const response = await fetch('dashboard-content.json');
@@ -107,7 +108,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         projectList.appendChild(chevron);
 
         let activeLi = null;
-
         dashboardData.portfolio.projects.forEach((proj, i) => {
             if (!proj.title) return;
             const li = document.createElement('li');
@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             li.addEventListener('click', () => {
+                activePortfolioIndex = i;
                 if (activeLi) {
                     activeLi.classList.remove('active');
                     activeLi.classList.remove('hovered');
@@ -246,6 +247,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
                     }
 
+                    if (!isTabSwitching) {
+                        applyRandomStagger(changingViews);
+                        
+                        void document.body.offsetHeight;
+
+                        changingViews.forEach(view => {
+                            view.classList.add('view-portfolio');
+                        });
+                    }
+
                     if (wireframeImg) {
                         const imgSrc = projectImages[proj.title];
                         const vidSrc = projectVideos[proj.title];
@@ -264,28 +275,26 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
 
                         if (imgSrc) {
-                            wireframeImg.src = imgSrc;
-                            wireframeImg.style.display = 'block';
+                            const tempImg = new Image();
+                            tempImg.onload = () => {
+                                wireframeImg.src = imgSrc;
+                                wireframeImg.style.display = 'block';
+                            };
+                            tempImg.onerror = () => {
+                                wireframeImg.src = imgSrc;
+                                wireframeImg.style.display = 'block';
+                            };
+                            tempImg.src = imgSrc;
                         } else {
                             wireframeImg.style.display = 'none';
                         }
-                    }
-
-                    if (!isTabSwitching) {
-                        applyRandomStagger(changingViews);
-                        
-                        void document.body.offsetHeight;
-
-                        changingViews.forEach(view => {
-                            view.classList.add('view-portfolio');
-                        });
                     }
                 }, isTabSwitching ? 0 : 600);
             });
 
             projectList.appendChild(li);
 
-            if (i === 0) {
+            if (i === activePortfolioIndex) {
                 setTimeout(() => {
                     li.click();
                 }, 50);
@@ -352,6 +361,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 const boxAreaCView = document.querySelector('.box-area-c .view-arcade');
                 const boxAreaAView = document.querySelector('.box-area-a .view-arcade');
+                const boxAreaDView = getOrCreateArcadeView('.box-area-d');
+                const boxAreaHView = getOrCreateArcadeView('.box-area-h');
+                const boxAreaIView = getOrCreateArcadeView('.box-area-i');
                 const arcadeWhyContainer = document.getElementById('arcade-why-container');
                 const arcadePlatformContainer = document.getElementById('arcade-platform-container');
                 
@@ -384,12 +396,32 @@ document.addEventListener('DOMContentLoaded', async () => {
                             </div>
                         `;
                     }
+                    if (boxAreaDView) {
+                        boxAreaDView.innerHTML = `<div class="full-width"><p>${game.controls || ''}</p></div>`;
+                    }
                     if (arcadeWhyContainer) {
                         arcadeWhyContainer.innerHTML = `<p>${game.intention || ''}</p>`;
                     }
                     if (arcadePlatformContainer) {
                         arcadePlatformContainer.innerHTML = `<p>${game.platform || ''}</p>`;
                     }
+                    if (boxAreaHView) {
+                        boxAreaHView.innerHTML = `<div class="full-width"><p>${game.backlog || ''}</p></div>`;
+                    }
+                    if (boxAreaIView) {
+                        boxAreaIView.innerHTML = `<div class="full-width"><p>${game.credits || ''}</p></div>`;
+                    }
+                    if (!isTabSwitching) {
+                        applyRandomStagger(changingArcadeViews);
+                        
+                        void document.body.offsetHeight;
+
+                        changingArcadeViews.forEach(view => {
+                            view.classList.add('view-arcade');
+                        });
+                    }
+
+                    const gameImgSrc = game.image || 'images/placeholder.jpg';
                     if (boxAreaAView) {
                         let img = boxAreaAView.querySelector('.wireframe-img');
                         if (!img) {
@@ -400,22 +432,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                             img.style.cursor = 'pointer';
                             boxAreaAView.appendChild(img);
                         }
-                        img.src = game.image || 'images/placeholder.jpg';
-                        img.style.display = 'block';
-                    }
 
-                    if (boxAreaA) {
-                        boxAreaA.classList.add('has-game');
-                    }
-
-                    if (!isTabSwitching) {
-                        applyRandomStagger(changingArcadeViews);
-                        
-                        void document.body.offsetHeight;
-
-                        changingArcadeViews.forEach(view => {
-                            view.classList.add('view-arcade');
-                        });
+                        if (gameImgSrc) {
+                            const tempImg = new Image();
+                            tempImg.onload = () => {
+                                img.src = gameImgSrc;
+                                img.style.display = 'block';
+                                if (boxAreaA) {
+                                    boxAreaA.classList.add('has-game');
+                                }
+                            };
+                            tempImg.onerror = () => {
+                                img.src = gameImgSrc;
+                                img.style.display = 'block';
+                                if (boxAreaA) {
+                                    boxAreaA.classList.add('has-game');
+                                }
+                            };
+                            tempImg.src = gameImgSrc;
+                        } else {
+                            img.style.display = 'none';
+                            if (boxAreaA) {
+                                boxAreaA.classList.remove('has-game');
+                            }
+                        }
                     }
                 }, isTabSwitching ? 0 : 600);
             });
@@ -428,6 +468,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }, 50);
             }
         });
+    }
+
+    function getOrCreateArcadeView(boxSelector, extraClasses = 'flex-center scrollable-center-content') {
+        const box = document.querySelector(boxSelector);
+        if (!box) return null;
+        let view = box.querySelector('.view-arcade');
+        if (!view) {
+            view = document.createElement('div');
+            view.className = `stacked-content view-arcade ${extraClasses}`;
+            box.appendChild(view);
+        }
+        return view;
     }
 
     function updateBentoLabels(tabName) {
@@ -450,9 +502,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
         
         const arcadeLabels = {
+            'box-area-d': 'CONTROLS',
             'box-area-e': 'GAMES',
             'box-area-f': 'PLATFORM',
-            'box-area-g': 'WHY'
+            'box-area-g': 'WHY',
+            'box-area-h': 'BACKLOG',
+            'box-area-i': 'CREDITS'
         };
 
         document.querySelectorAll('.bento-label').forEach(labelEl => {
@@ -496,10 +551,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             if (tabName === 'portfolio') {
-                const firstProject = document.querySelector('#project-list li');
-                if (firstProject) {
+                const projectItems = document.querySelectorAll('#project-list li.project-list-item');
+                const selectedProject = projectItems[activePortfolioIndex] || projectItems[0];
+                if (selectedProject) {
                     window._isTabSwitching = true;
-                    firstProject.click();
+                    selectedProject.click();
                     window._isTabSwitching = false;
                 }
             }

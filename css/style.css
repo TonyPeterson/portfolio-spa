@@ -284,13 +284,7 @@ body[data-active-tab="about"] .tonyside {
     grid-area: e;
 }
 
-.dashboard-grid[data-active-tab="arcade"] .box-area-d {
-    display: none !important;
-}
 
-.dashboard-grid[data-active-tab="arcade"] .box-area-e {
-    grid-area: d / d / e / e;
-}
 
 .box-area-f {
     grid-area: f;
