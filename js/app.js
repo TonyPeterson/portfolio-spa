@@ -122,6 +122,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             li.addEventListener('click', () => {
+                const imgSrc = projectImages[proj.title];
+                const preloadedImg = new Image();
+                if (imgSrc) preloadedImg.src = imgSrc;
+
                 activePortfolioIndex = i;
                 if (activeLi) {
                     activeLi.classList.remove('active');
@@ -275,16 +279,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
 
                         if (imgSrc) {
-                            const tempImg = new Image();
-                            tempImg.onload = () => {
-                                wireframeImg.src = imgSrc;
+                            const applyImg = () => {
+                                wireframeImg.src = preloadedImg.src;
                                 wireframeImg.style.display = 'block';
                             };
-                            tempImg.onerror = () => {
-                                wireframeImg.src = imgSrc;
-                                wireframeImg.style.display = 'block';
-                            };
-                            tempImg.src = imgSrc;
+                            if (preloadedImg.complete) { applyImg(); } 
+                            else { preloadedImg.onload = applyImg; preloadedImg.onerror = applyImg; }
                         } else {
                             wireframeImg.style.display = 'none';
                         }
@@ -343,6 +343,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             li.addEventListener('click', () => {
+                const gameImgSrc = game.image || 'images/placeholder.jpg';
+                const preloadedImg = new Image();
+                if (gameImgSrc) preloadedImg.src = gameImgSrc;
+
                 if (activeArcadeLi) {
                     activeArcadeLi.classList.remove('active');
                     activeArcadeLi.classList.remove('hovered');
@@ -434,27 +438,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
 
                         if (gameImgSrc) {
-                            const tempImg = new Image();
-                            tempImg.onload = () => {
-                                img.src = gameImgSrc;
+                            const applyImg = () => {
+                                img.src = preloadedImg.src;
                                 img.style.display = 'block';
-                                if (boxAreaA) {
-                                    boxAreaA.classList.add('has-game');
-                                }
+                                if (boxAreaA) boxAreaA.classList.add('has-game');
                             };
-                            tempImg.onerror = () => {
-                                img.src = gameImgSrc;
-                                img.style.display = 'block';
-                                if (boxAreaA) {
-                                    boxAreaA.classList.add('has-game');
-                                }
-                            };
-                            tempImg.src = gameImgSrc;
+                            if (preloadedImg.complete) { applyImg(); } 
+                            else { preloadedImg.onload = applyImg; preloadedImg.onerror = applyImg; }
                         } else {
                             img.style.display = 'none';
-                            if (boxAreaA) {
-                                boxAreaA.classList.remove('has-game');
-                            }
+                            if (boxAreaA) boxAreaA.classList.remove('has-game');
                         }
                     }
                 }, isTabSwitching ? 0 : 600);
@@ -548,16 +541,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const orphanButtons = document.querySelector('.box-area-c .action-buttons-container');
             if (orphanButtons) {
                 orphanButtons.remove();
-            }
-
-            if (tabName === 'portfolio') {
-                const projectItems = document.querySelectorAll('#project-list li.project-list-item');
-                const selectedProject = projectItems[activePortfolioIndex] || projectItems[0];
-                if (selectedProject) {
-                    window._isTabSwitching = true;
-                    selectedProject.click();
-                    window._isTabSwitching = false;
-                }
             }
 
             const elementsToStagger = document.querySelectorAll('.dashboard-grid > section, .dashboard-grid > nav, .stacked-content');

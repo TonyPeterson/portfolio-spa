@@ -260,10 +260,15 @@
       },
       {
         "title": "8-Bit Takeover",
-        "hook": "<h3>Microsoft.com got a retro remake</h3><p>On the 256th day of the year, a small crew of us on the design team decided to hijack the Microsoft homepage purely for the fun of it. We engineered a hidden easter egg that triggered a complete, whimsical 8-bit reskin of the site when users typed the Konami code.</p>",
+        "hook": "<h3>Microsoft.com got a retro remake</h3><p>On the 256th day of the year, a small crew of us on the design team decided to hijack the Microsoft homepage purely for the fun of it. We engineered a hidden easter egg that triggered a complete, whimsical 8-bit reskin of the site when users typed the Konami code.</p><p>up up down down left right left right B A</p>",
         "hustle": "<p>I helped conceptualize the retro placements and actively coded several of the interactive components that brought the gag to life. We packed the page with pixel-art animations, including 8-bit renditions of our entire design team.</p>",
         "hype": "<p>We built it just to make people smile, but it went incredibly viral. The social media buzz ended up driving a massive 3 to 10 percent spike in unique visitors to the homepage that day.</p>",
-        "links": [],
+        "links": [
+          {
+            "url": "https://web.archive.org/web/20150913014017/http://www.microsoft.com/en-us/",
+            "text": "Wayback Machine Archive"
+          }
+        ],
         "role": "<p>Game Developer & Designer</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>Integrating feedback loops directly into the UX design process can reduce post-launch updates by 50%.</p>"
@@ -273,7 +278,12 @@
         "hook": "<h3>Great Scott!</h3><p>October 21, 2015, was the exact date Marty McFly traveled to in Back to the Future 2. To celebrate, we hid a secret code on the Microsoft homepage. If users typed in the DeLorean's license plate, the entire site transformed into a retro-futuristic homage juxtaposing past and present technology.</p>",
         "hustle": "<p>I was responsible for designing all the strategic placements and engineering the interactive elements. I built a custom image slider to seamlessly compare timelines and coded a dynamic toggle that rendered the entire page in stereoscopic anaglyphic 3D.</p>",
         "hype": "<p>Just like our 8-bit stunt, this takeover exploded on social media and drove another massive 3 to 10 percent increase in unique traffic.</p>",
-        "links": [],
+        "links": [
+          {
+            "url": "https://web.archive.org/web/20151021202804/http://www.microsoft.com/en-us/",
+            "text": "Wayback Machine Archive"
+          }
+        ],
         "role": "<p>Game Developer & Designer</p>",
         "tools": "<h3>Tools I used</h3><ul><li>Figma - For UI/UX design</li><li>VS Code - For development</li><li>Adobe Creative Suite - For asset creation</li><li>Git - For version control</li></ul>",
         "did-you-know": "<p>Personalized user experiences can increase customer satisfaction rates by 20%.</p>"
