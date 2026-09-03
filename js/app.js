@@ -58,36 +58,42 @@ let isAnimatingCaseStudy = false;
 async function updateCaseStudyPagination(isInitialLoad = false) {
     const wrapper = document.querySelector('.case-study-content-wrapper');
     const imgGroups = document.querySelectorAll('.cs-image-group');
+    const textPages = document.querySelectorAll('.case-study-page');
     const textTrack = document.querySelector('.case-study-track');
     const imgTrack = document.querySelector('.case-study-img-track');
     
-    // Update UI dots and buttons instantly
+    // 1. Update UI dots and buttons instantly
     document.querySelectorAll('.cs-dot').forEach((dot, index) => {
         dot.classList.toggle('active', index === currentCaseStudyPage);
-    });
-    document.querySelectorAll('.case-study-page').forEach((page, index) => {
-        page.classList.toggle('active', index === currentCaseStudyPage);
     });
     const csPrev = document.getElementById('cs-prev-btn');
     const csNext = document.getElementById('cs-next-btn');
     if (csPrev) csPrev.disabled = currentCaseStudyPage === 0;
-    if (csNext) csNext.disabled = currentCaseStudyPage === document.querySelectorAll('.case-study-page').length - 1;
+    if (csNext) csNext.disabled = currentCaseStudyPage === textPages.length - 1;
 
     if (!isInitialLoad) {
-        // 1. Contract images & restore clipping walls
+        // 2. Contract outgoing images & restore clipping walls
+        // Note: We do NOT remove the .active class yet. Outgoing content stays visible.
         if (wrapper) wrapper.classList.remove('settled');
         imgGroups.forEach(g => g.classList.remove('fanned'));
         await new Promise(r => setTimeout(r, 400)); // Wait for contraction
     }
 
-    // 2. Slide tracks
+    // 3. Slide tracks AND trigger cross-fade simultaneously
     if (textTrack) textTrack.style.transform = `translateX(-${currentCaseStudyPage * 100}%)`;
     if (imgTrack) imgTrack.style.transform = `translateX(-${currentCaseStudyPage * 100}%)`;
     
-    // Wait for slide to finish (skip waiting if initial modal open)
+    textPages.forEach((page, index) => {
+        page.classList.toggle('active', index === currentCaseStudyPage);
+    });
+    imgGroups.forEach((group, index) => {
+        group.classList.toggle('active', index === currentCaseStudyPage);
+    });
+
+    // Wait for slide & fade to finish
     await new Promise(r => setTimeout(r, isInitialLoad ? 50 : 400));
 
-    // 3. Fan out new images & allow bleeding
+    // 4. Fan out new images & allow bleeding
     if (wrapper) wrapper.classList.add('settled');
     if (imgGroups[currentCaseStudyPage]) imgGroups[currentCaseStudyPage].classList.add('fanned');
     

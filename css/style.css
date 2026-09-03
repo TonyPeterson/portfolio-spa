@@ -1212,7 +1212,7 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
     padding: 2rem 50% 2rem 2rem; /* Constrains text to left half */
     box-sizing: border-box;
     opacity: 0; /* Prevents off-stage peeking */
-    transition: opacity 0.3s;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     pointer-events: auto;
 }
 .case-study-page.active {
@@ -1245,6 +1245,11 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.cs-image-group.active {
+    opacity: 1;
 }
 .cs-image-group img {
     position: absolute;
