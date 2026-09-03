@@ -28,6 +28,62 @@ const projectImages = {
     'Microsoft Pride Campaign': 'images/PridePins3.jpg',
     'This is Our Story': 'images/GLC_Documentary1.jpg',
     'GLC Design Makeover': 'images/GLC_Redesign1.jpg',
+const caseStudyData = {
+    'Shop in 3D': {
+        pages: [
+            {
+                title: 'The Problem',
+                text: 'The pandemic shut down Microsoft retail stores. Customers lost the physical connection to Surface products. Static 2D image galleries failed to communicate build quality or mechanical features. The business requirement was to recreate the self-guided discovery of a physical store in a web browser. The deliverable was a fully interactive 3D web experience. It gave the user complete control to spin, zoom, and inspect the hardware in real time, allowing them to explore the product on their own terms without complex navigation.'
+            },
+            {
+                title: 'The Constraints',
+                text: 'I started with 8GB CAD manufacturing models that contained every internal screw. Those files were completely unusable for real-time web rendering. To make them work, I reduced the polygon counts from the millions down to the thousands. I applied video game optimization techniques using custom lighting, baked textures, and camera limits to maintain high-resolution fidelity on low-poly geometry. The rendering tech itself presented another hurdle. Web3D technology like three.js and babylon.js was cutting edge but still rough around the edges. I ended up working directly with the babylon.js team to improve their core framework while we tested our own product. Finally, the performance limits were absolute. I had to cap every model at 5MB to match the load times of the legacy spritesheet system. The final experience had to load fast on a 4G mobile network and function across all modern browsers, including fallbacks for legacy systems.'
+            },
+            {
+                title: 'The Iteration',
+                text: 'Early ideas attempted to cover the entire Microsoft product catalog. This made designing the MVP overly complex. Narrowing the focus strictly to Surface products clarified the design problems and removed unrelated variables. Early testing also revealed that displaying all 3D tool features immediately upon load confused users. I resolved this by implementing a clean primary menu paired with a secondary deep dive for detailed features. Because engineering was brought in later in the pipeline, my coded prototype served as the sole source of truth for the visual design and interaction logic. The engineering team utilized it daily, and I ran twice-weekly meetings to resolve build discrepancies against the prototype.'
+            },
+            {
+                title: 'The Outcome',
+                text: 'The interactive prototype secured $2 million in funding to build the MVP. The final experience launched on microsoft.com and ran for a year. During its deployment, it contributed to a 3% increase in Surface sales. I delivered a scalable, functional system that solved the immediate business need and provided the engineering team with a bulletproof blueprint.'
+            }
+        ],
+        images: [
+            ['images/placeholder/funny-cat-memes-meovvmaster-cover_675.jpg', 'images/placeholder/edfsaf.jpg', 'images/placeholder/GettyImages-140594401-1-scaled.jpg'],
+            ['images/placeholder/c245ea4a861e1a0ffb756fa65fd7bcce.jpg', 'images/placeholder/images.jpg', 'images/placeholder/images (1).jpg'],
+            ['images/placeholder/IMG_9250-e1788305642873.jpeg', 'images/placeholder/istockphoto-1226931930-612x612.jpg', 'images/placeholder/3902e7a3e2e57df9dc5e254e41cde03d.jpg'],
+            ['images/placeholder/30-and-funny-cat-selfies-you-ll-wish-your-cat-took-u1.jpg', 'images/placeholder/455802314_431455810040860_6818322446018491206_n-67a23637bb842__700.jpg', 'images/placeholder/472506207_2036877353494865_655091201606790707_n-67a2335bbab0d__700.jpg']
+        ]
+    },
+    'Project Mio': {
+        pages: [
+            {
+                title: 'The Problem',
+                text: 'Coding education for middle school students often fails to maintain engagement. Existing tools fall into two extremes: overly technical and intimidating platforms, or drag-and-drop interfaces that lack real-world application. The business goal, initiated by Microsoft\'s internal Product Lab, was to identify this gap and build an interactive solution that disguised foundational JavaScript concepts within a challenging, narrative-driven video game experience.'
+            },
+            {
+                title: 'The Constraints',
+                text: 'We had exactly one year to build the MVP. Because this was an experimental Product Lab initiative, we had zero internal Microsoft engineering support. Our five-person team was entirely self-reliant. If we encountered a technical gap, we had to partner with an external agency or call in favors from our personal networks. On the technical side, while the Phaser HTML5 engine provided default game mechanics, they lacked the precision we needed. I bypassed the out-of-the-box solutions and built custom physics and movement mechanics to ensure the platforming felt responsive while interacting seamlessly with the live JavaScript code inputs.'
+            },
+            {
+                title: 'The Iteration',
+                text: 'Early concepts included a system of non-playable characters called Gurus to distribute powers and side quests. Scoping proved this system was too complex for an MVP timeline. I stripped the mechanic down, replacing the Gurus with simple environmental pickups and centralizing all ability unlocks through a single tutorial character. To validate that the interface was actually teaching JavaScript syntax rather than just game patterns, I relied on out-of-game, teacher-run tests to measure true knowledge retention. I designed 18 code challenges. Building JavaScript puzzles to teach JavaScript required constant refinement. Initial prototypes failed to bridge the cognitive gap between a 9-year-old and a 14-year-old. I scrapped and rebuilt the puzzle logic multiple times based on user testing until the difficulty curve successfully accommodated both age groups.'
+            },
+            {
+                title: 'The Outcome',
+                text: 'We presented the MVP to roughly 1,500 students and conducted hands-on testing with over 100. While the game was an experimental proof-of-concept that concluded after the one-year timeline, the business impact was entirely organizational. We successfully proved the viability of an autonomous, startup-style team operating within the enterprise. Leadership viewed the caliber of our product as a massive success. As a direct result of this experiment, Microsoft restructured the entire MSCOM organization, breaking it down into smaller, agile "Pods" modeled after our team\'s framework.'
+            }
+        ],
+        images: [
+            ['images/placeholder/funny-cat-memes-meovvmaster-cover_675.jpg', 'images/placeholder/edfsaf.jpg', 'images/placeholder/GettyImages-140594401-1-scaled.jpg'],
+            ['images/placeholder/c245ea4a861e1a0ffb756fa65fd7bcce.jpg', 'images/placeholder/images.jpg', 'images/placeholder/images (1).jpg'],
+            ['images/placeholder/IMG_9250-e1788305642873.jpeg', 'images/placeholder/istockphoto-1226931930-612x612.jpg', 'images/placeholder/3902e7a3e2e57df9dc5e254e41cde03d.jpg'],
+            ['images/placeholder/30-and-funny-cat-selfies-you-ll-wish-your-cat-took-u1.jpg', 'images/placeholder/455802314_431455810040860_6818322446018491206_n-67a23637bb842__700.jpg', 'images/placeholder/472506207_2036877353494865_655091201606790707_n-67a2335bbab0d__700.jpg']
+        ]
+    }
+};
+
+
     'Great Lakes Church Signage': 'images/BuildingSignage1.jpg',
     '#staymarried': 'images/StaymarriedSocial1.jpg',
     'Eco Packaging Concept': 'images/EcoPackaging1.jpg',
@@ -233,17 +289,42 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (proj['behind-the-scenes']) {
                         buttonsHTML += `<button class="action-btn hover-trigger" data-key="behind-the-scenes">Behind the Scenes</button>`;
                     }
-                    if (proj.title === 'Shop in 3D') {
-                        buttonsHTML += `<button class="action-btn" id="case-study-btn">Case Study</button>`;
+                    if (proj.title === 'Shop in 3D' || proj.title === 'Project Mio') {
+                        buttonsHTML += `<button class="action-btn" id="case-study-btn" data-project="${proj.title}">Case Study</button>`;
                     }
                     buttonsHTML += '</div>';
 
-                    if (proj.hype || proj['behind-the-scenes'] || proj.title === 'Shop in 3D') {
+                    if (proj.hype || proj['behind-the-scenes'] || proj.title === 'Shop in 3D' || proj.title === 'Project Mio') {
                         boxAreaC.insertAdjacentHTML('beforeend', buttonsHTML);
 
                         const caseStudyBtn = document.getElementById('case-study-btn');
                         if (caseStudyBtn) {
                             caseStudyBtn.addEventListener('click', () => {
+                                const projectTitle = caseStudyBtn.getAttribute('data-project');
+                                const data = caseStudyData[projectTitle];
+                                
+                                const track = document.querySelector('.case-study-track');
+                                const imgTrack = document.querySelector('.case-study-img-track');
+                                
+                                if (data && track && imgTrack) {
+                                    track.innerHTML = '';
+                                    imgTrack.innerHTML = '';
+                                    
+                                    data.pages.forEach((page, index) => {
+                                        const pageDiv = document.createElement('div');
+                                        pageDiv.className = 'case-study-page' + (index === 0 ? ' active' : '');
+                                        pageDiv.innerHTML = `<h3>${page.title}</h3><p>${page.text}</p>`;
+                                        track.appendChild(pageDiv);
+                                    });
+                                    
+                                    data.images.forEach((imgGroup, index) => {
+                                        const groupDiv = document.createElement('div');
+                                        groupDiv.className = 'cs-image-group' + (index === 0 ? ' active' : '');
+                                        groupDiv.innerHTML = imgGroup.map((imgSrc, imgIdx) => `<img src="${imgSrc}" alt="${projectTitle} image ${index * 3 + imgIdx + 1}">`).join('');
+                                        imgTrack.appendChild(groupDiv);
+                                    });
+                                }
+
                                 const csModal = document.getElementById('case-study-modal');
                                 if (csModal) {
                                     csModal.classList.add('active');
