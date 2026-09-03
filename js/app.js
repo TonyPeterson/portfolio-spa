@@ -28,6 +28,30 @@ const projectImages = {
     'Microsoft Pride Campaign': 'images/PridePins3.jpg',
     'This is Our Story': 'images/GLC_Documentary1.jpg',
     'GLC Design Makeover': 'images/GLC_Redesign1.jpg',
+    'Great Lakes Church Signage': 'images/BuildingSignage1.jpg',
+    '#staymarried': 'images/StaymarriedSocial1.jpg',
+    'Eco Packaging Concept': 'images/EcoPackaging1.jpg',
+    'Mailers & Invites': 'images/Invites1.jpg'
+};
+
+const projectVideos = {
+    'Meet the Makers Campaign': 'videos/MeetTheMakers_Chapter1.mp4',
+    'Back to the Future Takeover': 'videos/BackToTheFuture1.mp4',
+    'Chatbot Redesign': 'videos/ChatbotLogoAnims1.mp4',
+    'CSO Showreel': 'videos/CSOStudio_SizzleReel_June302023a.mp4',
+    'Xbox Gift Card': 'videos/GiftCardAnimation1_1106_1920x1080_EN-US.mp4',
+    '8-Bit Takeover': 'videos/Microsoft8BitDay1.mp4',
+    'Optic8 Website': 'videos/Optic8_Site1.mp4',
+    'Eco Packaging Concept': 'videos/PackagingAnim3.mp4',
+    'Microsoft Pride Campaign': 'videos/Pride_ButtonAnimBumper8.mp4',
+    'Project Mio': 'videos/ProjectMioOverview.mp4',
+    'Simplified Office': 'videos/SimplifiedOfficeDemo.mp4',
+    'Virtual Store': 'videos/SurfaceHelpMe_Conversational_2up.mp4',
+    'Terra Mine Diver': 'videos/TerraMineDiver_Gamepaly1.mp4',
+    'Motion Graphics Reel': 'videos/TonyPeterson_MotionGraphicsReel1.mp4',
+    'Trilogy Studios Website': 'videos/Trilogy_Site1.mp4'
+};
+
 const caseStudyData = {
     'Shop in 3D': {
         pages: [
@@ -81,31 +105,6 @@ const caseStudyData = {
             ['images/placeholder/30-and-funny-cat-selfies-you-ll-wish-your-cat-took-u1.jpg', 'images/placeholder/455802314_431455810040860_6818322446018491206_n-67a23637bb842__700.jpg', 'images/placeholder/472506207_2036877353494865_655091201606790707_n-67a2335bbab0d__700.jpg']
         ]
     }
-};
-
-
-    'Great Lakes Church Signage': 'images/BuildingSignage1.jpg',
-    '#staymarried': 'images/StaymarriedSocial1.jpg',
-    'Eco Packaging Concept': 'images/EcoPackaging1.jpg',
-    'Mailers & Invites': 'images/Invites1.jpg'
-};
-
-const projectVideos = {
-    'Meet the Makers Campaign': 'videos/MeetTheMakers_Chapter1.mp4',
-    'Back to the Future Takeover': 'videos/BackToTheFuture1.mp4',
-    'Chatbot Redesign': 'videos/ChatbotLogoAnims1.mp4',
-    'CSO Showreel': 'videos/CSOStudio_SizzleReel_June302023a.mp4',
-    'Xbox Gift Card': 'videos/GiftCardAnimation1_1106_1920x1080_EN-US.mp4',
-    '8-Bit Takeover': 'videos/Microsoft8BitDay1.mp4',
-    'Optic8 Website': 'videos/Optic8_Site1.mp4',
-    'Eco Packaging Concept': 'videos/PackagingAnim3.mp4',
-    'Microsoft Pride Campaign': 'videos/Pride_ButtonAnimBumper8.mp4',
-    'Project Mio': 'videos/ProjectMioOverview.mp4',
-    'Simplified Office': 'videos/SimplifiedOfficeDemo.mp4',
-    'Virtual Store': 'videos/SurfaceHelpMe_Conversational_2up.mp4',
-    'Terra Mine Diver': 'videos/TerraMineDiver_Gamepaly1.mp4',
-    'Motion Graphics Reel': 'videos/TonyPeterson_MotionGraphicsReel1.mp4',
-    'Trilogy Studios Website': 'videos/Trilogy_Site1.mp4'
 };
 
 let currentCaseStudyPage = 0;
