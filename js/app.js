@@ -52,6 +52,48 @@ const projectVideos = {
     'Trilogy Studios Website': 'videos/Trilogy_Site1.mp4'
 };
 
+let currentCaseStudyPage = 0;
+let isAnimatingCaseStudy = false;
+
+async function updateCaseStudyPagination(isInitialLoad = false) {
+    const wrapper = document.querySelector('.case-study-content-wrapper');
+    const imgGroups = document.querySelectorAll('.cs-image-group');
+    const textTrack = document.querySelector('.case-study-track');
+    const imgTrack = document.querySelector('.case-study-img-track');
+    
+    // Update UI dots and buttons instantly
+    document.querySelectorAll('.cs-dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentCaseStudyPage);
+    });
+    document.querySelectorAll('.case-study-page').forEach((page, index) => {
+        page.classList.toggle('active', index === currentCaseStudyPage);
+    });
+    const csPrev = document.getElementById('cs-prev-btn');
+    const csNext = document.getElementById('cs-next-btn');
+    if (csPrev) csPrev.disabled = currentCaseStudyPage === 0;
+    if (csNext) csNext.disabled = currentCaseStudyPage === document.querySelectorAll('.case-study-page').length - 1;
+
+    if (!isInitialLoad) {
+        // 1. Contract images & restore clipping walls
+        if (wrapper) wrapper.classList.remove('settled');
+        imgGroups.forEach(g => g.classList.remove('fanned'));
+        await new Promise(r => setTimeout(r, 400)); // Wait for contraction
+    }
+
+    // 2. Slide tracks
+    if (textTrack) textTrack.style.transform = `translateX(-${currentCaseStudyPage * 100}%)`;
+    if (imgTrack) imgTrack.style.transform = `translateX(-${currentCaseStudyPage * 100}%)`;
+    
+    // Wait for slide to finish (skip waiting if initial modal open)
+    await new Promise(r => setTimeout(r, isInitialLoad ? 50 : 400));
+
+    // 3. Fan out new images & allow bleeding
+    if (wrapper) wrapper.classList.add('settled');
+    if (imgGroups[currentCaseStudyPage]) imgGroups[currentCaseStudyPage].classList.add('fanned');
+    
+    isAnimatingCaseStudy = false;
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const body = document.body;
     const grid = document.querySelector('.dashboard-grid');
@@ -185,10 +227,26 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (proj['behind-the-scenes']) {
                         buttonsHTML += `<button class="action-btn hover-trigger" data-key="behind-the-scenes">Behind the Scenes</button>`;
                     }
+                    if (proj.title === 'Shop in 3D') {
+                        buttonsHTML += `<button class="action-btn" id="case-study-btn">Case Study</button>`;
+                    }
                     buttonsHTML += '</div>';
 
-                    if (proj.hype || proj['behind-the-scenes']) {
+                    if (proj.hype || proj['behind-the-scenes'] || proj.title === 'Shop in 3D') {
                         boxAreaC.insertAdjacentHTML('beforeend', buttonsHTML);
+
+                        const caseStudyBtn = document.getElementById('case-study-btn');
+                        if (caseStudyBtn) {
+                            caseStudyBtn.addEventListener('click', () => {
+                                const csModal = document.getElementById('case-study-modal');
+                                if (csModal) {
+                                    csModal.classList.add('active');
+                                    currentCaseStudyPage = 0;
+                                    isAnimatingCaseStudy = true;
+                                    updateCaseStudyPagination(true);
+                                }
+                            });
+                        }
                     }
 
                     const tooltip = document.getElementById('project-tooltip');
@@ -523,6 +581,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function switchTab(tabName) {
         const elementsToClear = document.querySelectorAll('.dashboard-grid > section, .dashboard-grid > nav, .stacked-content');
+        window._isTabSwitching = true;
+
         elementsToClear.forEach(item => {
             item.style.transitionDelay = '0s';
         });
@@ -539,9 +599,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateBentoLabels(tabName);
 
             const orphanButtons = document.querySelector('.box-area-c .action-buttons-container');
-            if (orphanButtons) {
+            if (orphanButtons && tabName !== 'portfolio') {
                 orphanButtons.remove();
             }
+
+            if (tabName === 'portfolio') {
+                const activeProject = document.querySelector('#project-list li.active') || document.querySelector('#project-list li');
+                if (activeProject) {
+                    activeProject.click();
+                }
+            }
+
 
             const elementsToStagger = document.querySelectorAll('.dashboard-grid > section, .dashboard-grid > nav, .stacked-content');
             applyRandomStagger(elementsToStagger);
@@ -552,6 +620,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             body.setAttribute('data-active-tab', tabName);
 
             history.pushState({ tab: tabName }, '', `#${tabName}`);
+            window._isTabSwitching = false;
         }, 300);
     }
 
@@ -743,6 +812,61 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         resetIdleTimer();
     }
+
+    const csModal = document.getElementById('case-study-modal');
+    const csClose = document.getElementById('case-study-close');
+    const csPrev = document.getElementById('cs-prev-btn');
+    const csNext = document.getElementById('cs-next-btn');
+    const csDots = document.querySelectorAll('.cs-dot');
+
+    if (csClose) {
+        csClose.addEventListener('click', () => {
+            if (csModal) csModal.classList.remove('active');
+        });
+    }
+
+    if (csModal) {
+        csModal.addEventListener('click', (e) => {
+            if (e.target === csModal) {
+                csModal.classList.remove('active');
+            }
+        });
+    }
+
+    if (csPrev) {
+        csPrev.addEventListener('click', () => {
+            if (isAnimatingCaseStudy) return;
+            if (currentCaseStudyPage > 0) {
+                isAnimatingCaseStudy = true;
+                currentCaseStudyPage--;
+                updateCaseStudyPagination();
+            }
+        });
+    }
+
+    if (csNext) {
+        csNext.addEventListener('click', () => {
+            if (isAnimatingCaseStudy) return;
+            const csPages = document.querySelectorAll('.case-study-page');
+            if (currentCaseStudyPage < csPages.length - 1) {
+                isAnimatingCaseStudy = true;
+                currentCaseStudyPage++;
+                updateCaseStudyPagination();
+            }
+        });
+    }
+
+    if (csDots) {
+        csDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                if (isAnimatingCaseStudy) return;
+                isAnimatingCaseStudy = true;
+                currentCaseStudyPage = index;
+                updateCaseStudyPagination();
+            });
+        });
+    }
+
 });
 
 
