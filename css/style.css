@@ -1193,11 +1193,14 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
     height: 60vh;
     padding: 2rem;
     clip-path: inset(0px);
-    transition: clip-path 0.4s ease;
+    /* Waits 0.4s for images to contract, then snaps shut instantly */
+    transition: clip-path 0s linear 0.4s;
 }
 
 .case-study-content-wrapper.settled {
     clip-path: inset(-150px);
+    /* Snaps open instantly the millisecond the images start fanning out */
+    transition: clip-path 0s linear 0s;
 }
 
 /* TEXT TRACK */
