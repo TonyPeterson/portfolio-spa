@@ -76,7 +76,7 @@ const caseStudyData = {
             ['images/CaseStudies/SARS-CoV-2_without_background.png', 'images/CaseStudies/RE4tf03.png', 'images/CaseStudies/microsoft-store-new-york.webp'],
             ['images/CaseStudies/ForDeck3.png', 'images/CaseStudies/video-360_PosterImg.jpg', 'images/CaseStudies/ForDeck1.png'],
             ['images/CaseStudies/HotspotNormalsIllustrated2.png', 'images/CaseStudies/3D_Wireframe3c.png', 'images/CaseStudies/3D_Wireframe5b_Annotations.png'],
-            ['images/placeholder/30-and-funny-cat-selfies-you-ll-wish-your-cat-took-u1.jpg', 'images/placeholder/455802314_431455810040860_6818322446018491206_n-67a23637bb842__700.jpg', 'images/placeholder/472506207_2036877353494865_655091201606790707_n-67a2335bbab0d__700.jpg']
+            'images/CaseStudies/ShopIn3d_MenuV2a.mp4'
         ]
     },
     'Project Mio': {
@@ -325,7 +325,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     data.images.forEach((imgGroup, index) => {
                                         const groupDiv = document.createElement('div');
                                         groupDiv.className = 'cs-image-group' + (index === 0 ? ' active' : '');
-                                        groupDiv.innerHTML = imgGroup.map((imgSrc, imgIdx) => `<img src="${imgSrc}" alt="${projectTitle} image ${index * 3 + imgIdx + 1}">`).join('');
+                                        
+                                        if (typeof imgGroup === 'string' && imgGroup.endsWith('.mp4')) {
+                                            groupDiv.innerHTML = `<video class="cs-bg-video" src="${imgGroup}" autoplay loop muted playsinline></video>`;
+                                        } else {
+                                            groupDiv.innerHTML = imgGroup.map((imgSrc, imgIdx) => `<img src="${imgSrc}" alt="${projectTitle} image ${index * 3 + imgIdx + 1}">`).join('');
+                                        }
                                         imgTrack.appendChild(groupDiv);
                                     });
                                 }
