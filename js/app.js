@@ -268,6 +268,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                             changingViews.push(view);
                         }
                     });
+
+                    const activeButtons = document.querySelector('.box-area-c .action-buttons-container');
+                    if (activeButtons) {
+                        activeButtons.style.transitionDelay = '0s';
+                        activeButtons.classList.remove('visible');
+                    }
                 }
 
                 setTimeout(() => {
@@ -397,12 +403,24 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     if (!isTabSwitching) {
                         applyRandomStagger(changingViews);
-                        
-                        void document.body.offsetHeight;
+
+                        const newButtons = boxAreaC.querySelector('.action-buttons-container');
+                        if (newButtons) {
+                            newButtons.style.transitionDelay = `${Math.random() * 0.15}s`;
+                        }
+
+                        void document.body.offsetHeight; // Force reflow
 
                         changingViews.forEach(view => {
                             view.classList.add('view-portfolio');
                         });
+
+                        if (newButtons) {
+                            newButtons.classList.add('visible');
+                        }
+                    } else {
+                        const newButtons = boxAreaC.querySelector('.action-buttons-container');
+                        if (newButtons) newButtons.classList.add('visible');
                     }
 
                     if (wireframeImg) {
