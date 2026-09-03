@@ -73,8 +73,8 @@ const caseStudyData = {
             }
         ],
         images: [
-            ['images/placeholder/funny-cat-memes-meovvmaster-cover_675.jpg', 'images/placeholder/edfsaf.jpg', 'images/placeholder/GettyImages-140594401-1-scaled.jpg'],
-            ['images/placeholder/c245ea4a861e1a0ffb756fa65fd7bcce.jpg', 'images/placeholder/images.jpg', 'images/placeholder/images (1).jpg'],
+            ['images/CaseStudies/SARS-CoV-2_without_background.png', 'images/CaseStudies/RE4tf03.png', 'images/CaseStudies/microsoft-store-new-york.webp'],
+            ['images/CaseStudies/HotspotNormalsIllustrated2.png', 'images/CaseStudies/3D_Wireframe3c.png', 'images/CaseStudies/3D_Wireframe5b_Annotations.png'],
             ['images/placeholder/IMG_9250-e1788305642873.jpeg', 'images/placeholder/istockphoto-1226931930-612x612.jpg', 'images/placeholder/3902e7a3e2e57df9dc5e254e41cde03d.jpg'],
             ['images/placeholder/30-and-funny-cat-selfies-you-ll-wish-your-cat-took-u1.jpg', 'images/placeholder/455802314_431455810040860_6818322446018491206_n-67a23637bb842__700.jpg', 'images/placeholder/472506207_2036877353494865_655091201606790707_n-67a2335bbab0d__700.jpg']
         ]
