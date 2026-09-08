@@ -574,7 +574,7 @@
       },
       {
         "title": "D&D Godot Map",
-        "pitch": "A simple map system for hosting online D&D sessions that allows for multiple users to join and control tokens.",
+        "pitch": "A simple map system for hosting online D&D sessions that allows for multiple users to join and control tokens. <a href='https://www.topgfxstudio.com/dnd'>HERE</a>",
         "url": "/dnd",
         "image": "images/placeholder.jpg",
         "controls": "Mouse and Keyboard",
