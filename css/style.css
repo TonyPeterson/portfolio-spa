@@ -402,24 +402,54 @@ body[data-active-tab="about"] .tonyside {
     transform: rotate(25deg);
 }
 
-/* Arcade Controls Sprite Animation */
-@keyframes spriteBoil {
-    100% { transform: translateX(-100%); }
+/* Arcade Box D specific layout overrides */
+.box-area-d .view-arcade {
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: relative;
 }
-.arcade-sprite-wrapper {
-    width: 100%;
-    height: 120px;
-    margin-bottom: 1rem;
-    flex-shrink: 0;
-}
-.arcade-sprite-image {
+
+/* Elevates any controls text above the animated background */
+.box-area-d .view-arcade .full-width {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    padding: 2rem;
+    z-index: 10;
+    pointer-events: none; /* Let the mouse hover trigger the background animation */
+    display: flex;
+    align-items: center; 
+}
+
+/* Arcade Controls Frame Animation */
+.arcade-anim-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
     height: 100%;
-    width: 400%; /* Spans the 4 frames of the stitched PNG */
-    max-width: none;
-    animation: spriteBoil 0.4s steps(4) infinite;
+    z-index: 0;
+}
+.arcade-anim-frames {
+    width: 100%;
+    height: 100%;
+}
+.arcade-anim-frames img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+/* Slowed down to 0.6s total loop */
+.arcade-anim-frames img:nth-child(1) { animation: boilFrame 0.6s infinite 0.00s; }
+.arcade-anim-frames img:nth-child(2) { animation: boilFrame 0.6s infinite 0.15s; }
+.arcade-anim-frames img:nth-child(3) { animation: boilFrame 0.6s infinite 0.30s; }
+.arcade-anim-frames img:nth-child(4) { animation: boilFrame 0.6s infinite 0.45s; }
+
+@keyframes boilFrame {
+    0%, 24.9% { opacity: 1; }
+    25%, 100% { opacity: 0; }
 }
 
 /* Helper styles for specific content */
