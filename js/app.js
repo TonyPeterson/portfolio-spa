@@ -568,7 +568,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                         `;
                     }
                     if (boxAreaDView) {
-                        boxAreaDView.innerHTML = `<div class="full-width"><p>${game.controls || ''}</p></div>`;
+                        boxAreaDView.innerHTML = `
+                            <div class="hover arcade-sprite-wrapper">
+                                <div class="hover_inner">
+                                    <img src="images/KeysSpriteForAnimating1.png" class="arcade-sprite-image" alt="Keyboard Controls">
+                                </div>
+                            </div>
+                            <div class="full-width"><p>${game.controls || ''}</p></div>
+                        `;
                     }
                     if (arcadeWhyContainer) {
                         arcadeWhyContainer.innerHTML = `<p>${game.intention || ''}</p>`;

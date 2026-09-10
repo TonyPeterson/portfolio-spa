@@ -402,6 +402,26 @@ body[data-active-tab="about"] .tonyside {
     transform: rotate(25deg);
 }
 
+/* Arcade Controls Sprite Animation */
+@keyframes spriteBoil {
+    100% { transform: translateX(-100%); }
+}
+.arcade-sprite-wrapper {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+.arcade-sprite-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400%; /* Spans the 4 frames of the stitched PNG */
+    max-width: none;
+    animation: spriteBoil 0.4s steps(4) infinite;
+}
+
 /* Helper styles for specific content */
 #portfolio-what-i-did-container h3,
 #portfolio-tools-container h3 {
