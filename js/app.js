@@ -570,11 +570,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (boxAreaDView) {
                         boxAreaDView.innerHTML = `
                             <div class="hover arcade-anim-wrapper">
-                                <div class="hover_inner arcade-anim-frames">
-                                    <img src="images/KeysForAnimating1.png" alt="Controls Frame 1">
-                                    <img src="images/KeysForAnimating2.png" alt="Controls Frame 2">
-                                    <img src="images/KeysForAnimating3.png" alt="Controls Frame 3">
-                                    <img src="images/KeysForAnimating4.png" alt="Controls Frame 4">
+                                <div class="hover_inner">
+                                    <video src="videos/KeysLineBoil1.webm" autoplay loop muted playsinline class="arcade-video-bg"></video>
                                 </div>
                             </div>
                             <div class="full-width"><p>${game.controls || ''}</p></div>
