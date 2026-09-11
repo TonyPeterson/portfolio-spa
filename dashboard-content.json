@@ -531,12 +531,14 @@
       {
         "title": "Tonys Breakout",
         "url": "games/tonysbreakout.html",
+        "image": "images/Breakout1.png",
         "pitch": "It is traditional Breakout at its core. Keep the ball bouncing and smash every brick on the screen so you can progress to the next level. To keep things interesting, you can grab various power-ups that speed up the ball, multiply them into a chaotic swarm, or make them delightfully sticky.",
         "intention": "I followed a tutorial for this one, and it served as a fantastic exercise in pure game polish. I used it as a hands-on crash course to learn how to build particle systems, write simple arcade physics, and manage complex game states."
       },
       {
         "title": "Graveyard Trash Haul",
         "url": "games/graveyardtest.html",
+        "image": "images/Graveyard1.png",
         "pitch": "You play as a ghost wandering through a graveyard that is inexplicably covered in garbage. Your singular mission is to clean up the afterlife by picking up the trash and returning it to the proper bin. It is essentially a spooky sanitation job wrapped in a dark, atmospheric visual style.",
         "intention": "This prototype was born from a tutorial, and it is entirely responsible for sparking my interest in top-down adventure games. Mechanically, there is not much going on beyond the core visuals and basic screen-to-screen movement. However, this served as the alpha version that directly inspired the 'Forest Adventure' prototype, where I eventually doubled down on smooth camera transitions and built a proper inventory system."
       },
@@ -578,7 +580,7 @@
         "pitch": "A custom web-based VTT environment for managing D&D campaigns.",
         "url": "/dnd",
         "image": "images/placeholder.jpg",
-        "controls": "Mouse and Keyboard",
+        "controls": "",
         "platform": "Web/Godot",
         "intention": "I wanted a simple and totally free, no-need-to-sign-up, anyone-with-internet platform for which to assist in running my online D&D campaigns.",
         "backlog": "Many features to come.",
