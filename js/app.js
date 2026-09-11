@@ -571,7 +571,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         boxAreaDView.innerHTML = `
                             <div class="hover arcade-anim-wrapper">
                                 <div class="hover_inner">
-                                    <video src="videos/KeysLineBoil1.webm" autoplay loop muted playsinline class="arcade-video-bg"></video>
+                                    <video src="videos/KeysLineBoil2.webm" autoplay loop muted playsinline class="arcade-video-bg"></video>
                                 </div>
                             </div>
                             <div class="full-width"><p>${game.controls || ''}</p></div>

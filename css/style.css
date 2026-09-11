@@ -395,7 +395,7 @@ body[data-active-tab="about"] .tonyside {
 }
 
 .hover:hover .hover_inner {
-    transform: scale(1.25) rotate(-12deg);
+    transform: scale(1.25) rotate(-5deg) translateX(-15px);
 }
 
 .hover:hover h2 {
