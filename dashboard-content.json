@@ -579,7 +579,7 @@
         "title": "D&D Godot Map",
         "pitch": "A custom web-based VTT environment for managing D&D campaigns.",
         "url": "/dnd",
-        "image": "images/placeholder.jpg",
+        "image": "images/dndMap1.png",
         "controls": "",
         "platform": "Web/Godot",
         "intention": "I wanted a simple and totally free, no-need-to-sign-up, anyone-with-internet platform for which to assist in running my online D&D campaigns.",
