@@ -150,8 +150,10 @@
 
         .center-blob, .main-button {
             position: absolute;
-            width: 70px;
-            height: 70px;
+            width: 90px;
+            height: 90px;
+            top: calc(50% - 45px);
+            left: calc(50% - 45px);
             border-radius: 50%;
             background: var(--primary);
             display: flex;
@@ -169,8 +171,10 @@
 
         .menu-blob, .menu-item {
             position: absolute;
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
+            top: calc(50% - 40px);
+            left: calc(50% - 40px);
             border-radius: 50%;
             background: var(--primary);
             transform: translate(0, 0) scale(0.5);
@@ -193,7 +197,7 @@
         }
 
         .menu-item span {
-            max-width: 48px;
+            max-width: 64px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -461,7 +465,7 @@
         btnContainer.innerHTML = '';
         
         const total = definedMeds.length;
-        const radius = 100; // How far the drops push out
+        const radius = 135; // How far the drops push out
         
         definedMeds.forEach((med, i) => {
             // Calculate the arc to shoot the bubbles upwards (between 195 and 345 degrees)
@@ -469,8 +473,8 @@
             if (total === 1) {
                 angle = Math.PI * 1.5; // Straight up
             } else {
-                const startAngle = Math.PI * 1.08; 
-                const endAngle = Math.PI * 1.92; 
+                const startAngle = Math.PI * 1.15; 
+                const endAngle = Math.PI * 1.85; 
                 angle = startAngle + (i / (total - 1)) * (endAngle - startAngle);
             }
             
