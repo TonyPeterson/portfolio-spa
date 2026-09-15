@@ -1362,11 +1362,11 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
 
 /* PAGE 1 FANNED TRANSFORMS (Preserving original manual tweaks) */
 .case-study-img-track .cs-image-group:nth-child(1).fanned img:nth-child(1) {
-    transform: translate(-5px, -190px) rotate(-8deg);
+    transform: translate(-415px, 130px) rotate(-8deg);
 }
 
 .case-study-img-track .cs-image-group:nth-child(1).fanned img:nth-child(2) {
-    transform: translate(-395px, 100px) rotate(4deg);
+    transform: translate(35px, -120px) rotate(-3deg);
 }
 
 .case-study-img-track .cs-image-group:nth-child(1).fanned img:nth-child(3) {
@@ -1379,7 +1379,7 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
 }
 
 .case-study-img-track .cs-image-group:nth-child(2).fanned img:nth-child(2) {
-    transform: translate(-200px, 150px) rotate(-4deg);
+    transform: translate(-400px, 90px) rotate(-4deg);
 }
 
 .case-study-img-track .cs-image-group:nth-child(2).fanned img:nth-child(3) {
@@ -1388,11 +1388,11 @@ body:not([data-active-tab="portfolio"]) .action-buttons-container {
 
 /* PAGE 3 FANNED TRANSFORMS (Starter variations) */
 .case-study-img-track .cs-image-group:nth-child(3).fanned img:nth-child(1) {
-    transform: translate(40px, -170px) rotate(5deg);
+    transform: translate(-370px, 140px) rotate(5deg);
 }
 
 .case-study-img-track .cs-image-group:nth-child(3).fanned img:nth-child(2) {
-    transform: translate(-300px, 150px) rotate(-8deg);
+    transform: translate(0px, -191px) rotate(-8deg);
 }
 
 .case-study-img-track .cs-image-group:nth-child(3).fanned img:nth-child(3) {
