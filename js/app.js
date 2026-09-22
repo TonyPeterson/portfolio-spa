@@ -576,6 +576,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                             </div>
                             <div class="full-width"><p>${game.controls || ''}</p></div>
                         `;
+
+                        const mouseGames = ['Identity Theft', 'Project Mio', 'D&D Godot Map'];
+                        const controlVideoElement = document.querySelector('.box-area-d video');
+
+                        if (mouseGames.includes(game.title)) {
+                            controlVideoElement.src = 'videos/MouseLineBoil1.webm';
+                        } else {
+                            controlVideoElement.src = 'videos/KeysLineBoil2.webm';
+                        }
+
+                        controlVideoElement.load();
+                        controlVideoElement.play();
                     }
                     if (arcadeWhyContainer) {
                         arcadeWhyContainer.innerHTML = `<p>${game.intention || ''}</p>`;
